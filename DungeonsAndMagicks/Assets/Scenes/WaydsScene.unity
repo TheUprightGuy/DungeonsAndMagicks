@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 42646448}
   - component: {fileID: 42646452}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67713230023643409ea6862861d3218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: {fileID: 11400000, guid: 2d1fba555e6507443b1fe516ac415172, type: 2}
 --- !u!1 &110533143
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,8 +768,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130072707}
-  m_LocalRotation: {x: -0.07299055, y: 0.92446285, z: -0.22653496, w: -0.29786357}
-  m_LocalPosition: {x: 6.500889, y: 5.9963846, z: 9.306958}
+  m_LocalRotation: {x: 0.16884878, y: -0.83114696, z: 0.3759724, w: 0.373269}
+  m_LocalPosition: {x: 10.99463, y: 16.075314, z: 10.187652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

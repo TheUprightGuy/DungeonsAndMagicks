@@ -7,9 +7,12 @@ public class Controller : MonoBehaviour
 {
     private MagicCanvas magicCanvas;
 
+    public Ability ability;
+
     private void Start()
     {
         magicCanvas = MagicCanvas.instance;
+        ability.StartUp();
     }
 
     private void Update()
@@ -17,6 +20,12 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             magicCanvas.ToggleRingInterface();
+            magicCanvas.SetActiveAbility(ability);        
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            ability.Use(transform);
         }
     }
 }

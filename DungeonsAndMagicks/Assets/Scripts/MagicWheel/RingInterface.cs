@@ -18,6 +18,9 @@ public class RingInterface : MonoBehaviour
     private TMPro.TextMeshProUGUI elementText;
     private float gapWidthDegree = 1.0f;
 
+    [Header("Temp")]
+    public Ability activeAbility;
+
     private void Awake()
     {
         elementText = GetComponent<TMPro.TextMeshProUGUI>();
@@ -70,9 +73,14 @@ public class RingInterface : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Add Functionality
-            pieces[activeElement].Use();
+            pieces[activeElement].Use(activeAbility);
             //gameObject.SetActive(false);
         }
+    }
+
+    public void SetActiveAbility(Ability _ability)
+    {
+        activeAbility = _ability;
     }
 
     private float NormalizeAngle(float a) => (a + 360f) % 360f;

@@ -9,9 +9,11 @@ public class OptionPrefab : MonoBehaviour
     public Image icon;
     [HideInInspector] public RingElement element;
 
-    public void Use()
+    public void Use(Ability _ability)
     {
         // Interface?
         Debug.Log(element.name + " clicked.");
+
+        _ability.AddMods(element.modifiers);
     }
 }

@@ -29,4 +29,9 @@ public class MagicCanvas : MonoBehaviour
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
     }
+
+    public void SetActiveAbility(Ability _ability)
+    {
+        ringInterface.activeAbility = _ability;
+    }
 }

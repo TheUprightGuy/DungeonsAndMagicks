@@ -7,5 +7,6 @@ public class RingElement : ScriptableObject
 {
     new public string name;
     public Sprite icon;
-    // Color Here?
+
+    public AbilityModifiers modifiers;
 }
