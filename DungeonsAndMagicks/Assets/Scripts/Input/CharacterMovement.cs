@@ -51,12 +51,14 @@ public class CharacterMovement : MonoBehaviour
 
         Vector3 finalMoveVec = Vector3.zero;
 
+        Vector3 rayStart = transform.position;
+        rayStart.y -= 0.4f;
         RaycastHit hit;
-        if (!Physics.Raycast(transform.position, horVec, out hit, collisionCheckDistance))
+        if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance))
         {
             finalMoveVec += horVec;  //transform.position + (movement * Time.deltaTime * PlayerSpeed);
         }
-        if (!Physics.Raycast(transform.position, vertVec, out hit, collisionCheckDistance))
+        if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance))
         {
             finalMoveVec += vertVec;
         }
