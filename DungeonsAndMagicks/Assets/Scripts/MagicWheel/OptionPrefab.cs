@@ -28,8 +28,8 @@ public class OptionPrefab : MonoBehaviour
         {
             _ability.AddMods(element.modifiers);
             icon.color = selectedColor;
-            GameObject mod = Instantiate(parent.modPrefab)
-            parent.modList
+            GameObject mod = Instantiate(parent.modPrefab);
+            //parent.modList
             selected = true;
         }
     }
