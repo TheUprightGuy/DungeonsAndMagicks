@@ -56,13 +56,13 @@ MonoBehaviour:
   - PosIndex: {x: -2, y: 1}
     NorthOpen: 0
     EastOpen: 0
-    SouthOpen: 1
-    WestOpen: 1
+    SouthOpen: 0
+    WestOpen: 0
   - PosIndex: {x: -2, y: 2}
     NorthOpen: 1
     EastOpen: 0
     SouthOpen: 0
-    WestOpen: 1
+    WestOpen: 0
   - PosIndex: {x: -1, y: 2}
     NorthOpen: 1
     EastOpen: 0
@@ -77,12 +77,12 @@ MonoBehaviour:
     NorthOpen: 0
     EastOpen: 0
     SouthOpen: 0
-    WestOpen: 1
+    WestOpen: 0
   - PosIndex: {x: -1, y: -1}
     NorthOpen: 0
     EastOpen: 1
     SouthOpen: 0
-    WestOpen: 1
+    WestOpen: 0
   - PosIndex: {x: -1, y: -2}
     NorthOpen: 0
     EastOpen: 0
@@ -118,10 +118,113 @@ MonoBehaviour:
     EastOpen: 1
     SouthOpen: 0
     WestOpen: 1
+  - PosIndex: {x: -2, y: 0}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -2, y: -1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -3, y: -1}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -4, y: -1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 1
+  - PosIndex: {x: -4, y: 0}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -4, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -3, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -3, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -4, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -5, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -6, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -7, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -8, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -9, y: 2}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -9, y: 1}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -9, y: 0}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 1
+  - PosIndex: {x: -8, y: 0}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -7, y: 0}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -6, y: 0}
+    NorthOpen: 1
+    EastOpen: 1
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -9, y: 3}
+    NorthOpen: 1
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 1
   LevelTiles:
-  - {fileID: 9138584307541969430, guid: 35da9776da2fd3849b7685aee46e6a2f, type: 3}
-  - {fileID: 5846455713826673669, guid: 4b2de78b108113e49a301e06bfb9141a, type: 3}
-  - {fileID: 128519956984911651, guid: 6bf0479e5b28b4a439344ea74b492ff6, type: 3}
-  - {fileID: 7516567732157369833, guid: af776057e3d2c31418163225289a29d0, type: 3}
-  - {fileID: 1786773242170860876, guid: 6a2a93dd385a02a49bd6e4603399bb39, type: 3}
+  - {fileID: 5846455713826673669, guid: 327f047ee2ac43c48898d16a31ac653c, type: 3}
+  - {fileID: 128519956984911651, guid: a6d676b88d1b01b4cb5be3c764234d06, type: 3}
+  - {fileID: 7516567732157369833, guid: b1311f7fdc2c40e478476b7c655958fc, type: 3}
+  - {fileID: 1786773242170860876, guid: ba8cd0f837cbe9e4f97a8cdc8bf19e9f, type: 3}
   - {fileID: 6240919369074253087, guid: 2ba2f214e0cbbe441b7ba24010d692d9, type: 3}
+  - {fileID: 6240919369074253087, guid: a8f9966c9e6abc442abc7dec7d607635, type: 3}
+  - {fileID: 6240919369074253087, guid: 56826ee53c3815146a47c5d62f6e7c00, type: 3}
+  - {fileID: 6240919369074253087, guid: d8f819c2a3fcd894f834a4aa20bf85ad, type: 3}
+  - {fileID: 6240919369074253087, guid: fad0b03e32e178a4b971bcaf3763fc31, type: 3}

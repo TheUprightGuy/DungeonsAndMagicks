@@ -1,0 +1,1837 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.0f1 (3721df5a8b28) revision 3613151'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16312 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60468
+Successfully changed project path to: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks
+C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 57.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.0f1 (3721df5a8b28)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Vendor:   
+    VRAM:     8043 MB
+    Driver:   27.21.14.6089
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56108
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001379 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 57.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.792 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001410 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 63.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.754 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2389 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.4 MB.
+System memory in use after: 115.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2831.
+Total: 1.823600 ms (FindLiveObjects: 0.257800 ms CreateObjectMapping: 0.066800 ms MarkObjects: 1.455000 ms  DeleteObjects: 0.043100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/LevelTiles/Fenced.prefab
+  artifactKey: Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Fenced.prefab using Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c631e47d75471aad83dcc965e8296a36') in 0.190921 seconds
+  Import took 0.194878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.420978 seconds.
+  path: Assets/LevelTiles/Fenced.prefab
+  artifactKey: Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Fenced.prefab using Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd099a29f0187b338bc2cf2990e3ee3be') in 0.020880 seconds
+  Import took 0.024901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015821 seconds.
+  path: Assets/LevelTiles/Fenced.prefab
+  artifactKey: Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Fenced.prefab using Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd099a29f0187b338bc2cf2990e3ee3be') in 0.015900 seconds
+  Import took 0.019537 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001333 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.688 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2280 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.1 MB.
+System memory in use after: 115.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2879.
+Total: 1.865400 ms (FindLiveObjects: 0.264300 ms CreateObjectMapping: 0.065600 ms MarkObjects: 1.522800 ms  DeleteObjects: 0.011900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.520091 seconds.
+  path: Assets/LevelTiles/Fenced 1.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Fenced 1.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ccf531cefa39126977c91a7a1d755b9') in 0.133898 seconds
+  Import took 0.137868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.392189 seconds.
+  path: Assets/LevelTiles/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc5a7481da2e085e6fe3c4d1b67113c') in 0.023030 seconds
+  Import took 0.027181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.700670 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D
+  artifactKey: Guid(76e7fb2e498c94948bacd65406ea990f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D using Guid(76e7fb2e498c94948bacd65406ea990f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2dfe6bf9822eadb20a8c8ca15154040') in 0.014101 seconds
+  Import took 0.017638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.481911 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1
+  artifactKey: Guid(06e174a43b934dd439b1d679108d0ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1 using Guid(06e174a43b934dd439b1d679108d0ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92607cd16e5ab13aa4a0af3ee74ecbd7') in 0.005093 seconds
+  Import took 0.008659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1
+  artifactKey: Guid(06e174a43b934dd439b1d679108d0ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1 using Guid(06e174a43b934dd439b1d679108d0ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92607cd16e5ab13aa4a0af3ee74ecbd7') in 0.001943 seconds
+  Import took 0.005260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.972201 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence01.fbx
+  artifactKey: Guid(6871d60cc28fde142bbac3e74e48e20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence01.fbx using Guid(6871d60cc28fde142bbac3e74e48e20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f798a6294729b197a592be1a173e876') in 0.275878 seconds
+  Import took 0.279330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence23.fbx
+  artifactKey: Guid(8ea1a0f5717bb8f499efa26f69ceb435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence23.fbx using Guid(8ea1a0f5717bb8f499efa26f69ceb435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e28967b332074bb9c700ec7bfccf49') in 0.044377 seconds
+  Import took 0.047533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree06.fbx
+  artifactKey: Guid(c3f3339dcd494c647b2f893600db86e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree06.fbx using Guid(c3f3339dcd494c647b2f893600db86e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f040551f31b94029c795749ef924fb7') in 0.048201 seconds
+  Import took 0.051376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall03.fbx
+  artifactKey: Guid(b84bd6c74f6bdb14591182672715df10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall03.fbx using Guid(b84bd6c74f6bdb14591182672715df10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea9adfe31d79e0ee5c6be2a2aa5fb14') in 0.104703 seconds
+  Import took 0.107870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence03.fbx
+  artifactKey: Guid(cd38812df90f82f48b23e2f04228467f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence03.fbx using Guid(cd38812df90f82f48b23e2f04228467f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68cd433e9331915c9c5b2a68d36c2eaf') in 0.037692 seconds
+  Import took 0.041169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence18.fbx
+  artifactKey: Guid(b7aa8677b5dfe434d8dd8fda22bda696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence18.fbx using Guid(b7aa8677b5dfe434d8dd8fda22bda696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb95fca87882b03d64a820aeffa23163') in 0.030721 seconds
+  Import took 0.034003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence03.fbx
+  artifactKey: Guid(cd38812df90f82f48b23e2f04228467f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence03.fbx using Guid(cd38812df90f82f48b23e2f04228467f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68cd433e9331915c9c5b2a68d36c2eaf') in 0.028176 seconds
+  Import took 0.031232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop12Snow.fbx
+  artifactKey: Guid(62bc6bb244928874aac7756c51d79483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop12Snow.fbx using Guid(62bc6bb244928874aac7756c51d79483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f77d2777f762dccdae374d081946c50') in 0.058206 seconds
+  Import took 0.061331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeThin01.fbx
+  artifactKey: Guid(f810d808c60d5964f8dfc46a774416a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeThin01.fbx using Guid(f810d808c60d5964f8dfc46a774416a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9e29547fa92aa35041238f180c0437') in 0.037465 seconds
+  Import took 0.040586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop08Snow.fbx
+  artifactKey: Guid(078b7b7ff329cc5478a6d39152898eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop08Snow.fbx using Guid(078b7b7ff329cc5478a6d39152898eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11cad736a6d7f25014d73b5f4a7a21fb') in 0.044736 seconds
+  Import took 0.047825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence06.fbx
+  artifactKey: Guid(d55fea348168e16408f8dbc39dc1f02b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence06.fbx using Guid(d55fea348168e16408f8dbc39dc1f02b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9244abc73c95c59679732f0abb80eb10') in 0.026091 seconds
+  Import took 0.029050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_hill.fbx
+  artifactKey: Guid(5aa360d02c6a7b34d95863c6e06da7fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_hill.fbx using Guid(5aa360d02c6a7b34d95863c6e06da7fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d166d7aabbf3dfb6e4b65bea2303dd') in 0.030718 seconds
+  Import took 0.033800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop11Snow.fbx
+  artifactKey: Guid(451c55590edc00f4b8e2cbe534709f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop11Snow.fbx using Guid(451c55590edc00f4b8e2cbe534709f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a983bf4ff1b524076eefbd18a422bc9') in 0.041769 seconds
+  Import took 0.045019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence20.fbx
+  artifactKey: Guid(e6a43849ea02d454db87db4e2b3a605c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence20.fbx using Guid(e6a43849ea02d454db87db4e2b3a605c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f41b20a97f2281ae933f96d1c3f71c9b') in 0.024588 seconds
+  Import took 0.027591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence04.fbx
+  artifactKey: Guid(af7f7549d4abbdf4c935f9b743e8d7a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence04.fbx using Guid(af7f7549d4abbdf4c935f9b743e8d7a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '274242e880a01f8ceb7389aee2afe6b5') in 0.024359 seconds
+  Import took 0.027350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop09Snow.fbx
+  artifactKey: Guid(5a3eb8be56ce62f4e9f3dc8940935d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop09Snow.fbx using Guid(5a3eb8be56ce62f4e9f3dc8940935d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b842f8aa3fb87ce06900aa742b61069') in 0.052059 seconds
+  Import took 0.055176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence08.fbx
+  artifactKey: Guid(3d52008bb97fdd64598d2c4f87eb71f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence08.fbx using Guid(3d52008bb97fdd64598d2c4f87eb71f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413042b8512bb25d4ed50894034ef18d') in 0.025849 seconds
+  Import took 0.028887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree07.fbx
+  artifactKey: Guid(3f283566b65f4034bb52711d402f853d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree07.fbx using Guid(3f283566b65f4034bb52711d402f853d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd86d37d07bdf692dbea60a0f49cf4b6d') in 0.029566 seconds
+  Import took 0.032894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob03.fbx
+  artifactKey: Guid(05df174698bc42741b587d682ef449d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob03.fbx using Guid(05df174698bc42741b587d682ef449d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b91106cf502e00e764f5771fc2f63be5') in 0.066455 seconds
+  Import took 0.069839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence22.fbx
+  artifactKey: Guid(20b538935d1f1e645b8f90590a0c97e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence22.fbx using Guid(20b538935d1f1e645b8f90590a0c97e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '488fd300005f9f63a0561ebed19a8a4f') in 0.032101 seconds
+  Import took 0.035415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree01.fbx
+  artifactKey: Guid(c3716f2f5fb008b4b8a1c2cc34c29f1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree01.fbx using Guid(c3716f2f5fb008b4b8a1c2cc34c29f1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c51ec534a959376c4f6fd6fa7ffc61cc') in 0.054107 seconds
+  Import took 0.057195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob04.fbx
+  artifactKey: Guid(ce6d63a29201f234f8cfc5820c4e19fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob04.fbx using Guid(ce6d63a29201f234f8cfc5820c4e19fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67c2f10ab31bcc528c5d2720bd9375fc') in 0.029147 seconds
+  Import took 0.032251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob01.fbx
+  artifactKey: Guid(e196f35ef68545f4eb2f032af1ff85f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob01.fbx using Guid(e196f35ef68545f4eb2f032af1ff85f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f577025afbb39d0bcb7de853de26a031') in 0.061093 seconds
+  Import took 0.064443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall02.fbx
+  artifactKey: Guid(0b742fd99b8d71443a398c38c6f98663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall02.fbx using Guid(0b742fd99b8d71443a398c38c6f98663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af584c5e08a7f82becee941ab23066c1') in 0.068394 seconds
+  Import took 0.071500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree04.fbx
+  artifactKey: Guid(45737271492a5454ebc1cd6b13d1966e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree04.fbx using Guid(45737271492a5454ebc1cd6b13d1966e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f06e603406e5c266aec40c5b22c3cde3') in 0.028703 seconds
+  Import took 0.031770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence11.fbx
+  artifactKey: Guid(2e083715e544a46459e8c09c65bda8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence11.fbx using Guid(2e083715e544a46459e8c09c65bda8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6331e0001bc0fa276704d7f773c22f75') in 0.025657 seconds
+  Import took 0.028986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob02.fbx
+  artifactKey: Guid(a38ac4ab32cfb964e8ce405a8513df96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeBlob02.fbx using Guid(a38ac4ab32cfb964e8ce405a8513df96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00520e8ffd0eaa9d7785a8bc4b6fd154') in 0.059329 seconds
+  Import took 0.062463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall04.fbx
+  artifactKey: Guid(c03ea0a8d8d9e63409f323dbc1f13435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall04.fbx using Guid(c03ea0a8d8d9e63409f323dbc1f13435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7e2a7f52372642b1352db5e4668d993') in 0.062414 seconds
+  Import took 0.065558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall06.fbx
+  artifactKey: Guid(f88a9bb19554b594294978bac44b08b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall06.fbx using Guid(f88a9bb19554b594294978bac44b08b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85a14a30c09465fdeb919e8bf878a81') in 0.034538 seconds
+  Import took 0.037909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence15.fbx
+  artifactKey: Guid(534bfcef3aac60349b9477e33340ac37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence15.fbx using Guid(534bfcef3aac60349b9477e33340ac37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20123cf95f761070781a9d892f976115') in 0.029773 seconds
+  Import took 0.033116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence25.fbx
+  artifactKey: Guid(fdf25e4bd0439e6479785635dcab95e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence25.fbx using Guid(fdf25e4bd0439e6479785635dcab95e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f11a73fac81d0f95bb86b6f5feabc3a9') in 0.032387 seconds
+  Import took 0.035435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence24.fbx
+  artifactKey: Guid(40e8197d2a1c7f64cb3075b4b20b591e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence24.fbx using Guid(40e8197d2a1c7f64cb3075b4b20b591e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '575123a5f7ec16594f0ef2bf16eafeb5') in 0.027501 seconds
+  Import took 0.030711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence19.fbx
+  artifactKey: Guid(48f90d47eb07bac47a7a90ef77928795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence19.fbx using Guid(48f90d47eb07bac47a7a90ef77928795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25525a562f765aa0094e5798b1562796') in 0.024312 seconds
+  Import took 0.027928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence14.fbx
+  artifactKey: Guid(f3c6e35cfee20314aa665d14111a740c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence14.fbx using Guid(f3c6e35cfee20314aa665d14111a740c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27ed953992ccd28c519184d822edbafa') in 0.024762 seconds
+  Import took 0.028078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop01.fbx
+  artifactKey: Guid(a71e5185f7fa5164892773860136e483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop01.fbx using Guid(a71e5185f7fa5164892773860136e483) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96bde2090747957b3994f8ae689bdd66') in 0.039226 seconds
+  Import took 0.042429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeThin02.fbx
+  artifactKey: Guid(c2462e35b1ea563468aebc74d9681a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeThin02.fbx using Guid(c2462e35b1ea563468aebc74d9681a18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0541faf0764b0641d1cff19e65db89d') in 0.034556 seconds
+  Import took 0.037552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence10.fbx
+  artifactKey: Guid(337ff8083c2139b45aa2d38643640189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence10.fbx using Guid(337ff8083c2139b45aa2d38643640189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '267913fe03c7dd8130e03f45d0d39a3c') in 0.025826 seconds
+  Import took 0.028865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop05.fbx
+  artifactKey: Guid(eba7ae4fc8fee3c4aa1f010dcbb5b75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop05.fbx using Guid(eba7ae4fc8fee3c4aa1f010dcbb5b75c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4676c4eba6bb512a52bd0e34e8a88620') in 0.030211 seconds
+  Import took 0.033601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop07Snow.fbx
+  artifactKey: Guid(c62b070f52c248f44a9ac0db51c86eeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop07Snow.fbx using Guid(c62b070f52c248f44a9ac0db51c86eeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2bb8360df352b042e83d162f30d1d7') in 0.039167 seconds
+  Import took 0.042303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence17.fbx
+  artifactKey: Guid(ed207cf415d0ada489a96085bc0164df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence17.fbx using Guid(ed207cf415d0ada489a96085bc0164df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '114a654cfe38af5aec9b90ddd05a438f') in 0.024621 seconds
+  Import took 0.028085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_Landscape.fbx
+  artifactKey: Guid(60ce7e5ec24f270419bbfcf81dfe890e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_Landscape.fbx using Guid(60ce7e5ec24f270419bbfcf81dfe890e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44f0c0143c62e198e7264bebc49b9979') in 0.031361 seconds
+  Import took 0.034508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence02.fbx
+  artifactKey: Guid(25302bcd2e1e67042a5a9de4cdf9567a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence02.fbx using Guid(25302bcd2e1e67042a5a9de4cdf9567a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf493a41c44449faca526749fc77b2d') in 0.028823 seconds
+  Import took 0.032721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence07.fbx
+  artifactKey: Guid(2f561445b252e29448c636744f7a915c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence07.fbx using Guid(2f561445b252e29448c636744f7a915c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '513c1003346e804db84a73339a291094') in 0.027214 seconds
+  Import took 0.030684 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree03.fbx
+  artifactKey: Guid(75ca08a61bb8a58449a4cbd291a2994a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree03.fbx using Guid(75ca08a61bb8a58449a4cbd291a2994a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f522ff99be1ee60383952c9b141ef7') in 0.063065 seconds
+  Import took 0.066146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop02.fbx
+  artifactKey: Guid(d2e9571cfd3e3d1469f84657aa7b581f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop02.fbx using Guid(d2e9571cfd3e3d1469f84657aa7b581f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd450ad4c4641f3e4c3fe7c963a4e6a11') in 0.042560 seconds
+  Import took 0.046046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree05.fbx
+  artifactKey: Guid(30343e480d24dc74bb73e981a659b8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree05.fbx using Guid(30343e480d24dc74bb73e981a659b8b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484bfc2eb6814a0ccca11a95495195a5') in 0.031125 seconds
+  Import took 0.034242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence21.fbx
+  artifactKey: Guid(ab74f4a7bff859d4ea462808bb1aa725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence21.fbx using Guid(ab74f4a7bff859d4ea462808bb1aa725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb147129632d771c466ca458f2a63dcf') in 0.028831 seconds
+  Import took 0.032501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence12.fbx
+  artifactKey: Guid(9afcb993c5c90a44bb4e932ffd1e44be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence12.fbx using Guid(9afcb993c5c90a44bb4e932ffd1e44be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ea508a8d55b78c499114890a4abc12f') in 0.029453 seconds
+  Import took 0.033032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence13.fbx
+  artifactKey: Guid(240e409c18c0c7142a8bc002b4fffa46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence13.fbx using Guid(240e409c18c0c7142a8bc002b4fffa46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acd5333b9f3eb02aeb2a7cdcda7191d4') in 0.027794 seconds
+  Import took 0.030973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence16.fbx
+  artifactKey: Guid(8e9a36730bc5aaa449706a70341726ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence16.fbx using Guid(8e9a36730bc5aaa449706a70341726ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0494afe0dd6186c253f1e0e3674f9802') in 0.027696 seconds
+  Import took 0.031014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall01.fbx
+  artifactKey: Guid(3a1f16b3a8c87c740924278265320251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall01.fbx using Guid(3a1f16b3a8c87c740924278265320251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e422c506c56abeb30a2b3b1af6403074') in 0.058773 seconds
+  Import took 0.061937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence05.fbx
+  artifactKey: Guid(c4061f1ea66d675409ac1f4af3341ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence05.fbx using Guid(c4061f1ea66d675409ac1f4af3341ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98009b28b9754d41537541232236fd27') in 0.025689 seconds
+  Import took 0.029175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall05.fbx
+  artifactKey: Guid(3583b4d390e42a74b9d86bb76bfaedb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeTall05.fbx using Guid(3583b4d390e42a74b9d86bb76bfaedb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18daca275c43e4e418a7b96e4532ae95') in 0.024658 seconds
+  Import took 0.027715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence09.fbx
+  artifactKey: Guid(cbdb72acb28cee441ac54af1195b8c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_fence09.fbx using Guid(cbdb72acb28cee441ac54af1195b8c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0acc8cff29c2382c2b878c629dbcb95') in 0.028007 seconds
+  Import took 0.031111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop04.fbx
+  artifactKey: Guid(1916000af14c51e40a54165709f80fae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop04.fbx using Guid(1916000af14c51e40a54165709f80fae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27e884b98c50d2bd07b9afe14f4a86f') in 0.027411 seconds
+  Import took 0.030568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop10Snow.fbx
+  artifactKey: Guid(c52347aa34213e949bf80670b6ac7739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop10Snow.fbx using Guid(c52347aa34213e949bf80670b6ac7739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d9f5b588d670da863bd97ba25123286') in 0.038358 seconds
+  Import took 0.041813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop03.fbx
+  artifactKey: Guid(28f3af6273b1bf7408763dc01a51f3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop03.fbx using Guid(28f3af6273b1bf7408763dc01a51f3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c62094664b0977ea179b0ff020cfaa5e') in 0.041544 seconds
+  Import took 0.044668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop06.fbx
+  artifactKey: Guid(192b6ef5cea4f7d4295638a211518b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_treeRoundTop06.fbx using Guid(192b6ef5cea4f7d4295638a211518b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd7e919e33a1e4c93eea1da7f7af076') in 0.028970 seconds
+  Import took 0.032205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree02.fbx
+  artifactKey: Guid(8ec2648e5aee77d4da1aaba8137ddb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/Low_Poly_Forest_tree02.fbx using Guid(8ec2648e5aee77d4da1aaba8137ddb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39901307c929f70c937a6b47518cd715') in 0.058564 seconds
+  Import took 0.062132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.109416 seconds.
+  path: Assets/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca59d64bf2a08deef749e8286789f903') in 0.015641 seconds
+  Import took 0.019273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.464794 seconds.
+  path: Assets/LevelTemplates/Another.asset
+  artifactKey: Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTemplates/Another.asset using Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50d29ac642ab81cc31f1e25d31dbe05b') in 0.016587 seconds
+  Import took 0.021358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/LevelTemplates/Level.asset
+  artifactKey: Guid(a2a0ca6d2069af049bd116e670108527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTemplates/Level.asset using Guid(a2a0ca6d2069af049bd116e670108527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58352220cbaee6882441c3802e304cbe') in 0.005430 seconds
+  Import took 0.008388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.486232 seconds.
+  path: Assets/LevelTiles/BaseEmpty.prefab
+  artifactKey: Guid(35da9776da2fd3849b7685aee46e6a2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseEmpty.prefab using Guid(35da9776da2fd3849b7685aee46e6a2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58d4db72d98e978fb38175e998851426') in 0.017503 seconds
+  Import took 0.021164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontLeft.prefab
+  artifactKey: Guid(af776057e3d2c31418163225289a29d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontLeft.prefab using Guid(af776057e3d2c31418163225289a29d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7053dbac4bdab2c9a6d13c5b513db03a') in 0.018297 seconds
+  Import took 0.021594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontLeftRight.prefab
+  artifactKey: Guid(6a2a93dd385a02a49bd6e4603399bb39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontLeftRight.prefab using Guid(6a2a93dd385a02a49bd6e4603399bb39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da0395a1ebc119a2f32f9166076dbd94') in 0.021751 seconds
+  Import took 0.025194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/LevelTiles/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fcb0f24d228c5246f8d204cc4310ac7') in 0.018498 seconds
+  Import took 0.021935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65dd575caa9fb466f5a9f79675acb390') in 0.020806 seconds
+  Import took 0.024135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/LevelTiles/BaseFenceFront.prefab
+  artifactKey: Guid(4b2de78b108113e49a301e06bfb9141a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront.prefab using Guid(4b2de78b108113e49a301e06bfb9141a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e8f3ddba638522372ea06cdfae4315') in 0.017000 seconds
+  Import took 0.020194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.740410 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f9c4edb31805566584ba173c5c8404') in 0.017908 seconds
+  Import took 0.022243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001110 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f9c4edb31805566584ba173c5c8404') in 0.017692 seconds
+  Import took 0.021351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.965903 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd309dec03f30915836a5febee6e3eeb2') in 0.018808 seconds
+  Import took 0.023209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.997724 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b561bbdcfd536b5a396ae597b2704b40') in 0.014744 seconds
+  Import took 0.018800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.984406 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc7ca2487e2a01944f07e950f678b7b8') in 0.014278 seconds
+  Import took 0.018354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.622393 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa4cc64363abbf7c60a94275af123f05') in 0.015341 seconds
+  Import took 0.019313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.600720 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0f0ed5078c83b82314b0e65e724d093') in 0.015730 seconds
+  Import took 0.019801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.813025 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc3e7723dcf2a8a90be1c007aca8fd88') in 0.015917 seconds
+  Import took 0.019897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.836653 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4faf8c34d468768f2bd7008e87d5356') in 0.015540 seconds
+  Import took 0.019849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.582940 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616969aaae16a916c8deec7025b1cf90') in 0.015057 seconds
+  Import took 0.019033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.679897 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dac198fbb83604881f6d9e352a284bac') in 0.024011 seconds
+  Import took 0.028022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.402071 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6230c33e6f32043c37ef1355dbfd99c3') in 0.017960 seconds
+  Import took 0.022249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.604842 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5fa7125ad2b19551e15bc4c0db547d9') in 0.016589 seconds
+  Import took 0.020637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.420875 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e8b1621c48bf16ac00d216144b0a2b') in 0.022388 seconds
+  Import took 0.027192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.434773 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2cf41f35ee44e31d41160969ff19ef6') in 0.014795 seconds
+  Import took 0.018709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.811730 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54e6e0c15463701633e994c72c36790b') in 0.015251 seconds
+  Import took 0.019345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.207399 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09314fba928679c999b819326a5f66f') in 0.022976 seconds
+  Import took 0.027068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.985357 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615bd36a25420df06fb74e6889e01de0') in 0.015712 seconds
+  Import took 0.019653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.991152 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6908cfaaef505e66426f3e8f111a5fd7') in 0.020469 seconds
+  Import took 0.024466 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.197636 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0decd5ea129684babc5567dd20a247c7') in 0.023344 seconds
+  Import took 0.027604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.655163 seconds.
+  path: Assets/Materials/Enemy.mat
+  artifactKey: Guid(1adf340b11122f24e899c042c440cbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Enemy.mat using Guid(1adf340b11122f24e899c042c440cbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '177507f06ae9c0807ab41922d2420486') in 0.019493 seconds
+  Import took 0.023186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Materials/Ground.mat
+  artifactKey: Guid(1643fdf61067b604bafc45525708138c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Ground.mat using Guid(1643fdf61067b604bafc45525708138c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5854fbeb44e2ebb1346681809db5407d') in 0.029564 seconds
+  Import took 0.032581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Materials/Player.mat
+  artifactKey: Guid(0ac76ff90e173f34f94db537313157bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Player.mat using Guid(0ac76ff90e173f34f94db537313157bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '847abe5036c2b802108fdf8b8387b3d3') in 0.014959 seconds
+  Import took 0.018075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Materials/Obstacles.mat
+  artifactKey: Guid(ed0fc5ca11cad2e41b25234615454821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Obstacles.mat using Guid(ed0fc5ca11cad2e41b25234615454821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '367e86a12a6858575fb8fdc1144aa634') in 0.022799 seconds
+  Import took 0.025927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Materials/Skybox_Mat.mat
+  artifactKey: Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Skybox_Mat.mat using Guid(0ffaa0b7117ba8c47a9d05ae701d4b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a69c50638b701a8559e3d9d96673b049') in 0.096790 seconds
+  Import took 0.099992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.385629 seconds.
+  path: Assets/LevelTemplates/Another.asset
+  artifactKey: Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTemplates/Another.asset using Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1714cf3cc46fa431e3717b1e3a8d57dc') in 0.011600 seconds
+  Import took 0.016679 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001373 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.679 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2280 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2953.
+Total: 1.978700 ms (FindLiveObjects: 0.267500 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.641300 ms  DeleteObjects: 0.012700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 110.741205 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence01.mat
+  artifactKey: Guid(56e41e3c1e74e8c4eb970d5bf95fe6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence01.mat using Guid(56e41e3c1e74e8c4eb970d5bf95fe6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0cd347d47c92292e8ecb4f172d019f') in 0.132836 seconds
+  Import took 0.136794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeBlob.psd
+  artifactKey: Guid(d0d1e8fb9e977a94da097f43bb8e1331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeBlob.psd using Guid(d0d1e8fb9e977a94da097f43bb8e1331) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01d1e94d789ca280fee26f88341e06f8') in 0.026507 seconds
+  Import took 0.029539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTop.png
+  artifactKey: Guid(94abcc41748440e499d4791be58edd9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTop.png using Guid(94abcc41748440e499d4791be58edd9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279193273770169dd0a6c7cc16056b6f') in 0.042035 seconds
+  Import took 0.045007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRound.png
+  artifactKey: Guid(fa462b0af7ed20743ae6c4bf5b56573f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRound.png using Guid(fa462b0af7ed20743ae6c4bf5b56573f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bd4316e3a40066054c844eed150c28') in 0.014865 seconds
+  Import took 0.018135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeBlob.mat
+  artifactKey: Guid(ef8decccb1029e54ebc3020996330100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeBlob.mat using Guid(ef8decccb1029e54ebc3020996330100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2541eb44e184236bcf788705d904426') in 0.022788 seconds
+  Import took 0.025929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTopSnow.psd
+  artifactKey: Guid(0466c06f0df7c5948b135601047e0c30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTopSnow.psd using Guid(0466c06f0df7c5948b135601047e0c30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4682b21db1f19631597deb498dd4767a') in 0.018662 seconds
+  Import took 0.021739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTop.mat
+  artifactKey: Guid(409a916496e460a4ba0b6e43dd8a4f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTop.mat using Guid(409a916496e460a4ba0b6e43dd8a4f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c7f702281f941795af6fe98daf1efe0') in 0.018843 seconds
+  Import took 0.021883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeTall.png
+  artifactKey: Guid(20c2af47fd2fd6c4e8cdb589337a56b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeTall.png using Guid(20c2af47fd2fd6c4e8cdb589337a56b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b2b6a0833e2981c283d2f0471cf393') in 0.016220 seconds
+  Import took 0.019287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/ground.psd
+  artifactKey: Guid(7215669f5ab638f429819ec20a513ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/ground.psd using Guid(7215669f5ab638f429819ec20a513ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9373d7b32bcf3252922cf559aeeb3e71') in 0.017671 seconds
+  Import took 0.020873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/hill.psd
+  artifactKey: Guid(fc33c97e029cd2c439ea37db803c06cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/hill.psd using Guid(fc33c97e029cd2c439ea37db803c06cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60710fb993af4963b2b785213f0d0efb') in 0.017248 seconds
+  Import took 0.020945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence01.png
+  artifactKey: Guid(43032d876014d444483b3b8a834b3376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence01.png using Guid(43032d876014d444483b3b8a834b3376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '190c72decf10d3a53c1f7321218de521') in 0.015673 seconds
+  Import took 0.019179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTopSnow.png
+  artifactKey: Guid(538d344c51411fe4ea7a924906eb0b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTopSnow.png using Guid(538d344c51411fe4ea7a924906eb0b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad546babaad7e103fec9e3fbb8b71379') in 0.012566 seconds
+  Import took 0.015958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRound.psd
+  artifactKey: Guid(2a31c950a48fbb34499b8bde48702e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRound.psd using Guid(2a31c950a48fbb34499b8bde48702e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b26825a4d7d221884850b828b192f23') in 0.012270 seconds
+  Import took 0.015238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence02.mat
+  artifactKey: Guid(f3ec7efd964ebfe44b4553dbf924c2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence02.mat using Guid(f3ec7efd964ebfe44b4553dbf924c2b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d53bcf065d5f5fe56811e7db1d68ee5') in 0.024744 seconds
+  Import took 0.027706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence02.png
+  artifactKey: Guid(8166cf00424b0af419d5e87c6b35dc72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence02.png using Guid(8166cf00424b0af419d5e87c6b35dc72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8fc65d7022cd0b616d1881226214d5') in 0.013289 seconds
+  Import took 0.016287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTop.psd
+  artifactKey: Guid(28536ee64fe7846449e705506248cbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeRoundTop.psd using Guid(28536ee64fe7846449e705506248cbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '812e2695f8521400cb6672211ac8ad6e') in 0.016731 seconds
+  Import took 0.020412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence01.psd
+  artifactKey: Guid(87c96d1f5004b294ab2cf9d795838636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/fence01.psd using Guid(87c96d1f5004b294ab2cf9d795838636) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a14e070c9cb40d0befba5ce59a9bfb') in 0.013870 seconds
+  Import took 0.017475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/TreeRound.mat
+  artifactKey: Guid(451c0ef34d371b943a63cc999caa28e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/TreeRound.mat using Guid(451c0ef34d371b943a63cc999caa28e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7b2f2617281d601a3f7b0702c503fa') in 0.017978 seconds
+  Import took 0.020973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/Ground.mat
+  artifactKey: Guid(decc95060f7082840bfd4a727f21794d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/Ground.mat using Guid(decc95060f7082840bfd4a727f21794d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49692d59103e5f69df54f29b68c0c40d') in 0.015697 seconds
+  Import took 0.018733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeBlob.png
+  artifactKey: Guid(2b245de1c75ea8a4aaafa29360908a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeBlob.png using Guid(2b245de1c75ea8a4aaafa29360908a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0919a2f09445162f2838908091034e24') in 0.006067 seconds
+  Import took 0.009149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/ground.png
+  artifactKey: Guid(009f102e2e1556a4fb90b525668463f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/ground.png using Guid(009f102e2e1556a4fb90b525668463f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564e4d0f6d95117bddcb271ea88366a9') in 0.009533 seconds
+  Import took 0.012590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/hill.png
+  artifactKey: Guid(0d908945b7f62704ba8412f0f172aeee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/hill.png using Guid(0d908945b7f62704ba8412f0f172aeee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d84f53b4c346ff798fba90162508527') in 0.011198 seconds
+  Import took 0.014306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/Hill.mat
+  artifactKey: Guid(a644a861f7622654b939d3a8f5759ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/Hill.mat using Guid(a644a861f7622654b939d3a8f5759ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4c203d0a876b9d5ff546b61e420f2fb') in 0.019537 seconds
+  Import took 0.022549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeTall.psd
+  artifactKey: Guid(a24c60024ba262547b8ef1c49088e396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeTall.psd using Guid(a24c60024ba262547b8ef1c49088e396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c2b8a2650461ba369f118c8bc1e7c3') in 0.010709 seconds
+  Import took 0.013652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeTal.mat
+  artifactKey: Guid(50f71db8bb16c8d41a9976d58bec560e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets_DevilsWorkshop/3D/Trees 1/tex/treeTal.mat using Guid(50f71db8bb16c8d41a9976d58bec560e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb2261a55c85805a941ad1d52d76bda') in 0.017301 seconds
+  Import took 0.020241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.818467 seconds.
+  path: Assets/LevelTiles/Fenced.prefab
+  artifactKey: Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Fenced.prefab using Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9133c92450f2033cfae099b3562cb385') in 0.026796 seconds
+  Import took 0.030906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.109326 seconds.
+  path: Assets/LevelTiles/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d3fc3f3b59b66535099e8ea8a64274') in 0.016780 seconds
+  Import took 0.020813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.099721 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98f85d8b6d00ae567cb91950c51cb48f') in 0.018326 seconds
+  Import took 0.022461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.638592 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0901b87e18f58a948b1e21468e84eaff') in 0.019391 seconds
+  Import took 0.023617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.622352 seconds.
+  path: Assets/LevelTiles/Forest 2.prefab
+  artifactKey: Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 2.prefab using Guid(d8f819c2a3fcd894f834a4aa20bf85ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb44210a08f14ed05fff7846a9617dfc') in 0.020228 seconds
+  Import took 0.024400 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.080083 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae1700f9d58337bba506c1d66d3da64') in 0.020936 seconds
+  Import took 0.024672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/LevelTemplates/Another.asset
+  artifactKey: Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTemplates/Another.asset using Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea611ce2bc868cf1d44cdeeddf6edcc4') in 0.014660 seconds
+  Import took 0.019630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.817892 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4301c1b1deb844ae43562318e1f3f201') in 0.020730 seconds
+  Import took 0.025029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.202240 seconds.
+  path: Assets/LevelTiles/Forest 1.prefab
+  artifactKey: Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest 1.prefab using Guid(56826ee53c3815146a47c5d62f6e7c00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76f1b021fe394cc38ca6ee101f17a14a') in 0.027895 seconds
+  Import took 0.032068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.238750 seconds.
+  path: Assets/LevelTiles/ForestFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45ccb95acfa8072848cbfd50152fe088') in 0.022291 seconds
+  Import took 0.026067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.659888 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '234216870b9b5277deb6133bf3343aac') in 0.041825 seconds
+  Import took 0.046652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.514757 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25280a2fac29f1fc7fe8b1bee482a51') in 0.020670 seconds
+  Import took 0.024764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.311892 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25d5239921bb114b7991e312acc40a75') in 0.023317 seconds
+  Import took 0.027709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.200555 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dfb4c74e83a260c6b802aa62b524ea4') in 0.021281 seconds
+  Import took 0.025601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.990487 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '217d78eb63bf07b1d3739af63e548dd9') in 0.021530 seconds
+  Import took 0.025927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.184165 seconds.
+  path: Assets/LevelTiles/BaseFenceFront 1.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFront 1.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bf96d7cdfa88124086253f5e3e2bec9') in 0.017114 seconds
+  Import took 0.021221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.690334 seconds.
+  path: Assets/LevelTiles/ForestFenceFront.prefab
+  artifactKey: Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFront.prefab using Guid(327f047ee2ac43c48898d16a31ac653c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b0f669f1bb24ad2e0a1dd764c2a30f') in 0.030911 seconds
+  Import took 0.035019 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.073768 seconds.
+  path: Assets/LevelTiles/Forest
+  artifactKey: Guid(e508ec71d680a2547bcdd0dcbc9bae98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest using Guid(e508ec71d680a2547bcdd0dcbc9bae98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329476bad746f4e404783a0e9b540a50') in 0.002109 seconds
+  Import took 0.005623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.444127 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71e3e0bd26b35315b2522dbf94ce255a') in 0.025139 seconds
+  Import took 0.029526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.541250 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc1f6ffac7dc05f64fab192a97cf098') in 0.024020 seconds
+  Import took 0.028559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.444220 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906c930e3786a5b7f5d26158a38dd5e4') in 0.019767 seconds
+  Import took 0.024126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.847275 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7deec5930000dfead93809bb4e079bac') in 0.021620 seconds
+  Import took 0.026023 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.407526 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eec82befcec13b6759d207d16cf1f307') in 0.020429 seconds
+  Import took 0.024753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.599619 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd36b597ac3a83e3ee0f0b9e57dec66') in 0.023022 seconds
+  Import took 0.027471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.585101 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c93c6ceaa3d450ac473851e77a2b39a7') in 0.019722 seconds
+  Import took 0.024377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.000561 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41951c930b9ceec225e1b0f0830769f2') in 0.017956 seconds
+  Import took 0.022355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.594216 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec25ac4b0102b511ead9297ac6ae4049') in 0.020327 seconds
+  Import took 0.024692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.792353 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5584522c11a61217f587ff5c8ffe072') in 0.019952 seconds
+  Import took 0.024291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.189471 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23a7bdbfa5df0ed4c8902b576b349684') in 0.021794 seconds
+  Import took 0.026496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.057189 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack 1.prefab
+  artifactKey: Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack 1.prefab using Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dea97b959a0d86e32298eb2f61675e40') in 0.023343 seconds
+  Import took 0.028032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.165802 seconds.
+  path: Assets/LevelTiles/0.prefab
+  artifactKey: Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/0.prefab using Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d9cb1bdebfb97ba62feeb52b4ee22cd') in 0.023007 seconds
+  Import took 0.027713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.269062 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontBack.prefab
+  artifactKey: Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontBack.prefab using Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87390760477b4a4a62152bfb2d2767a4') in 0.022689 seconds
+  Import took 0.027061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.363125 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontBack.prefab
+  artifactKey: Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontBack.prefab using Guid(6bf0479e5b28b4a439344ea74b492ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3010721e4f11f6e10a4f94c7cdfd4832') in 0.027505 seconds
+  Import took 0.031664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.273701 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontBack.prefab
+  artifactKey: Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontBack.prefab using Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef78fdbf4c2ee1ee46bdc28128cdf78c') in 0.017954 seconds
+  Import took 0.022429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.628596 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontBack.prefab
+  artifactKey: Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontBack.prefab using Guid(a6d676b88d1b01b4cb5be3c764234d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '138ed49c49c5f252be4b42a4e65275ff') in 0.019845 seconds
+  Import took 0.024137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.137796 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontLeft 1.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontLeft 1.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb914d05cbf791e2c19db62f39409ba') in 0.020073 seconds
+  Import took 0.023937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.055805 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b39ca764206bfe4aee4950938b7b5b3') in 0.029313 seconds
+  Import took 0.033293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.246161 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2702cb1f397394880b29d948837bcecb') in 0.021141 seconds
+  Import took 0.025376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.316753 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e239469e4e020d522820a60d3d0590') in 0.019639 seconds
+  Import took 0.024441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.653457 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6790b9c4d42ebfffd96df1d44c0e1f41') in 0.020374 seconds
+  Import took 0.024927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.636960 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4d9daf0f911ef2adbe792fcc7673ef0') in 0.018696 seconds
+  Import took 0.022921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.415182 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ffcb92423c13827be425b4eb37eb07a') in 0.020700 seconds
+  Import took 0.025404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.805005 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd6029a814d94140e4bb81cb4faa1d59') in 0.022358 seconds
+  Import took 0.027278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.784535 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66509f15025e165dadd1373e9b7a9698') in 0.021107 seconds
+  Import took 0.025499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.596628 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4357c702d1ad9bbab71fc8c90f89dfd4') in 0.019430 seconds
+  Import took 0.023987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.998213 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e01f54f28b8e462ee324ff19daee03') in 0.018846 seconds
+  Import took 0.023358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.401482 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01fc8bdefa2c1e66b1085569fde6c4dd') in 0.021233 seconds
+  Import took 0.025525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.597713 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8033bdd815abf403c1feb61a4d067332') in 0.020327 seconds
+  Import took 0.024538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.200778 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f7afd5834c5c62872af08b2ee272d29') in 0.019703 seconds
+  Import took 0.024156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.208182 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7a2dbec21cf2952555bb2b0b6b6e7f') in 0.021195 seconds
+  Import took 0.026090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.180154 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d10faf54e841783489b5dae14a88572') in 0.020480 seconds
+  Import took 0.025458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.997224 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15ad9ad37874df75f4c61c826f34a76') in 0.022437 seconds
+  Import took 0.027001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.220458 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8119f509aa54d905d2a671fb5a29572d') in 0.021621 seconds
+  Import took 0.025778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.183278 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e93f8f49ee8b77b98af8fca6d9b79a2') in 0.020221 seconds
+  Import took 0.024715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.202683 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9d9e03d0dab3ecee42bbc3e8fc43bc5') in 0.020183 seconds
+  Import took 0.024410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.776429 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7d08ff81426de2d9b2cbd3502861bb5') in 0.020210 seconds
+  Import took 0.024705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.792687 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a28adc9d1f072204aacc7b86fee30e9a') in 0.020553 seconds
+  Import took 0.025015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.263589 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeft.prefab
+  artifactKey: Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeft.prefab using Guid(b1311f7fdc2c40e478476b7c655958fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f7ecdf836e4ca8821cbfdb21bf7950') in 0.022600 seconds
+  Import took 0.027057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.516190 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7045df9c8a5ff2903ef0eee6b4b658e') in 0.018307 seconds
+  Import took 0.023016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.302534 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a7435e02189449ae30462b86ca57851') in 0.021116 seconds
+  Import took 0.025503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.204599 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e32e6ade42eb004b2c1f5237acd0401f') in 0.015691 seconds
+  Import took 0.019753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.394659 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '799fc15a5d7e0027d7f4635441ad0712') in 0.019995 seconds
+  Import took 0.024204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.602462 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1f8129f47ba0392e6e1987bb24516f') in 0.019530 seconds
+  Import took 0.023790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.006948 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e42308407c9de851d25b02500135f65') in 0.015543 seconds
+  Import took 0.019598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.401278 seconds.
+  path: Assets/LevelTiles/Forest/Forest.prefab
+  artifactKey: Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest.prefab using Guid(a8f9966c9e6abc442abc7dec7d607635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a3684ba5d33a52a35bc0d8b6e153bd') in 0.016621 seconds
+  Import took 0.020627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.767505 seconds.
+  path: Assets/LevelTiles/BaseFenceFrontLeftRight 1.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFenceFrontLeftRight 1.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b22a0e20f1b78efdb3de16500cae8845') in 0.017022 seconds
+  Import took 0.021245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.220803 seconds.
+  path: Assets/LevelTiles/BaseFeFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/BaseFeFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149c6ba5e42609f312147d4c13696cfd') in 0.016689 seconds
+  Import took 0.020836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.004244 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7bf27001819102b4df92836a3727642') in 0.020343 seconds
+  Import took 0.024384 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.468881 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca83e4a9384ef2ffd1348cc8dd52eecb') in 0.020451 seconds
+  Import took 0.025008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.384150 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '955e81a4523c76a52b90a357a45810c5') in 0.018985 seconds
+  Import took 0.023248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.796952 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd555118edc9a0e761bc40d468d9726f0') in 0.025392 seconds
+  Import took 0.030090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.648087 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a08c9dbc5d1afede6736a5500849e477') in 0.023294 seconds
+  Import took 0.027704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.392418 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a90d0e4333f37964c6aca41c6d10161') in 0.023652 seconds
+  Import took 0.028140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.817685 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43e1687b85d690052e3062a05ca55ca4') in 0.024805 seconds
+  Import took 0.029420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.395041 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2047d3a488455bfeec77e57f15b705fc') in 0.021581 seconds
+  Import took 0.026505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.602780 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea79dbfee046bcdbe6db64b7f10a99fb') in 0.021661 seconds
+  Import took 0.026083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.589458 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c28ad74aaf25cf7420f506c1715179b8') in 0.020392 seconds
+  Import took 0.025108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.590451 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58ea4e82db6a592b3950078322baa368') in 0.022821 seconds
+  Import took 0.027276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.209199 seconds.
+  path: Assets/LevelTiles/Forest/Bench.prefab
+  artifactKey: Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Bench.prefab using Guid(2ba2f214e0cbbe441b7ba24010d692d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b49d7811eebf9656a240c5b2a465abc6') in 0.023460 seconds
+  Import took 0.027766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.777769 seconds.
+  path: Assets/LevelTiles/Forest/Forest 3.prefab
+  artifactKey: Guid(fad0b03e32e178a4b971bcaf3763fc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest 3.prefab using Guid(fad0b03e32e178a4b971bcaf3763fc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '630a19541abc458901b44c2a60b7ef16') in 0.029145 seconds
+  Import took 0.033148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.857443 seconds.
+  path: Assets/LevelTiles/Forest/Forest 3.prefab
+  artifactKey: Guid(fad0b03e32e178a4b971bcaf3763fc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest 3.prefab using Guid(fad0b03e32e178a4b971bcaf3763fc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd530c7975df35b6c3cf3e30107412277') in 0.011508 seconds
+  Import took 0.015995 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.775826 seconds.
+  path: Assets/LevelTiles/ForestFenceFrontLeftRight.prefab
+  artifactKey: Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/ForestFenceFrontLeftRight.prefab using Guid(ba8cd0f837cbe9e4f97a8cdc8bf19e9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab1e27da1c0c5c4d7344828a61209f10') in 0.020986 seconds
+  Import took 0.025369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.994124 seconds.
+  path: Assets/LevelTiles/Forest/Forest 3.prefab
+  artifactKey: Guid(fad0b03e32e178a4b971bcaf3763fc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTiles/Forest/Forest 3.prefab using Guid(fad0b03e32e178a4b971bcaf3763fc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536e26141eafda99c0e4fc8d5180b7d2') in 0.019415 seconds
+  Import took 0.030792 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001476 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.704 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2280 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.7 MB.
+System memory in use after: 118.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2993.
+Total: 1.911600 ms (FindLiveObjects: 0.265600 ms CreateObjectMapping: 0.056200 ms MarkObjects: 1.575600 ms  DeleteObjects: 0.013600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2847.079026 seconds.
+  path: Assets/LevelTemplates/Another.asset
+  artifactKey: Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LevelTemplates/Another.asset using Guid(98bcc7bb8b941bb46b7e24c52169e36f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9381c233c140f7542bfb4001ec2fab1') in 0.028958 seconds
+  Import took 0.034891 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
