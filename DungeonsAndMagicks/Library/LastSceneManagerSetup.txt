@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/WaydsScene.unity
+=======
+- path: Assets/Scenes/Movement Prototyping.unity
+>>>>>>> Jack
   isLoaded: 1
   isActive: 1
   isSubScene: 0
