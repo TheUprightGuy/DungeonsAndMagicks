@@ -61,6 +61,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piece: {fileID: 4043861760080883374}
   icon: {fileID: 5122815784270657791}
+  element: {fileID: 0}
+  selected: 0
+  notSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 0.09743297, g: 1, b: 0, a: 1}
 --- !u!1 &5226748789459218267
 GameObject:
   m_ObjectHideFlags: 0

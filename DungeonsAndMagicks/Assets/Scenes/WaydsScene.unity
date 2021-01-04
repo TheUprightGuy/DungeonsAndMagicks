@@ -813,6 +813,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1090423306}
     m_Modifications:
+    - target: {fileID: 4948593204486600024, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6160925129933746925, guid: 8351509a9fec33a4e98fb92429dac267,
         type: 3}
       propertyPath: m_fontAsset

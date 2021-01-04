@@ -30,6 +30,7 @@ public class Ability : ScriptableObject
 {
     public GameObject projectilePrefab;
     public AbilityModifiers mods;
+    private AbilityModifiers startMods;
 
     // Projectile Arc - Math?
     int[] oddArray = { 0, -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
@@ -40,6 +41,7 @@ public class Ability : ScriptableObject
         mods.numProj = 1;
         mods.onHit.Clear();
         mods.onShoot = OnShootBehaviour.Normal;
+        startMods = mods;
     }
 
     public void Use(Transform _user)
@@ -98,5 +100,10 @@ public class Ability : ScriptableObject
         {
             mods.onShoot = _mods.onShoot;
         }
+    }
+
+    public void ResetMods()
+    {
+        mods = startMods;
     }
 }

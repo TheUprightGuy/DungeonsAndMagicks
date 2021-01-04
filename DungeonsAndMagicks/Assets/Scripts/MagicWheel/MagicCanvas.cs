@@ -23,11 +23,22 @@ public class MagicCanvas : MonoBehaviour
     public void ToggleRingInterface(bool _toggle)
     {
         ringInterface.gameObject.SetActive(_toggle);
+        ResetAbility();
     }
 
     public void ToggleRingInterface()
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
+        ResetAbility();
+    }
+
+    public void ResetAbility()
+    {
+        if (ringInterface.gameObject.activeSelf)
+        {
+            if (ringInterface.activeAbility)
+            ringInterface.activeAbility.ResetMods();
+        }
     }
 
     public void SetActiveAbility(Ability _ability)

@@ -8,13 +8,14 @@ public class RingInterface : MonoBehaviour
     [Header("Required Setup")]
     public RingMenu data;
     public OptionPrefab optionPrefab;
+    public GameObject modList;
+    public GameObject modPrefab;
     [Header("Highlight Options")]
     public Color activeColor = new Color(1f, 1f, 1f, 0.75f);
     public Color inactiveColor = new Color(1f, 1f, 1f, 0.5f);
 
     // Local Variables
     protected OptionPrefab[] pieces;
-    protected RingInterface Parent;
     private TMPro.TextMeshProUGUI elementText;
     private float gapWidthDegree = 1.0f;
 
