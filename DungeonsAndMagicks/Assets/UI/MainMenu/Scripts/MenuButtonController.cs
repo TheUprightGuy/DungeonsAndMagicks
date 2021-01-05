@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MenuButtonController : MonoBehaviour
 {
+    [Header("Required Fields")]
+    public MenuOptions menuOption;
+
     // Local Variables
     bool keyDown;
     List<MenuButton> buttons = new List<MenuButton>();
@@ -11,17 +14,9 @@ public class MenuButtonController : MonoBehaviour
     [HideInInspector] public int index;
     [HideInInspector] public AudioSource audioSource;
 
-    #region Singleton&Setup
-    public static MenuButtonController instance;
+    #region Setup
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.LogError("More than one MenuButtonController exists!");
-            Destroy(this.gameObject);
-        }
-
-        instance = this;
         audioSource = GetComponent<AudioSource>();
         foreach(MenuButton n in transform.GetComponentsInChildren<MenuButton>())
         {
@@ -30,13 +25,25 @@ public class MenuButtonController : MonoBehaviour
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].thisIndex = i; 
+            buttons[i].thisIndex = i;
+            buttons[i].menuButtonController = this;
+            buttons[i].animatorFunctions.menuButtonController = this;
         }
 
         index = 0;
         maxIndex = buttons.Count - 1;
     }
-    #endregion Singleton&Setup
+    #endregion Setup
+
+    private void Start()
+    {
+        CanvasController.instance.toggleMenuOption += ToggleMenuOption;
+    }
+
+    private void OnDestroy()
+    {
+        CanvasController.instance.toggleMenuOption -= ToggleMenuOption;
+    }
 
     private void Update()
     {
@@ -58,6 +65,18 @@ public class MenuButtonController : MonoBehaviour
         else
         {
             keyDown = false;
+        }
+    }
+
+    public void ToggleMenuOption(MenuOptions _menuOption)
+    {
+        if (menuOption == _menuOption)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -5,20 +5,18 @@ using UnityEngine;
 public class MenuButton : MonoBehaviour
 {
     // Local Variables
-    MenuButtonController menuButtonController;
+    [HideInInspector] public MenuButtonController menuButtonController;
     [HideInInspector] public Animator animator;
     [HideInInspector] public AnimatorFunctions animatorFunctions;
     [HideInInspector] public int thisIndex;
+
+    public MenuOptions menuOptions;
 
     #region Setup
     private void Awake()
     {
         animator = GetComponent<Animator>();
         animatorFunctions = GetComponent<AnimatorFunctions>();
-    }
-    private void Start()
-    {
-        menuButtonController = MenuButtonController.instance;
     }
     #endregion Setup
 
@@ -28,9 +26,10 @@ public class MenuButton : MonoBehaviour
         {
             animator.SetBool("Selected", true);
 
-            if (Input.GetAxis("Submit") == 1)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 animator.SetBool("Pressed", true);
+                CanvasController.instance.ToggleMenuOption(menuOptions);
             }
             else if (animator.GetBool("Pressed"))
             {
