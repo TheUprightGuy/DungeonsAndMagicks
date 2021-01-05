@@ -11,7 +11,8 @@ public class OptionPrefab : MonoBehaviour
     public bool selected;
     public Color notSelectedColor;
     public Color selectedColor;
-    [HideInInspector] public RingInterface parent;
+    //[HideInInspector]
+    public RingInterface parent;
 
     private void OnEnable()
     {
@@ -28,9 +29,11 @@ public class OptionPrefab : MonoBehaviour
         {
             _ability.AddMods(element.modifiers);
             icon.color = selectedColor;
-            GameObject mod = Instantiate(parent.modPrefab);
-            //parent.modList
+            parent.modList.CreateMod(icon, parent.modPrefab);
+
             selected = true;
         }
+
+        MagicCanvas.instance.NextRing();
     }
 }

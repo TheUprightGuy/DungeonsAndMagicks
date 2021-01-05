@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagicCanvas : MonoBehaviour
 {
     public static MagicCanvas instance;
-    private RingInterface ringInterface;
+    [HideInInspector] public RingInterface ringInterface;
     private void Awake()
     {
         if (instance != null)
@@ -43,6 +43,16 @@ public class MagicCanvas : MonoBehaviour
 
     public void SetActiveAbility(Ability _ability)
     {
-        ringInterface.activeAbility = _ability;
+        ringInterface.SetActiveAbility(_ability);
+        ringInterface.CreateRing(0);
+    }
+
+    public void NextRing()
+    {
+        if (!ringInterface.NextRing())
+        {
+            ringInterface.currentData = 0;
+            ToggleRingInterface();
+        }
     }
 }

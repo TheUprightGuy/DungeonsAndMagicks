@@ -32,6 +32,8 @@ public class Ability : ScriptableObject
     public AbilityModifiers mods;
     private AbilityModifiers startMods;
 
+    public List<RingMenu> modRings;
+
     // Projectile Arc - Math?
     int[] oddArray = { 0, -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
     int[] evenArray = { -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
