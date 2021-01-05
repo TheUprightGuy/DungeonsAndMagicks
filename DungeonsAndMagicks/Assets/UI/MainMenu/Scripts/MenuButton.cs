@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class MenuButton : MonoBehaviour
+public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     // Local Variables
     [HideInInspector] public MenuButtonController menuButtonController;
@@ -20,7 +21,7 @@ public class MenuButton : MonoBehaviour
     }
     #endregion Setup
 
-    private void Update()
+    public virtual void Update()
     {
         if (menuButtonController.index == thisIndex)
         {
@@ -28,17 +29,32 @@ public class MenuButton : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                animator.SetBool("Pressed", true);
+                animator.SetTrigger("Pressed");
                 CanvasController.instance.ToggleMenuOption(menuOptions);
-            }
-            else if (animator.GetBool("Pressed"))
-            {
-                animator.SetBool("Pressed", false);
             }
         }
         else
         {
             animator.SetBool("Selected", false);
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        menuButtonController.index = thisIndex;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (menuButtonController.index == thisIndex)
+        {
+            menuButtonController.index = -1;
+        }
+    }
+
+    public virtual void OnPointerDown(PointerEventData eventData)
+    {
+        animator.SetTrigger("Pressed");
+        CanvasController.instance.ToggleMenuOption(menuOptions);
     }
 }

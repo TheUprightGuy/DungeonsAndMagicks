@@ -22,6 +22,10 @@ public class MenuButtonController : MonoBehaviour
         {
             buttons.Add(n);
         }
+        foreach (ToggleButton n in transform.GetComponentsInChildren<ToggleButton>())
+        {
+            n.animatorFunctions.menuButtonController = this;
+        }
 
         for (int i = 0; i < buttons.Count; i++)
         {
@@ -30,7 +34,7 @@ public class MenuButtonController : MonoBehaviour
             buttons[i].animatorFunctions.menuButtonController = this;
         }
 
-        index = 0;
+        index = -1;
         maxIndex = buttons.Count - 1;
     }
     #endregion Setup
