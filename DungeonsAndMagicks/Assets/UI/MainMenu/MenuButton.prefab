@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: N E W  G A M E
+  m_text: NEW GAME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29c13d8f89925b9448cc3fca2e5db0c1, type: 2}
   m_sharedMaterial: {fileID: 4417904475864566122, guid: 29c13d8f89925b9448cc3fca2e5db0c1,
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 12
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614211f6f7fcda84093b8eebb497f690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disableOnce: 0
 --- !u!1 &8700617874003506701
 GameObject:
   m_ObjectHideFlags: 0

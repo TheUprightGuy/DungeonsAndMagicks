@@ -4,39 +4,48 @@ using UnityEngine;
 
 public class MenuButtonController : MonoBehaviour
 {
+    [Header("Required Fields")]
+    public MenuOptions menuOption;
+
     // Local Variables
     bool keyDown;
     List<MenuButton> buttons = new List<MenuButton>();
     private int maxIndex;
     [HideInInspector] public int index;
-    [HideInInspector] public AudioSource audioSource;
 
-    #region Singleton&Setup
-    public static MenuButtonController instance;
+    #region Setup
     private void Awake()
     {
-        if (instance != null)
-        {
-            Debug.LogError("More than one MenuButtonController exists!");
-            Destroy(this.gameObject);
-        }
-
-        instance = this;
-        audioSource = GetComponent<AudioSource>();
         foreach(MenuButton n in transform.GetComponentsInChildren<MenuButton>())
         {
             buttons.Add(n);
         }
+        foreach (ToggleButton n in transform.GetComponentsInChildren<ToggleButton>())
+        {
+            n.animatorFunctions.menuButtonController = this;
+        }
 
         for (int i = 0; i < buttons.Count; i++)
         {
-            buttons[i].thisIndex = i; 
+            buttons[i].thisIndex = i;
+            buttons[i].menuButtonController = this;
+            buttons[i].animatorFunctions.menuButtonController = this;
         }
 
-        index = 0;
+        index = -1;
         maxIndex = buttons.Count - 1;
     }
-    #endregion Singleton&Setup
+    #endregion Setup
+
+    private void Start()
+    {
+        CanvasController.instance.toggleMenuOption += ToggleMenuOption;
+    }
+
+    private void OnDestroy()
+    {
+        CanvasController.instance.toggleMenuOption -= ToggleMenuOption;
+    }
 
     private void Update()
     {
@@ -58,6 +67,18 @@ public class MenuButtonController : MonoBehaviour
         else
         {
             keyDown = false;
+        }
+    }
+
+    public void ToggleMenuOption(MenuOptions _menuOption)
+    {
+        if (menuOption == _menuOption)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class AnimatorFunctions : MonoBehaviour
 {
-    MenuButtonController menuButtonController;
+    [HideInInspector] public MenuButtonController menuButtonController;
 
-    private void Start()
+    public void PlaySound(AudioClip _sound)
     {
-        menuButtonController = MenuButtonController.instance;
-    }
-
-    void PlaySound(AudioClip _sound)
-    {
-        menuButtonController.audioSource.Stop();
-        menuButtonController.audioSource.PlayOneShot(_sound);
+        CanvasController.instance.audioSource.PlayOneShot(_sound);
     }
 }
