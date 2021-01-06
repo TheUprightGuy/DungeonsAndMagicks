@@ -30,6 +30,7 @@ public class ResolutionOption : MonoBehaviour
     public void SetSettings()
     {
         resolution = settings.resolution;
+        UpdateText();
     }
 
     public void IncreaseResolution()

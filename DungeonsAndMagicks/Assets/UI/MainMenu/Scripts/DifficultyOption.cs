@@ -31,6 +31,7 @@ public class DifficultyOption : MonoBehaviour
     public void SetSettings()
     {
         difficulty = settings.difficulty;
+        UpdateText();
     }
 
     public void IncreaseDifficulty()
