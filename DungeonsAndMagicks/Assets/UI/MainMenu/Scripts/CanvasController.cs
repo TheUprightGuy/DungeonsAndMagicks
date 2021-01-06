@@ -28,11 +28,17 @@ public class CanvasController : MonoBehaviour
             Destroy(this.gameObject);
         }
         instance = this;
+        audioSource = GetComponent<AudioSource>();
     }
     #endregion Singleton
 
-    public MenuOptions menu = MenuOptions.Main;
-    public MenuOptions prevMenu;
+    [HideInInspector] public MenuOptions menu = MenuOptions.Main;
+    [HideInInspector] public MenuOptions prevMenu;
+    [HideInInspector] public AudioSource audioSource;
+
+    [Header("Game Settings")]
+    public GameSettings gameSettings;
+    public GameSettings defaultSettings;
 
     private void Start()
     {
@@ -75,6 +81,15 @@ public class CanvasController : MonoBehaviour
                 }
                 break;
             }
+        }
+    }
+
+    public Action setSettings;
+    public void SetSettings()
+    {
+        if (setSettings != null)
+        {
+            setSettings();
         }
     }
 }

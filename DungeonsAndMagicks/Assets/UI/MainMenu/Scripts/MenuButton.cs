@@ -55,6 +55,12 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public virtual void OnPointerDown(PointerEventData eventData)
     {
         animator.SetTrigger("Pressed");
+        Invoke("ChangeMenu", 0.15f);
+    }
+
+    public void ChangeMenu()
+    {
         CanvasController.instance.ToggleMenuOption(menuOptions);
+
     }
 }

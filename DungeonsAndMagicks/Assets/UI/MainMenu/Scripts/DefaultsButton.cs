@@ -5,6 +5,15 @@ using UnityEngine.EventSystems;
 
 public class DefaultsButton : MenuButton, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
+    private GameSettings gameSettings;
+    private GameSettings defaults;
+
+    private void Start()
+    {
+        gameSettings = CanvasController.instance.gameSettings;
+        defaults = CanvasController.instance.defaultSettings;
+    }
+
     public override void Update()
     {
         if (menuButtonController.index == thisIndex)
@@ -31,6 +40,38 @@ public class DefaultsButton : MenuButton, IPointerEnterHandler, IPointerExitHand
 
     public void ResetDefaults()
     {
+        switch(menuOptions)
+        {
+            case MenuOptions.Game:
+            {
+                gameSettings.difficulty = defaults.difficulty;
+                // Language
+                break;
+            }
+            case MenuOptions.Audio:
+            {
+                gameSettings.masterVolume = defaults.masterVolume;
+                gameSettings.soundVolume = defaults.soundVolume;
+                gameSettings.musicVolume = defaults.musicVolume;
+                gameSettings.subtitles = defaults.subtitles;
+                break;
+            }
+            case MenuOptions.Video:
+            {
+                gameSettings.resolution = defaults.resolution;
+                gameSettings.fullScreen = defaults.fullScreen;
+                break;
+            }
+            case MenuOptions.Controls:
+            {
+                // Keybindings
+                break;
+            }
+            default:
+                break;
+        }
+
         Debug.Log("Reset " + menuOptions.ToString() + " options to defaults.");
+        CanvasController.instance.SetSettings();
     }
 }

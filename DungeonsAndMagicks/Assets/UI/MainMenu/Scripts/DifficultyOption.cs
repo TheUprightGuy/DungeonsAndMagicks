@@ -13,6 +13,25 @@ public class DifficultyOption : MonoBehaviour
 {
     public Difficulty difficulty;
     public TMPro.TextMeshProUGUI text;
+    private GameSettings settings;
+
+    private void Start()
+    {
+        settings = CanvasController.instance.gameSettings;
+        SetSettings();
+
+        CanvasController.instance.setSettings += SetSettings;
+    }
+
+    private void OnDestroy()
+    {
+        CanvasController.instance.setSettings -= SetSettings;
+    }
+
+    public void SetSettings()
+    {
+        difficulty = settings.difficulty;
+    }
 
     public void IncreaseDifficulty()
     {
@@ -21,6 +40,7 @@ public class DifficultyOption : MonoBehaviour
             difficulty++; 
         }
         UpdateText();
+        settings.difficulty = difficulty;
     }
 
     public void LowerDifficulty()
@@ -30,6 +50,7 @@ public class DifficultyOption : MonoBehaviour
             difficulty--;
         }
         UpdateText();
+        settings.difficulty = difficulty;
     }
 
     public void UpdateText()

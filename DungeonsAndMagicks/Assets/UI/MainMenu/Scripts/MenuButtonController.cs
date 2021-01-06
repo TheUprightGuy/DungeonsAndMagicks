@@ -12,12 +12,10 @@ public class MenuButtonController : MonoBehaviour
     List<MenuButton> buttons = new List<MenuButton>();
     private int maxIndex;
     [HideInInspector] public int index;
-    [HideInInspector] public AudioSource audioSource;
 
     #region Setup
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         foreach(MenuButton n in transform.GetComponentsInChildren<MenuButton>())
         {
             buttons.Add(n);
