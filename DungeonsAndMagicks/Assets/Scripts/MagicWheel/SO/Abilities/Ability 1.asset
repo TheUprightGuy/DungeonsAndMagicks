@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   mods:
     numProj: 1
-    onHit: 0200000001000000
+    onHit: 
     onShoot: 0
   modRings:
   - {fileID: 11400000, guid: baa09af20cbfa554f99acead084453d9, type: 2}

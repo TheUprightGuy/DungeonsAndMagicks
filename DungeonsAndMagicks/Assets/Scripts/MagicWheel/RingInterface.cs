@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RingInterface : MonoBehaviour
 {
@@ -14,19 +15,16 @@ public class RingInterface : MonoBehaviour
     [Header("Highlight Options")]
     public Color activeColor = new Color(1f, 1f, 1f, 0.75f);
     public Color inactiveColor = new Color(1f, 1f, 1f, 0.5f);
-
+    [Header("Mod Display")]
+    public TMPro.TextMeshProUGUI elementName;
+    public TMPro.TextMeshProUGUI elementDescription;
+    public Image elementIcon;
     // Local Variables
     protected List<OptionPrefab> pieces;
-    private TMPro.TextMeshProUGUI elementText;
     private float gapWidthDegree = 1.0f;
 
     [Header("Temp")]
     public Ability activeAbility;
-
-    private void Awake()
-    {
-        elementText = GetComponent<TMPro.TextMeshProUGUI>();
-    }
 
     public void CreateRing(int _current)
     {
@@ -100,7 +98,10 @@ public class RingInterface : MonoBehaviour
         }
 
         // Update Centre Text w/ Element Description
-        elementText.SetText(pieces[activeElement].element.name);
+        elementName.SetText(pieces[activeElement].element.name);
+        // temp
+        elementDescription.SetText(pieces[activeElement].element.name);
+        elementIcon.sprite = pieces[activeElement].element.icon;
 
         // Clicked Element
         if (Input.GetMouseButtonDown(0))
