@@ -99,8 +99,7 @@ public class RingInterface : MonoBehaviour
 
         // Update Centre Text w/ Element Description
         elementName.SetText(pieces[activeElement].element.name);
-        // temp
-        elementDescription.SetText(pieces[activeElement].element.name);
+        elementDescription.SetText(pieces[activeElement].element.description);
         elementIcon.sprite = pieces[activeElement].element.icon;
 
         // Clicked Element

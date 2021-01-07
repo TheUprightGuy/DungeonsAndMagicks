@@ -6,6 +6,7 @@ using UnityEngine;
 public class RingElement : ScriptableObject
 {
     new public string name;
+    public string description;
     public Sprite icon;
 
     public AbilityModifiers modifiers;
