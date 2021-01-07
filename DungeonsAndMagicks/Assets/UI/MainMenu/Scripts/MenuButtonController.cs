@@ -20,16 +20,11 @@ public class MenuButtonController : MonoBehaviour
         {
             buttons.Add(n);
         }
-        foreach (ToggleButton n in transform.GetComponentsInChildren<ToggleButton>())
-        {
-            n.animatorFunctions.menuButtonController = this;
-        }
 
         for (int i = 0; i < buttons.Count; i++)
         {
             buttons[i].thisIndex = i;
             buttons[i].menuButtonController = this;
-            buttons[i].animatorFunctions.menuButtonController = this;
         }
 
         index = -1;

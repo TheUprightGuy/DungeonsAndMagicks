@@ -13,7 +13,9 @@ public enum MenuOptions
     Video,
     Controls,
     Back,
-    Quit
+    Quit,
+    QuitToMenu,
+    Continue
 }
 
 public class CanvasController : MonoBehaviour
@@ -55,7 +57,17 @@ public class CanvasController : MonoBehaviour
     public void ToggleMenuOption(MenuOptions _option)
     {
         switch (_option)
-        {
+        { 
+            case MenuOptions.Continue:
+            {
+                CallbackHandler.instance.TogglePause();
+                break;
+            }
+            case MenuOptions.QuitToMenu:
+            {
+                CallbackHandler.instance.QuitToMenu();
+                break;
+            }
             case MenuOptions.Quit:
             {
                 Application.Quit();

@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51e5b28131b27b4bbd9753eef028bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuOption: 0
+  menuOption: 5
   index: 0
 --- !u!1 &356775188519547654
 GameObject:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51e5b28131b27b4bbd9753eef028bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuOption: 0
+  menuOption: 4
   index: 0
 --- !u!1 &670879002104049342
 GameObject:
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51e5b28131b27b4bbd9753eef028bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuOption: 0
+  menuOption: 3
   index: 0
 --- !u!1 &1474663935574150561
 GameObject:
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51e5b28131b27b4bbd9753eef028bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuOption: 0
+  menuOption: 2
   index: 0
 --- !u!1 &3370206197621488629
 GameObject:
@@ -4656,7 +4656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51e5b28131b27b4bbd9753eef028bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuOption: 0
+  menuOption: 6
   index: 0
 --- !u!1 &5775065684267038438
 GameObject:
@@ -8442,6 +8442,11 @@ PrefabInstance:
         type: 3}
       propertyPath: thisIndex
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030382183163191841, guid: 7c74de1e540a0e44b9b5d6bbda52e2bc,
+        type: 3}
+      propertyPath: menuOptions
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1030382183163191841, guid: 7c74de1e540a0e44b9b5d6bbda52e2bc,
         type: 3}
