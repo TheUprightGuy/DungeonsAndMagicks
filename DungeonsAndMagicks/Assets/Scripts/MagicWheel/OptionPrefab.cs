@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class OptionPrefab : MonoBehaviour
 {
+    [Header("Setup Fields")]
     public Image piece;
     public Image icon;
+    public Image backPlate;
+    [Header("Backplate Sprites")]
+    public Sprite notSelectedSprite;
+    public Sprite selectedSprite;
+
     [HideInInspector] public RingElement element;
-    public bool selected;
-    public Color notSelectedColor;
-    public Color selectedColor;
-    //[HideInInspector]
-    public RingInterface parent;
+    [HideInInspector] public bool selected;
+    [HideInInspector] public RingInterface parent;
 
     private void OnEnable()
     {
         selected = false;
-        icon.color = notSelectedColor;
     }
 
     public void Use(Ability _ability)
@@ -28,7 +30,6 @@ public class OptionPrefab : MonoBehaviour
         if (!selected)
         {
             _ability.AddMods(element.modifiers);
-            icon.color = selectedColor;
             parent.modList.CreateMod(icon, parent.modPrefab);
 
             selected = true;

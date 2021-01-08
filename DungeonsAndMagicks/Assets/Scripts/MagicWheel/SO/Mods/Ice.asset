@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ice
   description: Reduces enemies movement speed.
-  icon: {fileID: 21300000, guid: 17b4cae395e690541914026fd763f901, type: 3}
+  icon: {fileID: 21300000, guid: 14a7804fe00a6a94fa0e3fcf1eb04eb9, type: 3}
   modifiers:
     numProj: 1
     onHit: 01000000

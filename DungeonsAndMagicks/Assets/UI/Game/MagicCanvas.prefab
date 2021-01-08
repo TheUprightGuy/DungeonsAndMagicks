@@ -149,10 +149,40 @@ PrefabInstance:
       propertyPath: elementDescription
       value: 
       objectReference: {fileID: 4248686539066751542}
+    - target: {fileID: 1998887321375500532, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998887321375500532, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -398
+      objectReference: {fileID: 0}
     - target: {fileID: 4948593204486600024, guid: 8351509a9fec33a4e98fb92429dac267,
         type: 3}
       propertyPath: m_ChildControlWidth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563962596686442952, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563962596686442952, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212519262846624333, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212519262846624333, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -163.33728
       objectReference: {fileID: 0}
     - target: {fileID: 6226703017181146537, guid: 8351509a9fec33a4e98fb92429dac267,
         type: 3}
@@ -261,8 +291,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8748677498461231853, guid: 8351509a9fec33a4e98fb92429dac267,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748677498461231853, guid: 8351509a9fec33a4e98fb92429dac267,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 108
+      value: 44.66272
       objectReference: {fileID: 0}
     - target: {fileID: 8995057189772319394, guid: 8351509a9fec33a4e98fb92429dac267,
         type: 3}

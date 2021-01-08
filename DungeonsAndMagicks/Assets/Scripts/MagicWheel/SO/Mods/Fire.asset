@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Fire
   description: Deals damage over time.
-  icon: {fileID: 21300000, guid: be7fe1b92aecf114daaf63d2441a357c, type: 3}
+  icon: {fileID: 21300000, guid: 9a83001dab535ea48ae580c5f2843dd5, type: 3}
   modifiers:
     numProj: 0
     onHit: 02000000
