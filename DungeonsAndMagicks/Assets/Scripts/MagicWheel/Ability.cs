@@ -32,6 +32,9 @@ public class Ability : ScriptableObject
     public AbilityModifiers mods;
     private AbilityModifiers startMods;
 
+    // temp
+    public List<RingElement> modsApplied;
+
     public List<RingMenu> modRings;
 
     // Projectile Arc - Math?
@@ -107,5 +110,6 @@ public class Ability : ScriptableObject
     public void ResetMods()
     {
         mods = startMods;
+        modsApplied.Clear();
     }
 }

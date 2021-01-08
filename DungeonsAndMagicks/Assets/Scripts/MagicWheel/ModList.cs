@@ -7,10 +7,10 @@ public class ModList : MonoBehaviour
 {
     public List<GameObject> modIcons;
 
-    public void CreateMod(Image _icon, GameObject _n)
+    public void CreateMod(Sprite _icon, GameObject _n)
     {
         GameObject mod = Instantiate(_n, this.transform);
-        mod.GetComponent<Image>().sprite = _icon.sprite;
+        mod.GetComponent<Image>().sprite = _icon;
         modIcons.Add(mod);
     }
 

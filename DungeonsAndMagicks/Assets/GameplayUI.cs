@@ -4,40 +4,14 @@ using UnityEngine;
 
 public class GameplayUI : MonoBehaviour
 {
-    public List<AbilityUI> abilities;
-    public int activeAbility;
-
-    private void Update()
+    #region SetupIDs
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        AbilityUI[] temp = GetComponentsInChildren<AbilityUI>();
+        for (int i = 0; i < temp.Length; i++)
         {
-            activeAbility = 0;
-            ChooseAbility();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            activeAbility = 1;
-            ChooseAbility();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            activeAbility = 2;
-            ChooseAbility();
+            temp[i].abilityID = i;
         }
     }
-
-    public void ChooseAbility()
-    {
-        for (int i = 0; i < abilities.Count; i++)
-        {
-            if (i == activeAbility)
-            {
-                abilities[i].gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1.0f);
-            }
-            else
-            {
-                abilities[i].gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            }
-        }
-    }
+    #endregion SetupIDs
 }

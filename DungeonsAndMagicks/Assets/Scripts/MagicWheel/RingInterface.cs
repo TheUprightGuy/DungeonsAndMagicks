@@ -19,9 +19,7 @@ public class RingInterface : MonoBehaviour
     // Local Variables
     protected List<OptionPrefab> pieces;
     private float gapWidthDegree = 1.0f;
-
-    [Header("Temp")]
-    public Ability activeAbility;
+    [HideInInspector] public Ability activeAbility;
 
     public void CreateRing(int _current)
     {

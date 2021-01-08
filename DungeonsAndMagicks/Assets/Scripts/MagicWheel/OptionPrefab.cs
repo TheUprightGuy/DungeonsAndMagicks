@@ -29,12 +29,13 @@ public class OptionPrefab : MonoBehaviour
 
         if (!selected)
         {
+            _ability.modsApplied.Add(element);
             _ability.AddMods(element.modifiers);
-            parent.modList.CreateMod(icon, parent.modPrefab);
+            parent.modList.CreateMod(icon.sprite, parent.modPrefab);
 
             selected = true;
         }
-
+        CallbackHandler.instance.UpdateAbilityModList(_ability);
         MagicCanvas.instance.NextRing();
     }
 }

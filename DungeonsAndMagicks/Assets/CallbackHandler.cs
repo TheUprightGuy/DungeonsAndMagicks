@@ -28,6 +28,70 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<int> setActiveAbility;
+    public void SetActiveAbility(int _id)
+    {
+        if (setActiveAbility != null)
+        {
+            setActiveAbility(_id);
+        }
+    }
+
+    public Action toggleRingInterface;
+    public void ToggleRingInterface(Ability _ability)
+    {
+        if (toggleRingInterface != null)
+        {
+            toggleRingInterface();
+            SetRingAbility(_ability);
+        }
+    }
+
+    public Action<Ability> setRingAbility;
+    public void SetRingAbility(Ability _ability)
+    {
+        if (setRingAbility != null)
+        {
+            setRingAbility(_ability);
+        }
+    }
+
+    public Action<int, Ability> setAbilityReference;
+    public void SetAbilityReference(int _id, Ability _ability)
+    {
+        if (setAbilityReference != null)
+        {
+            setAbilityReference(_id, _ability);
+        }
+    }
+
+    public Action<float> updateHealth;
+    public void UpdateHealth(float _health)
+    {
+        if (updateHealth != null)
+        {
+            updateHealth(_health);
+        }
+    }
+
+    public Action<float> updateMana;
+    public void UpdateMana(float _mana)
+    {
+        if (updateMana != null)
+        {
+            updateMana(_mana);
+        }
+    }
+
+    public Action<Ability> updateAbilityModList;
+    public void UpdateAbilityModList(Ability _ability)
+    {
+        if (updateAbilityModList != null)
+        {
+            updateAbilityModList(_ability);
+        }
+    }
+
     public void QuitToMenu()
     {
         // SceneLoad here

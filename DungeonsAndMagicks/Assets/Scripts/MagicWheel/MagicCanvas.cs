@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MagicCanvas : MonoBehaviour
 {
-    public static MagicCanvas instance;
     [HideInInspector] public RingInterface ringInterface;
+    #region Singleton
+    public static MagicCanvas instance;
     private void Awake()
     {
         if (instance != null)
@@ -19,17 +20,28 @@ public class MagicCanvas : MonoBehaviour
 
         ToggleRingInterface(false);
     }
+    #endregion Singleton
+    #region Callbacks
+    private void Start()
+    {
+        CallbackHandler.instance.toggleRingInterface += ToggleRingInterface;
+        CallbackHandler.instance.setRingAbility += SetRingAbility;
+    }
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.toggleRingInterface -= ToggleRingInterface;
+        CallbackHandler.instance.setRingAbility -= SetRingAbility;
+    }
+    #endregion Callbacks
 
     public void ToggleRingInterface(bool _toggle)
     {
         ringInterface.gameObject.SetActive(_toggle);
-        ResetAbility();
     }
 
     public void ToggleRingInterface()
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
-        ResetAbility();
     }
 
     public void ResetAbility()
@@ -37,13 +49,16 @@ public class MagicCanvas : MonoBehaviour
         if (ringInterface.gameObject.activeSelf)
         {
             if (ringInterface.activeAbility)
-            ringInterface.activeAbility.ResetMods();
+            {
+                ringInterface.activeAbility.ResetMods();
+            }
         }
     }
 
-    public void SetActiveAbility(Ability _ability)
+    public void SetRingAbility(Ability _ability)
     {
         ringInterface.SetActiveAbility(_ability);
+        ResetAbility();
         ringInterface.CreateRing(0);
     }
 
