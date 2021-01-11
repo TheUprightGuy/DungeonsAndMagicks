@@ -14,6 +14,7 @@ public abstract class Ability : ScriptableObject
 {
     // temp
     [HideInInspector] public List<Mod> modsApplied;
+    [HideInInspector] public List<RingMenu> startRings;
 
     public List<RingMenu> modRings;
 

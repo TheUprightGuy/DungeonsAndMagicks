@@ -126,12 +126,23 @@ public class ProjectileAbility : Ability
     {
         mods = startMods;
         modsApplied.Clear();
+        modRings.Clear();
+        foreach (RingMenu n in startRings)
+        {
+            modRings.Add(n);
+        }
     }
+
     public override void StartUp()
     {
         mods.numProj = 1;
         mods.onHit.Clear();
         mods.onShoot = OnShootBehaviour.Normal;
         startMods = mods;
+        startRings.Clear();
+        foreach (RingMenu n in modRings)
+        {
+            startRings.Add(n);
+        }
     }
 }

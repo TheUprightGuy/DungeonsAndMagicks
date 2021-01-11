@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5984c733adf894bb7142cab72f197d, type: 3}
   m_Name: Movement
   m_EditorClassIdentifier: 
-  modsApplied:
-  - {fileID: 11400000, guid: 5584fa7aee9bdf64eb575254014c4f50, type: 2}
-  - {fileID: 11400000, guid: 5584fa7aee9bdf64eb575254014c4f50, type: 2}
+  modsApplied: []
+  startRings:
+  - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
   modRings:
   - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
   mods:

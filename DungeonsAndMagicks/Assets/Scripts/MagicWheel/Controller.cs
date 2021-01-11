@@ -13,6 +13,16 @@ public class Controller : MonoBehaviour
         Invoke("SetupAbilityReferences", 0.1f);
         // This needs to go
         abilities[0].StartUp();
+        abilities[1].StartUp();
+        abilities[2].StartUp();
+    }
+
+    private void OnApplicationQuit()
+    {
+        // required
+        abilities[0].ResetMods();
+        abilities[1].ResetMods();
+        abilities[2].ResetMods();
     }
 
     public void SetupAbilityReferences()

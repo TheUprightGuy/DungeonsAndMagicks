@@ -43,11 +43,21 @@ public class BuffAbility : Ability
     {
         mods = startMods;
         modsApplied.Clear();
+        modRings.Clear();
+        foreach (RingMenu n in startRings)
+        {
+            modRings.Add(n);
+        }
     }
     public override void StartUp()
     {
         mods.onBuffEnd.Clear();
         mods.onBuff = OnBuffBehaviour.Normal;
         startMods = mods;
+        startRings.Clear();
+        foreach (RingMenu n in modRings)
+        {
+            startRings.Add(n);
+        }
     }
 }

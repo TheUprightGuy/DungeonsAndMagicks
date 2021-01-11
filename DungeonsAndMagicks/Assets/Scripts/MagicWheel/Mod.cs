@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using Object = UnityEngine.Object;
 
 public enum ModType
 {
@@ -18,6 +21,8 @@ public class Mod : ScriptableObject
     public string description;
     public Sprite icon;
     public Element element;
+
+    public RingMenu followUp;
 
 
     [HideIfEnumValue("type", HideIf.NotEqual, (int)ModType.Projectile)]

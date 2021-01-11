@@ -5,6 +5,8 @@ using UnityEngine;
 public enum OnEndBehaviour
 {
     None,
+    Evasion,
+    Phasing
 }
 
 public enum OnMoveBehaviour
@@ -26,7 +28,7 @@ public class MovementAbility : Ability
 {
     public MovementAbilityModifiers mods;
     [HideInInspector] public MovementAbilityModifiers startMods;
-
+   
     public override void Use(Transform _user)
     {
         switch (mods.onMove)
@@ -75,6 +77,11 @@ public class MovementAbility : Ability
     {
         mods = startMods;
         modsApplied.Clear();
+        modRings.Clear();
+        foreach(RingMenu n in startRings)
+        {
+            modRings.Add(n);
+        }
     }
 
     public override void StartUp()
@@ -82,5 +89,10 @@ public class MovementAbility : Ability
         mods.onEnd.Clear();
         mods.onMove = OnMoveBehaviour.Normal;
         startMods = mods;
+        startRings.Clear();
+        foreach (RingMenu n in modRings)
+        {
+            startRings.Add(n);
+        }
     }
 }

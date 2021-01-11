@@ -30,6 +30,13 @@ public class OptionPrefab : MonoBehaviour
             _ability.AddMods(element);
             parent.modList.CreateMod(icon.sprite, parent.modPrefab);
 
+
+            if (element.followUp)
+            {
+                parent.data.Add(element.followUp);
+            }
+
+
             selected = true;
         }
         CallbackHandler.instance.UpdateAbilityModList(_ability);
