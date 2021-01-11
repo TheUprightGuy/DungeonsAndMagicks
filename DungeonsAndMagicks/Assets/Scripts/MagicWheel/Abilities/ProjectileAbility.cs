@@ -13,6 +13,7 @@ public enum OnHitBehaviour
 public enum OnShootBehaviour
 {
     Normal = 0,
+    Multiple,
     Volley,
     Line
 }
@@ -21,8 +22,8 @@ public enum OnShootBehaviour
 public struct ProjectileAbilityModifiers
 {
     public int numProj;
-    public List<OnHitBehaviour> onHit;
     public OnShootBehaviour onShoot;
+    public List<OnHitBehaviour> onHit;
 }
 
 [CreateAssetMenu(fileName = "ProjectileAbility", menuName = "Ability/ProjectileAbility", order = 1)]
@@ -37,14 +38,20 @@ public class ProjectileAbility : Ability
     int[] oddArray = { 0, -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
     int[] evenArray = { -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
 
-    // Volley array - math?
-    int[] volleyArray = { 0, -1, 1, -2, 2, -3, 3, -4, 4 };
-
     public override void Use(Transform _user)
     {
         switch (mods.onShoot)
         {
             case OnShootBehaviour.Normal:
+            {
+                Projectile temp = Instantiate(projectilePrefab, _user.transform.position + _user.transform.forward, Quaternion.identity).GetComponent<Projectile>();
+                temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f);
+
+                temp.Setup(mods);
+                    
+                break;
+            }
+            case OnShootBehaviour.Multiple:
             {
                 int[] angleArray = (mods.numProj % 2 == 0) ? evenArray : oddArray;
                 //transform.LookAt(hit.point);
@@ -77,15 +84,7 @@ public class ProjectileAbility : Ability
             }
             case OnShootBehaviour.Line:
             {
-                    StartCoroutine((Fire(_user, 0.1f)));
-                // Add minor delay between instantiate
-                /*for (int i = 0; i < mods.numProj; i++)
-                {
-                    Projectile temp = Instantiate(projectilePrefab, _user.transform.position, Quaternion.identity).GetComponent<Projectile>();
-                    temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f);
-                    temp.Setup(mods);
-                        Fire();
-                }*/
+                StartCoroutine((Fire(_user, 0.1f)));
                 break;
             }
         }
@@ -103,7 +102,7 @@ public class ProjectileAbility : Ability
         }
     }
 
-    public override void AddMods(RingElement _mods)
+    public override void AddMods(Mod _mods)
     {
         // Number of Projectiles (Additive)
         mods.numProj += _mods.projModifiers.numProj;

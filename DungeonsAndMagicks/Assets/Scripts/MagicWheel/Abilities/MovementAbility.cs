@@ -2,12 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum OnEndBehaviour
+{
+    None,
+}
+
+public enum OnMoveBehaviour
+{
+    Normal = 0,
+    Blink,
+    Dash,
+    Sprint
+}
+
 [System.Serializable]
 public struct MovementAbilityModifiers
 {
-    public int numProj;
-    public List<OnHitBehaviour> onHit;
-    public OnShootBehaviour onShoot;
+    public OnMoveBehaviour onMove;
+    public List<OnEndBehaviour> onEnd;
 }
 
 [CreateAssetMenu(fileName = "MovementAbility", menuName = "Ability/MovementAbility", order = 1)]
@@ -18,39 +30,62 @@ public class MovementAbility : Ability
 
     public override void Use(Transform _user)
     {
-
+        switch (mods.onMove)
+        {
+            case OnMoveBehaviour.Normal:
+            {
+                // Do Nothing?
+                break;
+            }
+            case OnMoveBehaviour.Blink:
+            {
+                // Teleport - temp
+                Vector3 pos = CharacterStats.instance.mousePos.MouseToWorldPos;
+                _user.position = new Vector3(pos.x, pos.y + _user.GetComponent<MeshFilter>().mesh.bounds.extents.y, pos.z);
+                break;
+            }
+            case OnMoveBehaviour.Dash:
+            {
+                // Force Move - Get from GameJam
+                break;
+            }
+            case OnMoveBehaviour.Sprint:
+            {
+                // Apply MS Buff - temp
+                CharacterStats.instance.UpdateMovementSpeed(2.0f, 3.0f);
+                break;
+            }
+        }
     }
 
-    public override void AddMods(RingElement _mods)
+    public override void AddMods(Mod _mods)
     {
-        // Number of Projectiles (Additive)
-        //mods.numProj += _mods.movementModifiers.numProj;
-
         // Hit Behaviours (Additive)
-        /*foreach (OnHitBehaviour n in mods.onHit)
+        foreach (OnEndBehaviour n in mods.onEnd)
         {
-            if (!mods.onHit.Contains(n))
+            if (!mods.onEnd.Contains(n))
             {
-                mods.onHit.Add(n);
+                mods.onEnd.Add(n);
             }
-        }*/
+        }
 
         // Shoot Behaviours (Override)
-        /*if ((int)_mods.projModifiers.onShoot > (int)mods.onShoot)
+        if ((int)_mods.movementModifiers.onMove > (int)mods.onMove)
         {
-            mods.onShoot = _mods.projModifiers.onShoot;
-        */
+            mods.onMove = _mods.movementModifiers.onMove;
+        }
     }
+
     public override void ResetMods()
     {
-       /* mods = startMods;
-        modsApplied.Clear();*/
+        mods = startMods;
+        modsApplied.Clear();
     }
+
     public override void StartUp()
     {
-        /*mods.numProj = 1;
-        mods.onHit.Clear();
-        mods.onShoot = OnShootBehaviour.Normal;
-        startMods = mods;*/
+        mods.onEnd.Clear();
+        mods.onMove = OnMoveBehaviour.Normal;
+        startMods = mods;
     }
 }

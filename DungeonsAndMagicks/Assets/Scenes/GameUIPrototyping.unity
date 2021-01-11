@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 518054692}
   - component: {fileID: 518054691}
   - component: {fileID: 518054696}
+  - component: {fileID: 518054698}
   - component: {fileID: 518054697}
   m_Layer: 0
   m_Name: Player
@@ -462,9 +463,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 11400000, guid: 6ca6f573f7d50754d85a097896e1712f, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2d1fba555e6507443b1fe516ac415172, type: 2}
+  - {fileID: 11400000, guid: 7dfe45504e4b398478c6b3a136c6a4ac, type: 2}
   activeIndex: 0
+--- !u!114 &518054698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518054690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5258f02f8131044adb756fdd35bd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePos: {fileID: 0}
+  movement: {fileID: 0}
+  movementSpeed: 0
+  movementMod: 0
+  movementDuration: 0
 --- !u!1 &534464505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6239850360166927885, guid: 2ba2f214e0cbbe441b7ba24010d692d9,
@@ -1314,73 +1332,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0345254, y: 1.2344427, z: 0.12075506}
   m_Center: {x: 0.40782565, y: 0.44528612, z: 0}
---- !u!1 &1884259512
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1884259514}
-  - component: {fileID: 1884259513}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1884259513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884259512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7278ca889e6a34c9980727585a575c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showS1: 0
-  s1: S1
-  s2: S2 instead
-  obj: {fileID: 0}
-  objIsNull: Shown as obj is null!
-  objIsNotNull: Shown as obj is not null!
-  testEnum: 0
-  isNotVal1: Val 1 not selected
-  isVal1: Val 1 selected
-  isNotVal2Or3: Neither Val 2 nor 3 are selected
-  isVal2Or3: Val 2 or 3 are selected
-  hide: 0
-  a:
-    a: 0
-    b: 
-  b:
-    a: 0
-    b: 
-  c:
-    a: 0
-    b: 
-  d:
-    a: 0
-    b: 
---- !u!4 &1884259514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884259512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1280, y: 720, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923357654 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6511460452850069439, guid: 2ba2f214e0cbbe441b7ba24010d692d9,

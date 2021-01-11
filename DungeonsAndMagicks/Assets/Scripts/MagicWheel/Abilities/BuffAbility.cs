@@ -2,12 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum OnBuffEndBehaviour
+{
+    None,
+}
+
+public enum OnBuffBehaviour
+{
+    Normal = 0,
+    Blink,
+    Dash,
+    Sprint
+}
+
 [System.Serializable]
 public struct BuffAbilityModifiers
 {
     public int numProj;
-    public List<OnHitBehaviour> onHit;
-    public OnShootBehaviour onShoot;
+    public OnBuffBehaviour onBuff;
+    public List<OnBuffEndBehaviour> onBuffEnd;
 }
 
 [CreateAssetMenu(fileName = "BuffAbility", menuName = "Ability/BuffAbility", order = 2)]
@@ -21,21 +34,20 @@ public class BuffAbility : Ability
 
     }
 
-    public override void AddMods(RingElement _mods)
+    public override void AddMods(Mod _mods)
     {
 
     }
 
     public override void ResetMods()
     {
-        /*mods = startMods;
-        modsApplied.Clear();*/
+        mods = startMods;
+        modsApplied.Clear();
     }
     public override void StartUp()
     {
-       /* mods.numProj = 1;
-        mods.onHit.Clear();
-        mods.onShoot = OnShootBehaviour.Normal;
-        startMods = mods;*/
+        mods.onBuffEnd.Clear();
+        mods.onBuff = OnBuffBehaviour.Normal;
+        startMods = mods;
     }
 }

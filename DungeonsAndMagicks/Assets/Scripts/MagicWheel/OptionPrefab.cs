@@ -13,7 +13,7 @@ public class OptionPrefab : MonoBehaviour
     public Sprite notSelectedSprite;
     public Sprite selectedSprite;
 
-    [HideInInspector] public RingElement element;
+    [HideInInspector] public Mod element;
     [HideInInspector] public bool selected;
     [HideInInspector] public RingInterface parent;
 
@@ -24,9 +24,6 @@ public class OptionPrefab : MonoBehaviour
 
     public void Use(Ability _ability)
     {
-        // Interface?
-        Debug.Log(element.name + " clicked.");
-
         if (!selected)
         {
             _ability.modsApplied.Add(element);

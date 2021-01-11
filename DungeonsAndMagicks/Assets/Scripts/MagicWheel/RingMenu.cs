@@ -6,5 +6,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RingMenu", menuName = "RingMenu/Ring", order = 1)]
 public class RingMenu : ScriptableObject
 {
-    public RingElement[] elements;
+    public Mod[] elements;
 }

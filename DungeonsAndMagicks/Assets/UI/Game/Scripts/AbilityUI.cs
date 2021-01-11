@@ -49,7 +49,7 @@ public class AbilityUI : MonoBehaviour
         if (ability == _ability)
         {
             modList.ClearIcons();
-            foreach (RingElement n in ability.modsApplied)
+            foreach (Mod n in ability.modsApplied)
             {
                 modList.CreateMod(n.icon, modPrefab);
             }
