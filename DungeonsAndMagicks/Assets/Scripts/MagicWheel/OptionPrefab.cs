@@ -30,7 +30,7 @@ public class OptionPrefab : MonoBehaviour
         if (!selected)
         {
             _ability.modsApplied.Add(element);
-            _ability.AddMods(element.modifiers);
+            _ability.AddMods(element);
             parent.modList.CreateMod(icon.sprite, parent.modPrefab);
 
             selected = true;

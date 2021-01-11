@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     Rigidbody rb;
-    AbilityModifiers mods;
+    ProjectileAbilityModifiers mods;
     public float speed;
     public float lifetime;
 
@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void Setup(AbilityModifiers _mods)
+    public void Setup(ProjectileAbilityModifiers _mods)
     {
         mods = _mods;
     }

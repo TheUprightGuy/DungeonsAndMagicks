@@ -1,0 +1,138 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum OnHitBehaviour
+{
+    None,
+    Chain,
+    Fork,
+    Explode
+}
+
+public enum OnShootBehaviour
+{
+    Normal = 0,
+    Volley,
+    Line
+}
+
+[System.Serializable]
+public struct ProjectileAbilityModifiers
+{
+    public int numProj;
+    public List<OnHitBehaviour> onHit;
+    public OnShootBehaviour onShoot;
+}
+
+[CreateAssetMenu(fileName = "ProjectileAbility", menuName = "Ability/ProjectileAbility", order = 1)]
+public class ProjectileAbility : Ability
+{
+    public ProjectileAbilityModifiers mods;
+    [HideInInspector] public ProjectileAbilityModifiers startMods;
+
+    public GameObject projectilePrefab;
+
+    // Projectile Arc - Math?
+    int[] oddArray = { 0, -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
+    int[] evenArray = { -10, 10, -20, 20, -30, 30, -40, 40, -50, 50 };
+
+    // Volley array - math?
+    int[] volleyArray = { 0, -1, 1, -2, 2, -3, 3, -4, 4 };
+
+    public override void Use(Transform _user)
+    {
+        switch (mods.onShoot)
+        {
+            case OnShootBehaviour.Normal:
+            {
+                int[] angleArray = (mods.numProj % 2 == 0) ? evenArray : oddArray;
+                //transform.LookAt(hit.point);
+
+                // Fan behaviour
+                for (int i = 0; i < mods.numProj; i++)
+                {
+                    Projectile temp = Instantiate(projectilePrefab, _user.transform.position + _user.transform.forward, Quaternion.identity).GetComponent<Projectile>();
+                    temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y + angleArray[i], 0.0f);
+
+                    temp.Setup(mods);
+                }
+                break;
+            }
+            case OnShootBehaviour.Volley:
+            {
+                // Volley behaviour
+                for (int i = 0; i < mods.numProj; i++)
+                {
+                    int space = Mathf.CeilToInt((float)((float)i / 2.0f));
+                    // Check if left or right
+                    int side = (i % 2 != 0) ? -1 * space : 1 * space;
+
+                    Projectile temp = Instantiate(projectilePrefab, _user.transform.position + _user.transform.forward + _user.transform.right * side, Quaternion.identity).GetComponent<Projectile>();              
+                    temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f); 
+
+                    temp.Setup(mods);
+                }
+                break;
+            }
+            case OnShootBehaviour.Line:
+            {
+                    StartCoroutine((Fire(_user, 0.1f)));
+                // Add minor delay between instantiate
+                /*for (int i = 0; i < mods.numProj; i++)
+                {
+                    Projectile temp = Instantiate(projectilePrefab, _user.transform.position, Quaternion.identity).GetComponent<Projectile>();
+                    temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f);
+                    temp.Setup(mods);
+                        Fire();
+                }*/
+                break;
+            }
+        }
+    }
+
+    IEnumerator Fire(Transform _user, float _delay)
+    {
+        // Add minor delay between instantiate
+        for (int i = 0; i < mods.numProj; i++)
+        {
+            Projectile temp = Instantiate(projectilePrefab, _user.transform.position, Quaternion.identity).GetComponent<Projectile>();
+            temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f);
+            temp.Setup(mods);
+            yield return new WaitForSeconds(_delay);
+        }
+    }
+
+    public override void AddMods(RingElement _mods)
+    {
+        // Number of Projectiles (Additive)
+        mods.numProj += _mods.projModifiers.numProj;
+
+        // Hit Behaviours (Additive)
+        foreach (OnHitBehaviour n in mods.onHit)
+        {
+            if (!mods.onHit.Contains(n))
+            {
+                mods.onHit.Add(n);
+            }
+        }
+
+        // Shoot Behaviours (Override)
+        if ((int)_mods.projModifiers.onShoot > (int)mods.onShoot)
+        {
+            mods.onShoot = _mods.projModifiers.onShoot;
+        }
+    }
+    public override void ResetMods()
+    {
+        mods = startMods;
+        modsApplied.Clear();
+    }
+    public override void StartUp()
+    {
+        mods.numProj = 1;
+        mods.onHit.Clear();
+        mods.onShoot = OnShootBehaviour.Normal;
+        startMods = mods;
+    }
+}
