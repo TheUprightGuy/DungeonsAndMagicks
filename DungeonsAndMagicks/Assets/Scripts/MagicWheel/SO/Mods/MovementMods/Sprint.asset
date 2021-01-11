@@ -23,8 +23,8 @@ MonoBehaviour:
     onHit: 
   buffModifiers:
     numProj: 0
-    onShoot: 0
-    onHit: 
+    onBuff: 0
+    onBuffEnd: 
   movementModifiers:
-    onMove: 3
+    onMove: 2
     onEnd: 

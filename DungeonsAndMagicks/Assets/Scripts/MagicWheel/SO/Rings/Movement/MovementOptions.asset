@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: MovementOptions
   m_EditorClassIdentifier: 
   elements:
-  - {fileID: 11400000, guid: 1491c1ad6efc16d4e922df7e783da520, type: 2}
   - {fileID: 11400000, guid: 5584fa7aee9bdf64eb575254014c4f50, type: 2}
   - {fileID: 11400000, guid: 0b1c7b848378cb549be2bfbad49354b5, type: 2}

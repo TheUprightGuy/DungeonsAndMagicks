@@ -11,7 +11,6 @@ public enum OnMoveBehaviour
 {
     Normal = 0,
     Blink,
-    Dash,
     Sprint
 }
 
@@ -44,11 +43,6 @@ public class MovementAbility : Ability
                 _user.position = new Vector3(pos.x, pos.y + _user.GetComponent<MeshFilter>().mesh.bounds.extents.y, pos.z);
                 break;
             }
-            case OnMoveBehaviour.Dash:
-            {
-                // Force Move - Get from GameJam
-                break;
-            }
             case OnMoveBehaviour.Sprint:
             {
                 // Apply MS Buff - temp
@@ -57,6 +51,7 @@ public class MovementAbility : Ability
             }
         }
     }
+
 
     public override void AddMods(Mod _mods)
     {
