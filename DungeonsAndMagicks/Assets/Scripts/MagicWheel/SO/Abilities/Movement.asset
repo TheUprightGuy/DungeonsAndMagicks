@@ -23,3 +23,5 @@ MonoBehaviour:
   startMods:
     onMove: 0
     onEnd: 
+  buffs:
+  - {fileID: 11400000, guid: 625d37152f3db704eba83f3585d3aee4, type: 2}

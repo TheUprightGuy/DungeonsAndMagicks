@@ -7,9 +7,11 @@ public class CharacterStats : MonoBehaviour
     [HideInInspector] public GetMouseInWorld mousePos;
     [HideInInspector] public CharacterMovement movement;
 
+    [Header("Player Base Stats")]
     public float movementSpeed;
+    [Header("Buffs")]
+    public List<Buff> buffs;
     public float movementMod;
-    public float movementDuration;
 
     #region Singleton
     public static CharacterStats instance;
@@ -32,29 +34,51 @@ public class CharacterStats : MonoBehaviour
 
     private void Update()
     {
-        // TEMP - WILL REPLACE WITH BUFF SYSTEM
-        if (movementDuration > 0)
+        // Update Buffs & Debuffs
+        for (int i = buffs.Count - 1; i >= 0; i--)
         {
-            movementDuration -= Time.deltaTime;
-        }
-        else
-        {
-            ResetMovementSpeed();
+            if (buffs[i].UpdateCount(Time.deltaTime))
+            {
+                CallbackHandler.instance.RemoveBuffFromUI(buffs[i]);
+                buffs.Remove(buffs[i]);
+            }
         }
     }
-
-    public void UpdateMovementSpeed(float _speed, float _duration)
+    
+    public void AddBuff(Buff _buff)
     {
-        // temp
-        movementMod = _speed;
-        movementDuration = _duration;
+        // Prune same type of buffs
+        for (int i = buffs.Count - 1; i >= 0; i--)
+        {
+            if (buffs[i].buffType == _buff.buffType)
+            {
+                CallbackHandler.instance.RemoveBuffFromUI(buffs[i]);
+                buffs.Remove(buffs[i]);
+            }
+        }
+        // Apply new buff
+        buffs.Add(_buff);
+        CallbackHandler.instance.AddBuffToUI(_buff);
+
+        CheckBuffs();
+    }
+
+    public void CheckBuffs()
+    {
+        CheckMSBuffs();
+    }
+
+    public void CheckMSBuffs()
+    {
+        movementMod = 1.0f;
+        // Check for MS Buff
+        for (int i = buffs.Count - 1; i >= 0; i--)
+        {
+            if (buffs[i].buffType == BuffType.Movement)
+            {
+                movementMod = buffs[i].movementModifiers.moveIncrease;
+            }
+        }
         movement.PlayerSpeed = movementSpeed * movementMod;
-    }
-
-    public void ResetMovementSpeed()
-    {
-        // temp
-        movement.PlayerSpeed = movementSpeed;
-        movementMod = 1;
     }
 }

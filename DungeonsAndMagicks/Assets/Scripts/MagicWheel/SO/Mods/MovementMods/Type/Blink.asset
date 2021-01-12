@@ -17,14 +17,16 @@ MonoBehaviour:
   description: Teleports instantly to the targeted location.
   icon: {fileID: 0}
   element: 0
+  followUp: {fileID: 0}
+  buff: {fileID: 11400000, guid: 05eb53bfc8e431047a2126aa2acbc50a, type: 2}
   projModifiers:
     numProj: 0
     onShoot: 0
     onHit: 
   buffModifiers:
     numProj: 0
-    onShoot: 0
-    onHit: 
+    onBuff: 0
+    onBuffEnd: 
   movementModifiers:
     onMove: 1
     onEnd: 

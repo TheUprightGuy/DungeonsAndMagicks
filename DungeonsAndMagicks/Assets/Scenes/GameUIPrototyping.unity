@@ -481,8 +481,8 @@ MonoBehaviour:
   mousePos: {fileID: 0}
   movement: {fileID: 0}
   movementSpeed: 0
+  buffs: []
   movementMod: 0
-  movementDuration: 0
 --- !u!1 &534464505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6239850360166927885, guid: 2ba2f214e0cbbe441b7ba24010d692d9,
@@ -1788,6 +1788,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3983907380744677593, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983907380744677593, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983907380744677593, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983907380744677593, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983907380744677593, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983907380744677593, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7529365785187390319, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.x

@@ -92,6 +92,23 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<Buff> addBuffToUI;
+    public void AddBuffToUI(Buff _buff)
+    {
+        if (addBuffToUI != null)
+        {
+            addBuffToUI(_buff);
+        }
+    }
+    public Action<Buff> removeBuffFromUI;
+    public void RemoveBuffFromUI(Buff _buff)
+    {
+        if (removeBuffFromUI != null)
+        {
+            removeBuffFromUI(_buff);
+        }
+    }
+
     public void QuitToMenu()
     {
         // SceneLoad here

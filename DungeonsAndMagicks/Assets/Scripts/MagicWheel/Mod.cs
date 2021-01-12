@@ -24,6 +24,9 @@ public class Mod : ScriptableObject
 
     public RingMenu followUp;
 
+    // temp
+    public Buff buff;
+
 
     [HideIfEnumValue("type", HideIf.NotEqual, (int)ModType.Projectile)]
     public ProjectileAbilityModifiers projModifiers;

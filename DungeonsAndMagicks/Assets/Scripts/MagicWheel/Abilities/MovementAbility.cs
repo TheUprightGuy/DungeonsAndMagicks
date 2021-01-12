@@ -28,6 +28,8 @@ public class MovementAbility : Ability
 {
     public MovementAbilityModifiers mods;
     [HideInInspector] public MovementAbilityModifiers startMods;
+
+    public List<Buff> buffs;
    
     public override void Use(Transform _user)
     {
@@ -43,12 +45,23 @@ public class MovementAbility : Ability
                 // Teleport - temp
                 Vector3 pos = CharacterStats.instance.mousePos.MouseToWorldPos;
                 _user.position = new Vector3(pos.x, pos.y + _user.GetComponent<MeshFilter>().mesh.bounds.extents.y, pos.z);
+                foreach (Buff n in buffs)
+                {
+                    Buff temp = Instantiate(n);
+                    n.StartUp();
+                    CharacterStats.instance.AddBuff(temp);
+                }
                 break;
             }
             case OnMoveBehaviour.Sprint:
             {
-                // Apply MS Buff - temp
-                CharacterStats.instance.UpdateMovementSpeed(2.0f, 3.0f);
+                // figuring out buff system
+                foreach (Buff n in buffs)
+                {
+                    Buff temp = Instantiate(n);
+                    n.StartUp();
+                    CharacterStats.instance.AddBuff(temp);
+                }
                 break;
             }
         }
@@ -66,10 +79,16 @@ public class MovementAbility : Ability
             }
         }
 
-        // Shoot Behaviours (Override)
+        // Move Behaviours (Override)
         if ((int)_mods.movementModifiers.onMove > (int)mods.onMove)
         {
             mods.onMove = _mods.movementModifiers.onMove;
+        }
+
+        // temp
+        if (_mods.buff)
+        {
+            buffs.Add(_mods.buff);
         }
     }
 
@@ -82,6 +101,7 @@ public class MovementAbility : Ability
         {
             modRings.Add(n);
         }
+        buffs.Clear();
     }
 
     public override void StartUp()
@@ -94,5 +114,6 @@ public class MovementAbility : Ability
         {
             startRings.Add(n);
         }
+        buffs.Clear();
     }
 }
