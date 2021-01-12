@@ -5,6 +5,8 @@ using UnityEngine;
 public enum BuffType
 {
     Movement = 0,
+    Phasing,
+    Dodge,
     Damage,
     Shield
 }

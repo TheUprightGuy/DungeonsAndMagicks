@@ -28,8 +28,6 @@ public class MovementAbility : Ability
 {
     public MovementAbilityModifiers mods;
     [HideInInspector] public MovementAbilityModifiers startMods;
-
-    public List<Buff> buffs;
    
     public override void Use(Transform _user)
     {
@@ -85,7 +83,7 @@ public class MovementAbility : Ability
             mods.onMove = _mods.movementModifiers.onMove;
         }
 
-        // temp
+        // Add Buffs if Any
         if (_mods.buff)
         {
             buffs.Add(_mods.buff);

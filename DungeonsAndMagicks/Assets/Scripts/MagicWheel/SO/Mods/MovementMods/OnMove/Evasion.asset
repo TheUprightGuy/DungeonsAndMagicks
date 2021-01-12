@@ -18,7 +18,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   element: 0
   followUp: {fileID: 0}
-  buff: {fileID: 0}
+  buff: {fileID: 11400000, guid: 6b5cd955b61934743b10b77011c9e7aa, type: 2}
   projModifiers:
     numProj: 0
     onShoot: 0

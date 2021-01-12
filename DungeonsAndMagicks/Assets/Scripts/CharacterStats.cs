@@ -41,6 +41,7 @@ public class CharacterStats : MonoBehaviour
             {
                 CallbackHandler.instance.RemoveBuffFromUI(buffs[i]);
                 buffs.Remove(buffs[i]);
+                CheckBuffs();
             }
         }
     }

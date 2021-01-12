@@ -31,12 +31,31 @@ public class BuffAbility : Ability
 
     public override void Use(Transform _user)
     {
-
+        // behaviours here
     }
 
     public override void AddMods(Mod _mods)
     {
+        // BuffEnd Behaviours (Additive)
+        foreach (OnBuffEndBehaviour n in mods.onBuffEnd)
+        {
+            if (!mods.onBuffEnd.Contains(n))
+            {
+                mods.onBuffEnd.Add(n);
+            }
+        }
 
+        // Buff Behaviours (Override)
+        if ((int)_mods.buffModifiers.onBuff > (int)mods.onBuff)
+        {
+            mods.onBuff = _mods.buffModifiers.onBuff;
+        }
+
+        // Add Buffs if Any
+        if (_mods.buff)
+        {
+            buffs.Add(_mods.buff);
+        }
     }
 
     public override void ResetMods()
@@ -48,7 +67,9 @@ public class BuffAbility : Ability
         {
             modRings.Add(n);
         }
+        buffs.Clear();
     }
+
     public override void StartUp()
     {
         mods.onBuffEnd.Clear();
@@ -59,5 +80,6 @@ public class BuffAbility : Ability
         {
             startRings.Add(n);
         }
+        buffs.Clear();
     }
 }

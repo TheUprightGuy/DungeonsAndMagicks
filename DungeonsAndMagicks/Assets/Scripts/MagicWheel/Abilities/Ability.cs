@@ -10,13 +10,24 @@ public enum Element
     Lightning
 }
 
+public enum AbilityType
+{
+    Projectile = 0,
+    Buff,
+    Movement
+}
+
+
 public abstract class Ability : ScriptableObject
 {
     // temp
     [HideInInspector] public List<Mod> modsApplied;
     [HideInInspector] public List<RingMenu> startRings;
 
+    public AbilityType type;
+
     public List<RingMenu> modRings;
+    public List<Buff> buffs;
 
     public abstract void StartUp();
 

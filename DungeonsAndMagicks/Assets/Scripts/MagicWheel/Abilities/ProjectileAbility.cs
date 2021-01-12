@@ -121,7 +121,14 @@ public class ProjectileAbility : Ability
         {
             mods.onShoot = _mods.projModifiers.onShoot;
         }
+
+        // Add Buffs if Any
+        if (_mods.buff)
+        {
+            buffs.Add(_mods.buff);
+        }
     }
+
     public override void ResetMods()
     {
         mods = startMods;
@@ -131,6 +138,7 @@ public class ProjectileAbility : Ability
         {
             modRings.Add(n);
         }
+        buffs.Clear();
     }
 
     public override void StartUp()
@@ -144,5 +152,6 @@ public class ProjectileAbility : Ability
         {
             startRings.Add(n);
         }
+        buffs.Clear();
     }
 }
