@@ -7,6 +7,8 @@ public class CharacterStats : MonoBehaviour
     [HideInInspector] public GetMouseInWorld mousePos;
     [HideInInspector] public CharacterMovement movement;
 
+    Animator animator;
+
     [Header("Player Base Stats")]
     public float movementSpeed;
     [Header("Buffs")]
@@ -25,6 +27,7 @@ public class CharacterStats : MonoBehaviour
         instance = this;
         mousePos = GetComponent<GetMouseInWorld>();
         movement = GetComponent<CharacterMovement>();
+        animator = GetComponentInChildren<Animator>();
     }
     #endregion Singleton
     private void Start()
@@ -44,6 +47,15 @@ public class CharacterStats : MonoBehaviour
                 CheckBuffs();
             }
         }
+
+        UpdateAnimations();
+    }
+
+    public void UpdateAnimations()
+    {
+        animator.SetBool("Moving", (movement.currentMovMag > 0));
+        animator.SetFloat("Forward", movement.backwards);
+        animator.SetFloat("Side", movement.strafing);
     }
     
     public void AddBuff(Buff _buff)
