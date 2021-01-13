@@ -109,6 +109,15 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<float> setCastSpeed;
+    public void SetCastSpeed(float _speed)
+    {
+        if (setCastSpeed != null)
+        {
+            setCastSpeed(_speed);
+        }
+    }
+
     public void QuitToMenu()
     {
         // SceneLoad here

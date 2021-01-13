@@ -7,6 +7,15 @@ public class Controller : MonoBehaviour
 {
     public List<Ability> abilities;
     [HideInInspector] public int activeIndex = 0;
+    Animator animator;
+
+    public float castspeed = 1.0f;
+
+    private void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+        GetComponentInChildren<PCAnimatorFunctions>().controller = this;
+    }
 
     private void Start()
     {
@@ -35,14 +44,27 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("ProjectileCast", false);
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             CallbackHandler.instance.ToggleRingInterface(abilities[activeIndex]);
         }
 
+        // Testing
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            CallbackHandler.instance.SetCastSpeed(2.5f);
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            CallbackHandler.instance.SetCastSpeed(1);
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
-            abilities[activeIndex].Use(transform);
+            // Callback might be better for this
+            animator.SetBool("ProjectileCast", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -60,5 +82,10 @@ public class Controller : MonoBehaviour
             activeIndex = 2;
             CallbackHandler.instance.SetActiveAbility(2);
         }
+    }
+
+    public void Cast()
+    {
+        abilities[activeIndex].Use(transform);
     }
 }

@@ -118,6 +118,7 @@ MonoBehaviour:
   movementSpeed: 0
   buffs: []
   movementMod: 0
+  playerInfo: {fileID: 11400000, guid: 6ac6871f016d04840bc2be1e1dab205b, type: 2}
 --- !u!114 &6448631725207227326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +136,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d1fba555e6507443b1fe516ac415172, type: 2}
   - {fileID: 11400000, guid: 7dfe45504e4b398478c6b3a136c6a4ac, type: 2}
   activeIndex: 0
+  castspeed: 1
 --- !u!1001 &6448631725629793848
 PrefabInstance:
   m_ObjectHideFlags: 0

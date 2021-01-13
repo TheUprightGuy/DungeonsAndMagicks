@@ -35,6 +35,9 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!CharacterStats.instance.Control())
+            return;
+
         RotateCharacter();
         MoveCharacter();
     }

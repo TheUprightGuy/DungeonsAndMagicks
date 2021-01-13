@@ -11,12 +11,14 @@ public class CharacterStats : MonoBehaviour
 
     [Header("Player Base Stats")]
     public float movementSpeed;
+    public float castSpeed = 1.0f;
     [Header("Buffs")]
     public List<Buff> buffs;
     public float movementMod;
 
     #region Singleton
     public static CharacterStats instance;
+    public PlayerStateInfo playerInfo;
     private void Awake()
     {
         if (instance != null)
@@ -30,9 +32,25 @@ public class CharacterStats : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
     #endregion Singleton
+
+    public bool Control()
+    {
+        return (playerInfo.Control());
+    }
+
+    public void SetControl(bool _toggle)
+    {
+        playerInfo.SetControl(_toggle);
+    }
+
     private void Start()
     {
         movementSpeed = movement.PlayerSpeed;
+        CallbackHandler.instance.setCastSpeed += SetCastSpeed;
+    }
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.setCastSpeed -= SetCastSpeed;
     }
 
     private void Update()
@@ -93,5 +111,10 @@ public class CharacterStats : MonoBehaviour
             }
         }
         movement.PlayerSpeed = movementSpeed * movementMod;
+    }
+
+    public void SetCastSpeed(float _speed)
+    {
+        animator.SetFloat("CastSpeed", _speed);
     }
 }
