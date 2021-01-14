@@ -17,15 +17,18 @@ MonoBehaviour:
   description: Reduces enemies movement speed.
   icon: {fileID: 21300000, guid: 14a7804fe00a6a94fa0e3fcf1eb04eb9, type: 3}
   element: 2
+  followUp: {fileID: 0}
+  buff: {fileID: 0}
   projModifiers:
     numProj: 0
     onShoot: 0
     onHit: 
+    projPrefab: {fileID: 3803912664757873177, guid: d30dc1df7e2f41a48ada91a64d2e3ddf,
+      type: 3}
   buffModifiers:
     numProj: 0
-    onShoot: 0
-    onHit: 
+    onBuff: 0
+    onBuffEnd: 
   movementModifiers:
-    numProj: 0
-    onShoot: 0
-    onHit: 
+    onMove: 0
+    onEnd: 

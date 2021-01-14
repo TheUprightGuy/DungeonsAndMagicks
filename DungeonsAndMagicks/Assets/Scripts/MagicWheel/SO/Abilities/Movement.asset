@@ -15,13 +15,13 @@ MonoBehaviour:
   modsApplied: []
   startRings:
   - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
+  type: 2
   modRings:
   - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
+  buffs: []
   mods:
     onMove: 0
     onEnd: 
   startMods:
     onMove: 0
     onEnd: 
-  buffs:
-  - {fileID: 11400000, guid: 625d37152f3db704eba83f3585d3aee4, type: 2}
