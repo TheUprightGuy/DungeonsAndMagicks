@@ -16,6 +16,7 @@ public class AIAgent : MonoBehaviour
     private Vector3 MoveTarget;
     private Vector3 AttackTarget;
 
+    
     public uint ClosestDist;
     public uint FurthestDist;
 
@@ -49,6 +50,7 @@ public class AIAgent : MonoBehaviour
 
         //ActionQueue[0].Move(Target, ref AINavAgent);
     }
+
 
 
     /// <summary>
