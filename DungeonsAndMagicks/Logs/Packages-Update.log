@@ -44,7 +44,11 @@ The following packages were added:
   com.unity.timeline@1.2.15
   com.unity.ugui@1.0.0
 
+<<<<<<< HEAD
 === Sat Dec 26 15:22:58 2020
+=======
+=== Tue Jan  5 11:04:52 2021
+>>>>>>> WaydsBranch
 
 Packages were changed.
 Update Mode: updateDependencies

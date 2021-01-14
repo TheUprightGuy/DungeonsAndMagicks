@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.2.0f1/Editor/Data/PlaybackEngines'
+=======
+Base path: 'C:/Program Files/2020.2.0f1/Editor/Data', plugins path 'C:/Program Files/2020.2.0f1/Editor/Data/PlaybackEngines'
+>>>>>>> WaydsBranch
 Cmd: initializeCompiler
 Cmd: compileSnippet
   error: 1 plat 4 at (306): implicit truncation of vector type\nCompiling Fragment program with _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT _ADDITIONAL_LIGHTS_VERTEX

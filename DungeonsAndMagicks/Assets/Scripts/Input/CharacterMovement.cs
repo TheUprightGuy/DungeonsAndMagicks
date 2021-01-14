@@ -6,9 +6,17 @@ public class CharacterMovement : MonoBehaviour
 {
     public float collisionCheckDistance;
     public float PlayerSpeed = 10.0f;
+
     GetMouseInWorld getMousePos;
     Vector3 camOffset;
     Camera mainCam;
+
+    #region Animation Variables
+    [HideInInspector] public float currentMovMag;
+    [HideInInspector] public float strafing = 0;
+    [HideInInspector] public float backwards;
+    #endregion Animation Variables
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,14 +64,27 @@ public class CharacterMovement : MonoBehaviour
         RaycastHit hit;
         if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance))
         {
-            finalMoveVec += horVec;  //transform.position + (movement * Time.deltaTime * PlayerSpeed);
+            finalMoveVec += horVec;
         }
         if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance))
         {
             finalMoveVec += vertVec;
         }
 
-        //transform.Translate((finalMoveVec * Time.deltaTime * PlayerSpeed));
+        // Update Animations
+        float angle = Vector3.Angle(finalMoveVec, transform.right);
+        if (finalMoveVec == Vector3.zero)
+        {
+            strafing = Mathf.Lerp(strafing, 0, Time.deltaTime);
+            backwards = Mathf.Lerp(backwards, 0, Time.deltaTime);
+        }
+        else 
+        {
+            strafing = (angle - 90) / 90;
+            backwards = (Vector3.Angle(finalMoveVec, transform.forward) - 90.0f) / -90.0f;
+        }
+        // Magnitude - Determine if Moving or not
+        currentMovMag = Vector3.Magnitude(finalMoveVec);
         transform.position = transform.position + (finalMoveVec * Time.deltaTime * PlayerSpeed);
     }
 }

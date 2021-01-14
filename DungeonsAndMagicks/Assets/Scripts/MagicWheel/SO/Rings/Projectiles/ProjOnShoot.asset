@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8def16fb34fbf82498d13cbb9c114bed, type: 3}
+  m_Name: ProjOnShoot
+  m_EditorClassIdentifier: 
+  elements:
+  - {fileID: 11400000, guid: f4b77a77771d41b458269e3e1328a081, type: 2}
+  - {fileID: 11400000, guid: 1de0c904343037342aec7674f6af6963, type: 2}
+  - {fileID: 11400000, guid: 50172a238011ba14d98502ce1f56be6d, type: 2}

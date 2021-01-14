@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5984c733adf894bb7142cab72f197d, type: 3}
+  m_Name: Movement
+  m_EditorClassIdentifier: 
+  modsApplied: []
+  startRings:
+  - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
+  modRings:
+  - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
+  mods:
+    onMove: 0
+    onEnd: 
+  startMods:
+    onMove: 0
+    onEnd: 
+  buffs:
+  - {fileID: 11400000, guid: 625d37152f3db704eba83f3585d3aee4, type: 2}
