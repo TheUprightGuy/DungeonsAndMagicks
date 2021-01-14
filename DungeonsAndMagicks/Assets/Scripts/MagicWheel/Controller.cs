@@ -63,8 +63,11 @@ public class Controller : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            // Callback might be better for this
-            animator.SetBool("ProjectileCast", true);
+            if (CharacterStats.instance.Control())
+            {
+                // Callback might be better for this
+                animator.SetBool("ProjectileCast", true);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
