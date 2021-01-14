@@ -8,14 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TreeRound
-  m_Shader: {fileID: 4800000, guid: 7ba6b5ba318876141ac1f43220b9e1d2, type: 3}
+  m_Shader: {fileID: 4800000, guid: d4a56c91f0e34744a802e08cb1949a16, type: 3}
   m_ShaderKeywords: _SPECULAR_SETUP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -83,7 +82,7 @@ Material:
     m_Floats:
     - Vector1_2c8d4cfa56464ea8adaf68231170b93d: 1
     - Vector1_439c8540ce3044f7b937f72b797852af: 0
-    - Vector1_db3f2034e19149bcb22cc569bb7a0a91: 4
+    - Vector1_db3f2034e19149bcb22cc569bb7a0a91: 5
     - Vector1_f15c3ac65c844fd4813135c35339837f: 0
     - Vector1_f43e6d0c99874a298a8a901fc1170d81: 1
     - _AlphaClip: 0

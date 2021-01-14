@@ -36,6 +36,9 @@ public class AIAgent : MonoBehaviour
 
     void Update()
     {
+        AgentUpdate();
+        DoAgentQueue();
+
 
         //On Change of target given a range
         if (FurthestDist > 0 && Target != TargetCache)
@@ -47,10 +50,24 @@ public class AIAgent : MonoBehaviour
             AINavAgent.SetDestination(MoveTarget);
         }
 
-
         //ActionQueue[0].Move(Target, ref AINavAgent);
     }
 
+    /// <summary>
+    /// Called within the update for Monobehaviour
+    /// CALL DoAgentQueue() for AIActions
+    /// </summary>
+    public virtual void AgentUpdate()
+    {
+        
+    }
+
+    public void DoAgentQueue()
+    {
+
+    }
+
+    public 
 
 
     /// <summary>

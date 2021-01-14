@@ -1,105 +1,31 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-<<<<<<< HEAD
     m_FilePath: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Packages/manifest.json
-=======
-    m_FilePath: C:/Users/Griz/Desktop/NewProj/DungeonsAndMagicks/DungeonsAndMagicks/Packages/manifest.json
->>>>>>> WaydsBranch
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
-      ticks: 637445461782904663
+      ticks: 637461936864814204
     m_Hash: 3720438963
   m_LockFileStatus:
     m_FilePath: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Packages/packages-lock.json
-=======
-      ticks: 637454098713217978
-    m_Hash: 910293926
-  m_LockFileStatus:
-    m_FilePath: C:/Users/Griz/Desktop/NewProj/DungeonsAndMagicks/DungeonsAndMagicks/Packages/packages-lock.json
->>>>>>> WaydsBranch
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-<<<<<<< HEAD
-      ticks: 637445462077088347
+      ticks: 637461949303855083
     m_Hash: 1009396942
-=======
-      ticks: 637454098719437375
-    m_Hash: 3678378854
->>>>>>> WaydsBranch
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-<<<<<<< HEAD
-=======
-    - packageId: com.unity.2d.sprite@1.0.0
-      testable: 0
-      isDirectDependency: 1
-      version: 1.0.0
-      source: 2
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.2d.sprite
-      assetPath: Packages/com.unity.2d.sprite
-      name: com.unity.2d.sprite
-      displayName: 2D Sprite
-      author:
-        name: 
-        email: 
-        url: 
-      category: 2D
-      type: 
-      description: Use Unity Sprite Editor Window to create and edit Sprite asset
-        properties like pivot, borders and Physics shape
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.0.0
-        compatible:
-        - 1.0.0
-        verified: 1.0.0
-      dependencies: []
-      resolvedDependencies: []
-      keywords:
-      - 2d
-      - sprite
-      - sprite editor window
-      registry:
-        id: 
-        name: 
-        url: 
-        scopes: []
-        isDefault: 0
-        capabilities: 0
-      hasRegistry: 0
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 0
-      documentationUrl: 
-      hasRepository: 0
-      repository:
-        type: 
-        url: 
-        revision: 
-        path: 
->>>>>>> WaydsBranch
     - packageId: com.unity.collab-proxy@1.3.9
       testable: 0
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.collab-proxy@1.3.9
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.collab-proxy@1.3.9
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -194,11 +120,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.rider@2.0.7
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.rider@2.0.7
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -297,11 +219,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.5
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -370,11 +288,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.vscode@1.2.3
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.vscode@1.2.3
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -443,11 +357,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 10.2.2
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.universal@10.2.2
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.universal@10.2.2
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
       displayName: Universal RP
@@ -551,11 +461,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.19
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.test-framework@1.1.19
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.test-framework@1.1.19
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -642,11 +548,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.textmeshpro@3.0.1
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.textmeshpro@3.0.1
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -793,11 +695,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.15
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.timeline@1.2.15
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.timeline@1.2.15
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -942,11 +840,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.ugui
       name: com.unity.ugui
       displayName: Unity UI
@@ -1009,11 +903,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.ai
       name: com.unity.modules.ai
       displayName: AI
@@ -1061,11 +951,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.androidjni
       name: com.unity.modules.androidjni
       displayName: Android JNI
@@ -1113,11 +999,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.animation
       name: com.unity.modules.animation
       displayName: Animation
@@ -1165,11 +1047,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.assetbundle
       name: com.unity.modules.assetbundle
       displayName: Asset Bundle
@@ -1217,11 +1095,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.audio
       name: com.unity.modules.audio
       displayName: Audio
@@ -1269,11 +1143,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.cloth
       name: com.unity.modules.cloth
       displayName: Cloth
@@ -1325,11 +1195,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.director
       name: com.unity.modules.director
       displayName: Director
@@ -1385,11 +1251,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.imageconversion
       name: com.unity.modules.imageconversion
       displayName: Image Conversion
@@ -1438,11 +1300,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.imgui
       name: com.unity.modules.imgui
       displayName: IMGUI
@@ -1490,11 +1348,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.jsonserialize
       name: com.unity.modules.jsonserialize
       displayName: JSONSerialize
@@ -1542,11 +1396,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.particlesystem
       name: com.unity.modules.particlesystem
       displayName: Particle System
@@ -1594,11 +1444,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.physics
       name: com.unity.modules.physics
       displayName: Physics
@@ -1646,11 +1492,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.physics2d
       name: com.unity.modules.physics2d
       displayName: Physics 2D
@@ -1698,11 +1540,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.screencapture
       name: com.unity.modules.screencapture
       displayName: Screen Capture
@@ -1754,11 +1592,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.terrain
       name: com.unity.modules.terrain
       displayName: Terrain
@@ -1806,11 +1640,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.terrainphysics
       name: com.unity.modules.terrainphysics
       displayName: Terrain Physics
@@ -1866,11 +1696,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.tilemap
       name: com.unity.modules.tilemap
       displayName: Tilemap
@@ -1922,11 +1748,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.ui
       name: com.unity.modules.ui
       displayName: UI
@@ -1974,11 +1796,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.uielements
       name: com.unity.modules.uielements
       displayName: UIElements
@@ -2042,11 +1860,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.umbra
       name: com.unity.modules.umbra
       displayName: Umbra
@@ -2094,11 +1908,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.unityanalytics
       name: com.unity.modules.unityanalytics
       displayName: Unity Analytics
@@ -2154,11 +1964,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.unitywebrequest
       name: com.unity.modules.unitywebrequest
       displayName: Unity Web Request
@@ -2206,11 +2012,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
       name: com.unity.modules.unitywebrequestassetbundle
       displayName: Unity Web Request Asset Bundle
@@ -2266,11 +2068,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.unitywebrequestaudio
       name: com.unity.modules.unitywebrequestaudio
       displayName: Unity Web Request Audio
@@ -2326,11 +2124,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.unitywebrequesttexture
       name: com.unity.modules.unitywebrequesttexture
       displayName: Unity Web Request Texture
@@ -2386,11 +2180,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.unitywebrequestwww
       name: com.unity.modules.unitywebrequestwww
       displayName: Unity Web Request WWW
@@ -2462,11 +2252,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.vehicles
       name: com.unity.modules.vehicles
       displayName: Vehicles
@@ -2518,11 +2304,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.video
       name: com.unity.modules.video
       displayName: Video
@@ -2582,11 +2364,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.vr
       name: com.unity.modules.vr
       displayName: VR
@@ -2648,11 +2426,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.wind
       name: com.unity.modules.wind
       displayName: Wind
@@ -2700,11 +2474,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.xr
       name: com.unity.modules.xr
       displayName: XR
@@ -2764,11 +2534,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.subsystems
       name: com.unity.modules.subsystems
       displayName: Subsystems
@@ -2820,11 +2586,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-<<<<<<< HEAD
       resolvedPath: C:\Program Files\Unity\Hub\Editor\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielementsnative
-=======
-      resolvedPath: C:\Program Files\2020.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielementsnative
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.modules.uielementsnative
       name: com.unity.modules.uielementsnative
       displayName: UIElements Native
@@ -2883,11 +2645,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.5
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ext.nunit@1.0.5
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ext.nunit@1.0.5
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2948,11 +2706,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.1.0
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.mathematics@1.1.0
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.mathematics@1.1.0
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.mathematics
       name: com.unity.mathematics
       displayName: Mathematics
@@ -3027,11 +2781,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.2.2
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.core@10.2.2
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.core@10.2.2
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -3173,11 +2923,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.2.2
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.shadergraph@10.2.2
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.shadergraph@10.2.2
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3322,11 +3068,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.3.1
       source: 1
-<<<<<<< HEAD
       resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.searcher@4.3.1
-=======
-      resolvedPath: C:\Users\Griz\Desktop\NewProj\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.searcher@4.3.1
->>>>>>> WaydsBranch
       assetPath: Packages/com.unity.searcher
       name: com.unity.searcher
       displayName: Searcher
@@ -3397,9 +3139,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-<<<<<<< HEAD
 m_ProjectPath: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Packages
-=======
-m_ProjectPath: C:/Users/Griz/Desktop/NewProj/DungeonsAndMagicks/DungeonsAndMagicks/Packages
->>>>>>> WaydsBranch
 m_EditorVersion: 2020.2.0f1 (3721df5a8b28)
