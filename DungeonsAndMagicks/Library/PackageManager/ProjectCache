@@ -1,19 +1,19 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Packages/manifest.json
+    m_FilePath: C:/Users/jackb/Documents/GitHub/DungeonsAndMagicks/DungeonsAndMagicks/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637461936864814204
-    m_Hash: 3720438963
+      ticks: 637462034860461046
+    m_Hash: 3251927940
   m_LockFileStatus:
-    m_FilePath: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Packages/packages-lock.json
+    m_FilePath: C:/Users/jackb/Documents/GitHub/DungeonsAndMagicks/DungeonsAndMagicks/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637461949303855083
+      ticks: 637462035920417616
     m_Hash: 1009396942
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -25,7 +25,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -120,7 +120,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -219,7 +219,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.5
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.visualstudio@2.0.5
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -288,7 +288,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -357,7 +357,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 10.2.2
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.universal@10.2.2
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.universal@10.2.2
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
       displayName: Universal RP
@@ -461,7 +461,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.19
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.test-framework@1.1.19
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.test-framework@1.1.19
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -548,7 +548,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -695,7 +695,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.15
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.timeline@1.2.15
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.timeline@1.2.15
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -2645,7 +2645,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.5
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ext.nunit@1.0.5
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.ext.nunit@1.0.5
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2706,7 +2706,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.1.0
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.mathematics@1.1.0
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.mathematics@1.1.0
       assetPath: Packages/com.unity.mathematics
       name: com.unity.mathematics
       displayName: Mathematics
@@ -2781,7 +2781,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.2.2
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.core@10.2.2
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.render-pipelines.core@10.2.2
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -2923,7 +2923,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 10.2.2
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.shadergraph@10.2.2
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.shadergraph@10.2.2
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3068,7 +3068,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.3.1
       source: 1
-      resolvedPath: C:\Users\jackb\Documents\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.searcher@4.3.1
+      resolvedPath: C:\Users\jackb\Documents\GitHub\DungeonsAndMagicks\DungeonsAndMagicks\Library\PackageCache\com.unity.searcher@4.3.1
       assetPath: Packages/com.unity.searcher
       name: com.unity.searcher
       displayName: Searcher
@@ -3139,5 +3139,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/jackb/Documents/DungeonsAndMagicks/DungeonsAndMagicks/Packages
+m_ProjectPath: C:/Users/jackb/Documents/GitHub/DungeonsAndMagicks/DungeonsAndMagicks/Packages
 m_EditorVersion: 2020.2.0f1 (3721df5a8b28)
