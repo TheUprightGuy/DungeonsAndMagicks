@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AIAction
 {
+    public string Name;
+
     ///<summary>
     ///Time that the AI
     ///Action is used for

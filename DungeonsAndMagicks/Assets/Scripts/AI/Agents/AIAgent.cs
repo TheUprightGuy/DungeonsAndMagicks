@@ -3,105 +3,91 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
-public class AIAgent : MonoBehaviour
+public class AIAgent
 {
-    public List<AIAction> ActionQueue = new List<AIAction>();
-
-    private NavMeshAgent AINavAgent;
-    
-    public Vector3 Target;
-    private Vector3 TargetCache;
-
-    private Vector3 MoveTarget;
-    private Vector3 AttackTarget;
-
-    
-    public uint ClosestDist;
-    public uint FurthestDist;
-
-    // Start is called before the first frame update
-    void Awake()
-    {    
-        AINavAgent = GetComponent<NavMeshAgent>();
+    public enum AgentStatus
+    {
+        INRANGE,
+        MOVINGTORANGE,
+        OUTOFRANGE
     }
 
-    private void Start()
-    {
-        TargetCache = Vector3.positiveInfinity;
-        MoveTarget = Target;
+    protected AgentStatus agentStatus;
+    protected AIType thisAIType;
 
-        AttackTarget = Target;
+    protected List<AIAction> MoveQueue = new List<AIAction>();
+    protected List<AIAction> AttackQueue = new List<AIAction>();
+    
+    public Transform Target;
+    public Transform AttachedObject;
+
+    protected NavMeshAgent AINavAgent;
+    
+    protected uint MinTrackDist;
+    protected uint MaxTrackDist;
+
+    /// <summary>
+    /// Defines the target, the attached object, and the required NavMeshAgent
+    /// </summary>
+    /// <param name="_Target">Transform for the player</param>
+    /// <param name="_Attached">Transform this AIAgent is attached to</param>
+    public AIAgent(Transform _Target, Transform _Attached)
+    {
+        Target = _Target;
+        AttachedObject = _Attached;
+
+        AINavAgent = AttachedObject.GetComponent<NavMeshAgent>();
     }
 
-    void Update()
+    public virtual void Act()
     {
-        AgentUpdate();
-        DoAgentQueue();
 
-
-        //On Change of target given a range
-        if (FurthestDist > 0 && Target != TargetCache)
-        {
-            //Update the cached target
-            TargetCache = Target;
-            MoveTarget = GetValidTarget();
-
-            AINavAgent.SetDestination(MoveTarget);
-        }
-
-        //ActionQueue[0].Move(Target, ref AINavAgent);
     }
 
     /// <summary>
-    /// Called within the update for Monobehaviour
-    /// CALL DoAgentQueue() for AIActions
+    /// Pulls a random AIAction queue, adding AbilityCount amount of AIActions if stack true
+    /// Clears then adds if stack is false
     /// </summary>
-    public virtual void AgentUpdate()
-    {
-        
-    }
-
-    public void DoAgentQueue()
+    /// <param name="AbilityCount">The amount of actions to apply</param>
+    /// <param name="stack">clears queues before adding if false, default is true</param>
+    public virtual void Randomise(uint AbilityCount, bool stack = true)
     {
 
     }
-
-    public 
 
 
     /// <summary>
     /// Get a valid target in the navmesh environment
     /// </summary>
     /// <returns>The valid destination</returns>
-    Vector3 GetValidTarget()
-    {
-        Vector3 validTarget = Target;
+    //public Vector3 GetValidTarget()
+    //{
+    //    Vector3 validTarget = Target;
 
-        int counter = 0;
-        const int breakOutCount = 100;
+    //    int counter = 0;
+    //    const int breakOutCount = 100;
 
-        while ( counter < breakOutCount) //found a complete path or had to break out
-        {
-            Vector2 randPoint = RandomInTorus(Target, ClosestDist, FurthestDist);
-            validTarget = new Vector3(randPoint.x, 0.0f, randPoint.y);
+    //    while (counter < breakOutCount) //found a complete path or had to break out
+    //    {
+    //        Vector2 randPoint = RandomInTorus(Target, ClosestDist, FurthestDist);
+    //        validTarget = new Vector3(randPoint.x, 0.0f, randPoint.y);
 
-            NavMeshPath path = new NavMeshPath();
-            AINavAgent.CalculatePath(validTarget, path);
+    //        NavMeshPath path = new NavMeshPath();
+    //        AINavAgent.CalculatePath(validTarget, path);
 
-            if (path.status == NavMeshPathStatus.PathComplete)//Check for a completable path
-            {
-                break;
-            }
-            else
-            {
-                validTarget = Target;
-            }
+    //        if (path.status == NavMeshPathStatus.PathComplete)//Check for a completable path
+    //        {
+    //            break;
+    //        }
+    //        else
+    //        {
+    //            validTarget = Target;
+    //        }
 
-            counter++;
-        }
-        return validTarget;
-    }
+    //        counter++;
+    //    }
+    //    return validTarget;
+    //}
 
     /// <summary>
     /// Gets a random point on a torus in 2D within two distances
