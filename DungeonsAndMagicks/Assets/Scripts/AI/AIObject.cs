@@ -35,4 +35,7 @@ public class AIObject : MonoBehaviour
     {
         thisAgent.Act();
     }
+
+
+    
 }

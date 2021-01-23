@@ -5,43 +5,103 @@ using UnityEngine.AI;
 
 public class AIAgent
 {
-    public enum AgentStatus
+    public enum DetectionStatus
     {
+        /// <summary>
+        /// Player is seen and can be acted upon
+        /// </summary>
+        DETECTED,
+        /// <summary>
+        /// Player is within the AI view distance
+        /// </summary>
         INRANGE,
-        MOVINGTORANGE,
+        /// <summary>
+        /// Player is out of range
+        /// </summary>
         OUTOFRANGE
     }
 
-    protected AgentStatus agentStatus;
-    protected AIType thisAIType;
+    protected DetectionStatus agentStatus;
+    public AIType thisAIType;
 
-    protected List<AIAction> MoveQueue = new List<AIAction>();
-    protected List<AIAction> AttackQueue = new List<AIAction>();
+    protected List<AIAction> ActionQueue = new List<AIAction>();
+
+    protected bool LockMovementQueue = false;
+    protected Vector3 MoveToTarget = Vector3.zero;
+    protected bool LockAttackQueue = false;
+    protected Vector3 AttackTarget = Vector3.zero;
+
+    public Transform TargetTransform;
+    public Transform AttachedTransform;
+
+    public NavMeshAgent AINavAgent;
     
-    public Transform Target;
-    public Transform AttachedObject;
 
-    protected NavMeshAgent AINavAgent;
-    
-    protected uint MinTrackDist;
-    protected uint MaxTrackDist;
+    protected uint MinTrackDist = 1;
+    protected uint MaxTrackDist = 10;
 
+    protected float ViewAngle = 180.0f;
+   
     /// <summary>
-    /// Defines the target, the attached object, and the required NavMeshAgent
+    /// Updates the agentStatus for what is visible to the AI,
+    /// based on MaxTrackDist.
     /// </summary>
-    /// <param name="_Target">Transform for the player</param>
-    /// <param name="_Attached">Transform this AIAgent is attached to</param>
-    public AIAgent(Transform _Target, Transform _Attached)
+    private void UpdateDetection()
     {
-        Target = _Target;
-        AttachedObject = _Attached;
-
-        AINavAgent = AttachedObject.GetComponent<NavMeshAgent>();
+        float AIToPlayerDist = Vector3.Distance(TargetTransform.position, AttachedTransform.position);
+        if (AIToPlayerDist > MaxTrackDist)
+        {
+            agentStatus = DetectionStatus.OUTOFRANGE;
+        }
+        else if (AIToPlayerDist < MaxTrackDist)
+        {
+            agentStatus = DetectionStatus.INRANGE;
+        }
     }
 
+    /// <summary>
+    /// Base act calls:
+    /// <list type="bullet">
+    /// <item>
+    /// <see cref="UpdateDetection()"/>
+    /// </item>
+    /// </list>
+    /// </summary>
     public virtual void Act()
     {
+        UpdateDetection();
+    }
 
+
+    private int ActionIndex = 0;
+    private float timer = 0.0f;
+    public void DoActionQueue()
+    {
+        if (ActionQueue.Count < 1)
+        {
+            Debug.Log(AttachedTransform.name + " AIAgent has no actions in its queue");
+            return;
+        }
+
+        if (timer > ActionQueue[ActionIndex].m_fTimeForAction)
+        {
+            ActionIndex++;
+            ActionIndex = ActionIndex % ActionQueue.Count;
+            timer = 0.0f;
+        }
+        else
+        {
+            timer += Time.deltaTime;
+        }
+
+        if (!LockMovementQueue)
+        {
+            ActionQueue[ActionIndex].Move(MoveToTarget, ref AINavAgent);
+        }
+        if (!LockAttackQueue)
+        {
+            ActionQueue[ActionIndex].Attack(AttackTarget, ref AINavAgent);
+        }
     }
 
     /// <summary>
@@ -53,6 +113,12 @@ public class AIAgent
     public virtual void Randomise(uint AbilityCount, bool stack = true)
     {
 
+    }
+
+
+    public AIAgent ShallowCopy()
+    {
+        return (AIAgent)this.MemberwiseClone();
     }
 
 
