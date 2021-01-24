@@ -24,6 +24,8 @@ public struct ProjectileAbilityModifiers
     public int numProj;
     public OnShootBehaviour onShoot;
     public List<OnHitBehaviour> onHit;
+
+    public GameObject projPrefab;
 }
 
 [CreateAssetMenu(fileName = "ProjectileAbility", menuName = "Ability/ProjectileAbility", order = 1)]
@@ -126,6 +128,11 @@ public class ProjectileAbility : Ability
         if (_mods.buff)
         {
             buffs.Add(_mods.buff);
+        }
+
+        if (_mods.projModifiers.projPrefab)
+        {
+            projectilePrefab = _mods.projModifiers.projPrefab;
         }
     }
 

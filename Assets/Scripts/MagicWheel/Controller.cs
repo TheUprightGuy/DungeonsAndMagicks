@@ -45,6 +45,7 @@ public class Controller : MonoBehaviour
     private void Update()
     {
         animator.SetBool("ProjectileCast", false);
+        animator.SetBool("MovementCast", false);
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -66,7 +67,25 @@ public class Controller : MonoBehaviour
             if (CharacterStats.instance.Control())
             {
                 // Callback might be better for this
-                animator.SetBool("ProjectileCast", true);
+
+                switch(abilities[activeIndex].type)
+                {
+                    case AbilityType.Projectile:
+                    {
+                        animator.SetBool("ProjectileCast", true);
+                        break;
+                    }
+                    case AbilityType.Buff:
+                    {
+                        break;
+                    }
+                    case AbilityType.Movement:
+                    {
+                        animator.SetBool("MovementCast", true);
+                        break;
+                    }
+                }
+
             }
         }
 

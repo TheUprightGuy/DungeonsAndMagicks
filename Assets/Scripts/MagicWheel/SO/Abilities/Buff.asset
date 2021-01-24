@@ -13,4 +13,15 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   modsApplied: []
+  startRings: []
+  type: 1
   modRings: []
+  buffs: []
+  mods:
+    numProj: 0
+    onBuff: 0
+    onBuffEnd: 
+  startMods:
+    numProj: 0
+    onBuff: 0
+    onBuffEnd: 
