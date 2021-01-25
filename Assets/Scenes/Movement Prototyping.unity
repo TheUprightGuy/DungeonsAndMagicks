@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cf592a1dd6d404184dcbc87bb749bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Template: {fileID: 11400000, guid: 98bcc7bb8b941bb46b7e24c52169e36f, type: 2}
+  Template: {fileID: 11400000, guid: c1141390912e913458127bd2fd31f735, type: 2}
   TileSize: 20
 --- !u!114 &1346005950
 MonoBehaviour:
