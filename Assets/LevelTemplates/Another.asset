@@ -228,3 +228,4 @@ MonoBehaviour:
   - {fileID: 6240919369074253087, guid: 56826ee53c3815146a47c5d62f6e7c00, type: 3}
   - {fileID: 6240919369074253087, guid: d8f819c2a3fcd894f834a4aa20bf85ad, type: 3}
   - {fileID: 6240919369074253087, guid: fad0b03e32e178a4b971bcaf3763fc31, type: 3}
+  TileBaseSize: 20

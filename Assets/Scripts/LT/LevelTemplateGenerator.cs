@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class LevelTemplateGenerator : MonoBehaviour
 {
     public LevelTemplate Template = null;
-    public float TileSize = 20.0f;
+    private float TileSize = 20.0f;
 
     
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class LevelTemplateGenerator : MonoBehaviour
             SpawnTile(item);
         }
 
-
+        TileSize = Template.TileBaseSize;
         GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 
