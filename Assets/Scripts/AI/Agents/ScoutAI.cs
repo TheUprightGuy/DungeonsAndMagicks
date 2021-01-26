@@ -9,6 +9,9 @@ public class ScoutAI : AIAgent
         BaseMove baseMove = new BaseMove();
         ActionQueue.Add(baseMove);
         thisAIType = AIType.SCOUT;
+
+        MinTrackDist = 0.1f;
+        MaxTrackDist = 100.0f;
     }
 
     public override void Randomise(uint AbilityCount, bool stack = true)
@@ -20,13 +23,13 @@ public class ScoutAI : AIAgent
     {
         base.Act();
 
-        float AIToPlayerDist = Vector3.Distance(TargetTransform.position, AttachedTransform.position);
+        float AIToPlayerDist = Vector3.Distance(TargetTransform.position, RootTransform.position);
         switch (agentStatus)
         {
             case DetectionStatus.DETECTED:
                 break;
             case DetectionStatus.INRANGE:
-                if (AIToPlayerDist > MinTrackDist)
+                if (AIToPlayerDist < MinTrackDist)
                 {
                     LockMovementQueue = true;
                     LockAttackQueue = false;

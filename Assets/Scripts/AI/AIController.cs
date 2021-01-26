@@ -57,7 +57,7 @@ public class AIController : Singleton<AIController>
             {
                 AIAgent CopiedAgent = item.ShallowCopy();
                 CopiedAgent.TargetTransform = _TargetTransform;
-                CopiedAgent.AttachedTransform = _AttachedTransform;
+                CopiedAgent.RootTransform = _AttachedTransform;
                 CopiedAgent.AINavAgent = _AttachedTransform.GetComponent<NavMeshAgent>();
 
 

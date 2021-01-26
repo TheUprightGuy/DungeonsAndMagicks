@@ -240,6 +240,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6448631725207227327, guid: 0f4fe0a67cfac9242aa5ce536a895e9a,
+        type: 3}
+      propertyPath: LTU
+      value: 
+      objectReference: {fileID: 1346005951}
+    - target: {fileID: 6448631725207227327, guid: 0f4fe0a67cfac9242aa5ce536a895e9a,
+        type: 3}
+      propertyPath: BorderThiccNess
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4fe0a67cfac9242aa5ce536a895e9a, type: 3}
 --- !u!1 &574571020
@@ -907,7 +917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d51cfc1c2c8122408791d44ff0f8c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Template: {fileID: 11400000, guid: a2a0ca6d2069af049bd116e670108527, type: 2}
+  Template: {fileID: 11400000, guid: c1141390912e913458127bd2fd31f735, type: 2}
   LevelName: Another
   FilePath: LevelTemplates
 --- !u!114 &1346005949
@@ -964,8 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae32546283f8c9445b134125c522d802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FetchTemplateFromLevelGen: 1
-  Template: {fileID: 0}
+  FetchTemplateFromLevelGen: 0
+  Template: {fileID: 11400000, guid: c1141390912e913458127bd2fd31f735, type: 2}
 --- !u!4 &1346005952
 Transform:
   m_ObjectHideFlags: 0

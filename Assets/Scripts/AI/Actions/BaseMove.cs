@@ -5,9 +5,14 @@ using UnityEngine.AI;
 
 public class BaseMove : AIAction
 {
-    public override void Move(Vector3 _target, ref NavMeshAgent _baseAgent)
+    private NavMeshAgent agent = null;
+    public override void Move(Transform _target, Transform _root)
     {
+        if (agent == null)
+        {
+            agent = _root.GetComponent<NavMeshAgent>();
+        }
         //base.Move(_target, ref _baseAgent);
-        _baseAgent.SetDestination(_target);
+        agent.SetDestination(_target.position);
     }
 }

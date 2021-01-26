@@ -13,9 +13,11 @@ public class AIAction
     public float m_fTimeForAction = 1.0f;
 
     ///<summary>
-    ///Base Movement method
+    ///Base Movement method 
     ///</summary>
-    public virtual void Move(Vector3 _target, ref NavMeshAgent _baseAgent) { }
+    public virtual void Move(Transform _target, Transform _root) { }
 
-    public virtual void Attack(Vector3 _target, ref NavMeshAgent _baseAgent) { }
+    public virtual void Attack(Transform _target, Transform _root) { }
+
+
 }

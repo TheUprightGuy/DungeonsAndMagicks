@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class BaseAttack : AIAction
 {
-    public override void Attack(Vector3 _target, ref NavMeshAgent _baseAgent)
+    public override void Attack(Transform _target, Transform _root)
     {
-        base.Attack(_target, ref _baseAgent);
+        
     }
 }

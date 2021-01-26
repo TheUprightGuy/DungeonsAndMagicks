@@ -32,13 +32,13 @@ public class AIAgent
     protected Vector3 AttackTarget = Vector3.zero;
 
     public Transform TargetTransform;
-    public Transform AttachedTransform;
+    public Transform RootTransform;
 
     public NavMeshAgent AINavAgent;
     
 
-    protected uint MinTrackDist = 1;
-    protected uint MaxTrackDist = 10;
+    protected float MinTrackDist = 1;
+    protected float MaxTrackDist = 10;
 
     protected float ViewAngle = 180.0f;
    
@@ -48,7 +48,7 @@ public class AIAgent
     /// </summary>
     private void UpdateDetection()
     {
-        float AIToPlayerDist = Vector3.Distance(TargetTransform.position, AttachedTransform.position);
+        float AIToPlayerDist = Vector3.Distance(TargetTransform.position, RootTransform.position);
         if (AIToPlayerDist > MaxTrackDist)
         {
             agentStatus = DetectionStatus.OUTOFRANGE;
@@ -79,7 +79,7 @@ public class AIAgent
     {
         if (ActionQueue.Count < 1)
         {
-            Debug.Log(AttachedTransform.name + " AIAgent has no actions in its queue");
+            Debug.Log(RootTransform.name + " AIAgent has no actions in its queue");
             return;
         }
 
@@ -96,11 +96,11 @@ public class AIAgent
 
         if (!LockMovementQueue)
         {
-            ActionQueue[ActionIndex].Move(MoveToTarget, ref AINavAgent);
+            ActionQueue[ActionIndex].Move(TargetTransform, RootTransform);
         }
         if (!LockAttackQueue)
         {
-            ActionQueue[ActionIndex].Attack(AttackTarget, ref AINavAgent);
+            ActionQueue[ActionIndex].Attack(TargetTransform, RootTransform);
         }
     }
 
