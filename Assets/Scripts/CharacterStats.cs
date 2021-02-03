@@ -47,6 +47,8 @@ public class CharacterStats : MonoBehaviour
     {
         movementSpeed = movement.PlayerSpeed;
         CallbackHandler.instance.setCastSpeed += SetCastSpeed;
+        CallbackHandler.instance.SetCastSpeed(castSpeed);
+
     }
     private void OnDestroy()
     {

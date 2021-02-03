@@ -170,10 +170,10 @@ public class CharacterMovement : MonoBehaviour
             newPos.x = oldPos.x;
         }
 
-        if ((!topCheck && calcPos.y > oldPos.y) ||//Over the top edge and going further
-            (!botCheck && calcPos.y < oldPos.y))//Over the bottom edge and going further
+        if ((!topCheck && calcPos.z > oldPos.z) ||//Over the top edge and going further
+            (!botCheck && calcPos.z < oldPos.z))//Over the bottom edge and going further
         {
-            newPos.y = oldPos.y;
+            newPos.z = oldPos.z;
         }
 
 
