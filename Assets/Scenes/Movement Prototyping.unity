@@ -247,9 +247,9 @@ PrefabInstance:
       objectReference: {fileID: 1346005951}
     - target: {fileID: 6448631725207227327, guid: 0f4fe0a67cfac9242aa5ce536a895e9a,
         type: 3}
-      propertyPath: BorderThiccNess
-      value: 100
-      objectReference: {fileID: 0}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 987360856}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f4fe0a67cfac9242aa5ce536a895e9a, type: 3}
 --- !u!1 &574571020
@@ -519,67 +519,67 @@ PrefabInstance:
     - target: {fileID: 6322162425135484727, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529365785187390319, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785187390319, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529365785187390319, guid: 372910808665bb34e8d4b5d2f121bffa,
-        type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785736002836, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785736002836, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785842525137, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785842525137, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785842525137, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785933205490, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785933205490, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365785933205490, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786132489137, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786132489137, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786219671426, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
@@ -649,12 +649,12 @@ PrefabInstance:
     - target: {fileID: 7529365786418189867, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786444445944, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786582141062, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
@@ -669,24 +669,25 @@ PrefabInstance:
     - target: {fileID: 7529365786866855909, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786866855909, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786866855909, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7559767966697088020, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7529365786219671436, guid: 372910808665bb34e8d4b5d2f121bffa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 372910808665bb34e8d4b5d2f121bffa, type: 3}
 --- !u!1 &968554621
 GameObject:
@@ -917,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d51cfc1c2c8122408791d44ff0f8c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Template: {fileID: 11400000, guid: c1141390912e913458127bd2fd31f735, type: 2}
+  Template: {fileID: 0}
   LevelName: Another
   FilePath: LevelTemplates
 --- !u!114 &1346005949
@@ -932,7 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cf592a1dd6d404184dcbc87bb749bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Template: {fileID: 11400000, guid: c1141390912e913458127bd2fd31f735, type: 2}
+  Template: {fileID: 11400000, guid: 98bcc7bb8b941bb46b7e24c52169e36f, type: 2}
 --- !u!114 &1346005950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,11 +972,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346005947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae32546283f8c9445b134125c522d802, type: 3}
+  m_Script: {fileID: 11500000, guid: eea90326161f2a84db8ec704aaa261f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FetchTemplateFromLevelGen: 0
-  Template: {fileID: 11400000, guid: c1141390912e913458127bd2fd31f735, type: 2}
+  FetchTemplateFromLevelGen: 1
+  Template: {fileID: 11400000, guid: 98bcc7bb8b941bb46b7e24c52169e36f, type: 2}
 --- !u!4 &1346005952
 Transform:
   m_ObjectHideFlags: 0

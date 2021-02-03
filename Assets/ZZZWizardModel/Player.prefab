@@ -19,6 +19,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3752901781075217055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178742643786734441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7822d853c797c24db4cc74ed0cad48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!1 &6448631725207227317
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionCheckDistance: 0.5
   PlayerSpeed: 10
+  BorderThiccNess: 100
+  smoothTime: 0.3
+  LTU: {fileID: 0}
+  mainCam: {fileID: 0}
   currentMovMag: 0
   strafing: 0
   backwards: 0
@@ -116,6 +133,7 @@ MonoBehaviour:
   mousePos: {fileID: 0}
   movement: {fileID: 0}
   movementSpeed: 0
+  castSpeed: 1
   buffs: []
   movementMod: 0
   playerInfo: {fileID: 11400000, guid: 6ac6871f016d04840bc2be1e1dab205b, type: 2}

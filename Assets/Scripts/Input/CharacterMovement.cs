@@ -20,7 +20,7 @@ public class CharacterMovement : MonoBehaviour
     GetMouseInWorld getMousePos;
     Vector3 camOffset;
     Quaternion camRot = Quaternion.identity;
-    Camera mainCam;
+    public Camera mainCam;
     private Vector3 velocity = Vector3.zero;
 
     #region Animation Variables
