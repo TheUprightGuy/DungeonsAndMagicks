@@ -24,6 +24,15 @@ public class Controller : MonoBehaviour
         abilities[0].StartUp();
         abilities[1].StartUp();
         abilities[2].StartUp();
+
+        Invoke("SetupStuff", 0.1f);
+    }
+
+    public void SetupStuff()
+    {
+        CallbackHandler.instance.SetCastSpeed(castspeed);
+        activeIndex = 0;
+        CallbackHandler.instance.SetActiveAbility(0);
     }
 
     private void OnApplicationQuit()
@@ -50,16 +59,6 @@ public class Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             CallbackHandler.instance.ToggleRingInterface(abilities[activeIndex]);
-        }
-
-        // Testing
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            CallbackHandler.instance.SetCastSpeed(2.5f);
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            CallbackHandler.instance.SetCastSpeed(1);
         }
 
         if (Input.GetMouseButtonDown(1))
