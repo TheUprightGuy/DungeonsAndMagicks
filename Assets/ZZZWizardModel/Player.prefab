@@ -136,7 +136,7 @@ MonoBehaviour:
   castSpeed: 1
   buffs: []
   movementMod: 0
-  playerInfo: {fileID: 11400000, guid: 6ac6871f016d04840bc2be1e1dab205b, type: 2}
+  playerInfo: {fileID: 11400000, guid: be6698c1d8d013e4092d3eadb9b4ea4e, type: 2}
 --- !u!114 &6448631725207227326
 MonoBehaviour:
   m_ObjectHideFlags: 0

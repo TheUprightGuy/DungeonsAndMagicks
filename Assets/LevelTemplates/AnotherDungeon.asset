@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa791551bb54c24b877178ab5a72c92, type: 3}
+  m_Name: AnotherDungeon
+  m_EditorClassIdentifier: 
+  LevelLayout:
+  - PosIndex: {x: 0, y: 0}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: 1, y: 0}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: 2, y: 0}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: 2, y: -1}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: 2, y: 1}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: 2, y: 2}
+    NorthOpen: 1
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: 1, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -1, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -2, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -2, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -1, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: 0, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -1, y: 0}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -1, y: -1}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -1, y: -2}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 1
+  - PosIndex: {x: 0, y: -2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: 1, y: -2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: 2, y: -2}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: 1, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: 0, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -2, y: 0}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -2, y: -1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -3, y: -1}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -4, y: -1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 1
+  - PosIndex: {x: -4, y: 0}
+    NorthOpen: 0
+    EastOpen: 1
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -4, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 1
+  - PosIndex: {x: -3, y: 1}
+    NorthOpen: 0
+    EastOpen: 0
+    SouthOpen: 1
+    WestOpen: 0
+  - PosIndex: {x: -3, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 0
+  - PosIndex: {x: -4, y: 2}
+    NorthOpen: 1
+    EastOpen: 0
+    SouthOpen: 0
+    WestOpen: 1
+  LevelTiles:
+  - {fileID: 9138584307541969430, guid: c9fb8840ea1a679489e803e56e3775a3, type: 3}
+  - {fileID: 9138584307541969430, guid: ff7f9dec761f8ab4cbf6a3ce1afac595, type: 3}
+  - {fileID: 9138584307541969430, guid: 08daabdeb1948014e93bc71952974570, type: 3}
+  - {fileID: 9138584307541969430, guid: b65fe164207afda4f8a7972f8a8bf982, type: 3}
+  - {fileID: 5846455713826673669, guid: 04d36d73097a230469e54259140d66ce, type: 3}
+  - {fileID: 128519956984911651, guid: 420d2967a4460cd4a907a4757b51dc45, type: 3}
+  - {fileID: 7516567732157369833, guid: 3cbf7f7478b4db449b22d86ceb354fd6, type: 3}
+  - {fileID: 1786773242170860876, guid: 675e9b6b0da5d49489edc7246a36da82, type: 3}
+  TileBaseSize: 20
