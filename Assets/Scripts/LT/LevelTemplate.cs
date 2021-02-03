@@ -15,4 +15,6 @@ public class LevelTemplate : ScriptableObject
 {
     public List<TileInfo> LevelLayout = new List<TileInfo>();
     public List<GameObject> LevelTiles = new List<GameObject>();
+
+    public float TileBaseSize = 20.0f;
 }
