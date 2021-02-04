@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   modsApplied: []
-  startRings: []
+  startRings:
+  - {fileID: 11400000, guid: 1ebb336ef2a60ee42817a05e279201f0, type: 2}
   type: 1
-  modRings: []
+  modRings:
+  - {fileID: 11400000, guid: 1ebb336ef2a60ee42817a05e279201f0, type: 2}
   buffs: []
   mods:
-    numProj: 0
     onBuff: 0
     onBuffEnd: 
   startMods:
-    numProj: 0
     onBuff: 0
     onBuffEnd: 
+  buffPrefab: {fileID: 7796062578682012636, guid: 0c739a7c53cdfb44983cbba752119836,
+    type: 3}

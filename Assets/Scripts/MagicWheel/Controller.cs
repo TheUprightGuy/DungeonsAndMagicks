@@ -76,6 +76,7 @@ public class Controller : MonoBehaviour
                     }
                     case AbilityType.Buff:
                     {
+                        animator.SetBool("ProjectileCast", true);
                         break;
                     }
                     case AbilityType.Movement:
