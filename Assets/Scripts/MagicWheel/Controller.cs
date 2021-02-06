@@ -24,18 +24,18 @@ public class Controller : MonoBehaviour
         abilities[0].StartUp();
         abilities[1].StartUp();
         abilities[2].StartUp();
-    
+
         Invoke("SetupStuff", 0.1f);
     }
 
-public void SetupStuff()
-{
-    CallbackHandler.instance.SetCastSpeed(castspeed);
-    activeIndex = 0;
-    CallbackHandler.instance.SetActiveAbility(0);
-}
+    public void SetupStuff()
+    {
+        CallbackHandler.instance.SetCastSpeed(castspeed);
+        activeIndex = 0;
+        CallbackHandler.instance.SetActiveAbility(0);
+    }
 
-private void OnApplicationQuit()
+    private void OnApplicationQuit()
     {
         // required
         abilities[0].ResetMods();
@@ -61,16 +61,6 @@ private void OnApplicationQuit()
             CallbackHandler.instance.ToggleRingInterface(abilities[activeIndex]);
         }
 
-        // Testing
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            CallbackHandler.instance.SetCastSpeed(2.5f);
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            CallbackHandler.instance.SetCastSpeed(1);
-        }
-
         if (Input.GetMouseButtonDown(1))
         {
             if (CharacterStats.instance.Control())
@@ -86,6 +76,7 @@ private void OnApplicationQuit()
                     }
                     case AbilityType.Buff:
                     {
+                        animator.SetBool("ProjectileCast", true);
                         break;
                     }
                     case AbilityType.Movement:

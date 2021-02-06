@@ -17,15 +17,16 @@ MonoBehaviour:
   description: Passes through enemies on hit.
   icon: {fileID: 21300000, guid: a422d63a0d3581648bfb72d07fc7d089, type: 3}
   element: 0
+  followUp: {fileID: 0}
+  buff: {fileID: 0}
   projModifiers:
     numProj: 0
     onShoot: 0
-    onHit: 
+    onHit: 02000000
+    projPrefab: {fileID: 0}
   buffModifiers:
-    numProj: 0
-    onShoot: 0
-    onHit: 
+    onBuff: 0
+    onBuffEnd: 
   movementModifiers:
-    numProj: 0
-    onShoot: 0
-    onHit: 
+    onMove: 0
+    onEnd: 

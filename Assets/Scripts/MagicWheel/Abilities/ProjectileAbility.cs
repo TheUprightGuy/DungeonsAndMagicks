@@ -6,7 +6,7 @@ public enum OnHitBehaviour
 {
     None,
     Chain,
-    Fork,
+    Pierce,
     Explode
 }
 
@@ -110,7 +110,7 @@ public class ProjectileAbility : Ability
         mods.numProj += _mods.projModifiers.numProj;
 
         // Hit Behaviours (Additive)
-        foreach (OnHitBehaviour n in mods.onHit)
+        foreach (OnHitBehaviour n in _mods.projModifiers.onHit)
         {
             if (!mods.onHit.Contains(n))
             {
@@ -139,6 +139,7 @@ public class ProjectileAbility : Ability
     public override void ResetMods()
     {
         mods = startMods;
+        mods.onHit.Clear();
         modsApplied.Clear();
         modRings.Clear();
         foreach (RingMenu n in startRings)

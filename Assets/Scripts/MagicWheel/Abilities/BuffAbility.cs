@@ -10,15 +10,14 @@ public enum OnBuffEndBehaviour
 public enum OnBuffBehaviour
 {
     Normal = 0,
-    Blink,
-    Dash,
-    Sprint
+    Shield,
+    Reflect,
+    Slow
 }
 
 [System.Serializable]
 public struct BuffAbilityModifiers
 {
-    public int numProj;
     public OnBuffBehaviour onBuff;
     public List<OnBuffEndBehaviour> onBuffEnd;
 }
@@ -28,10 +27,19 @@ public class BuffAbility : Ability
 {
     public BuffAbilityModifiers mods;
     [HideInInspector] public BuffAbilityModifiers startMods;
+    public GameObject buffPrefab;
 
     public override void Use(Transform _user)
     {
-        // behaviours here
+        if (buffPrefab)
+        {
+            // temp + behaviours here
+            GameObject buff = Instantiate(buffPrefab, _user);
+            // temp (one buff)
+            buff.GetComponent<ShieldAlphaScript>().duration = buffs[0].lifeTime;
+            // change for buff duration
+            Destroy(buff, buffs[0].lifeTime);
+        }
     }
 
     public override void AddMods(Mod _mods)
