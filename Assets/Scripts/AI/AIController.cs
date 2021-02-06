@@ -12,16 +12,21 @@ public enum AIType
 
 public class AIController : Singleton<AIController>
 {
+    [HideInInspector]
     public float MutationChance = 0.0f;
 
+    [HideInInspector]
     public List<AIAction> MoveActions = new List<AIAction>();
+    [HideInInspector]
     public List<AIAction> AttackActions = new List<AIAction>();
-
+    [HideInInspector]
     public List<AIAgent> AgentTemplates = new List<AIAgent>();
 
     private void RegisterActions()
     {
         //Add each action, add to approriate List<>
+        MoveActions.Add(new BaseMove());
+        AttackActions.Add(new AIAction());
     }
      
     private void GenerateTemplates()

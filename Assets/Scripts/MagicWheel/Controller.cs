@@ -24,9 +24,18 @@ public class Controller : MonoBehaviour
         abilities[0].StartUp();
         abilities[1].StartUp();
         abilities[2].StartUp();
+    
+        Invoke("SetupStuff", 0.1f);
     }
 
-    private void OnApplicationQuit()
+public void SetupStuff()
+{
+    CallbackHandler.instance.SetCastSpeed(castspeed);
+    activeIndex = 0;
+    CallbackHandler.instance.SetActiveAbility(0);
+}
+
+private void OnApplicationQuit()
     {
         // required
         abilities[0].ResetMods();

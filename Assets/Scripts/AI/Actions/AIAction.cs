@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class AIAction
+public class AIAction : ScriptableObject
 {
     public string Name;
 
