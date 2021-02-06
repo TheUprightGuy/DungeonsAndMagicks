@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 2
   name: Blink
   description: Teleports instantly to the targeted location.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: c08c21c3a347bc048a0a3c39b9e0e46a, type: 3}
   element: 0
   followUp: {fileID: 0}
   buff: {fileID: 0}
@@ -23,8 +23,8 @@ MonoBehaviour:
     numProj: 0
     onShoot: 0
     onHit: 
+    projPrefab: {fileID: 0}
   buffModifiers:
-    numProj: 0
     onBuff: 0
     onBuffEnd: 
   movementModifiers:

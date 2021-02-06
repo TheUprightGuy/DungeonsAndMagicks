@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 1
   name: Slow
   description: Attackers attack and movement speeds are slowed.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 651cfb39aa1777a44b3ec49b9dd2188a, type: 3}
   element: 0
   followUp: {fileID: 0}
   buff: {fileID: 0}
