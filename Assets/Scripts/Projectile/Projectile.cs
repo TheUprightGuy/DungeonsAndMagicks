@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float lifetime;
 
+    private List<Transform> chainTargets = new List<Transform>();
+
 
     private void Awake()
     {
@@ -20,7 +22,7 @@ public class Projectile : MonoBehaviour
         lifetime -= Time.deltaTime;
         if (lifetime <= 0)
         {
-            Destroy(gameObject);
+            End();
         }
     }
 
@@ -32,5 +34,104 @@ public class Projectile : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(transform.position + transform.forward * Time.fixedDeltaTime * speed);
+    }
+    private void End()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Explode(Transform _transform)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(_transform.position, 5.0f);
+        foreach (Collider n in hitColliders)
+        {
+            // make sure enemy
+            if (n.gameObject.CompareTag("Enemy"))
+            {
+                // Damage Enemy
+            }
+        }
+        End();
+    }
+
+    private void Pierce(Transform _transform)
+    {
+        // Damage Enemy
+    }
+
+    public void Chain(Transform _transform)
+    {
+        // Add this transform
+        chainTargets.Add(_transform);
+
+        // Damage Enemy
+
+
+        // Check for nearby                                                 // chain distance
+        Collider[] hitColliders = Physics.OverlapSphere(_transform.position, 5.0f);
+
+        // Variables to check closest
+        Transform closest = null;
+        float closestDistance = float.MaxValue;
+
+        // Check for nearby
+        foreach (Collider n in hitColliders)
+        {
+            // make sure enemy
+            if (n.gameObject.CompareTag("Enemy"))
+            {
+                // find closest
+                if (Vector3.Distance(_transform.position, n.transform.position) < closestDistance && !chainTargets.Contains(n.transform))
+                {
+                    closestDistance = Vector3.Distance(_transform.position, n.transform.position);
+                    closest = n.transform;
+                }
+            }
+        }
+        // if another target found
+        if (closest)
+        {
+            transform.forward = Vector3.Normalize(closest.position - _transform.position);
+        }
+        else
+        {
+            End();
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Hit Enemy");
+
+            foreach (OnHitBehaviour n in mods.onHit)
+            {
+                switch (n)
+                {
+                    case OnHitBehaviour.Chain:
+                    {
+                        Chain(collision.transform);
+                        break;
+                    }
+                    case OnHitBehaviour.Pierce:
+                    {
+                        Pierce(collision.transform);
+                        break;
+                    }
+                    case OnHitBehaviour.Explode:
+                    {
+                        Explode(collision.transform);
+                        break;
+                    }
+                    default:
+                    {
+                        End();
+                        break;
+                    }
+                }
+            }
+
+        }
     }
 }
