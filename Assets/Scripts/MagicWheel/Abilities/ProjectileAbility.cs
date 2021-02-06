@@ -139,6 +139,7 @@ public class ProjectileAbility : Ability
     public override void ResetMods()
     {
         mods = startMods;
+        mods.onHit.Clear();
         modsApplied.Clear();
         modRings.Clear();
         foreach (RingMenu n in startRings)
