@@ -76,11 +76,11 @@ public class CharacterMovement : MonoBehaviour
         RaycastHit hit;
 
 
-        if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance))
+        if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance) || hit.collider.isTrigger)
         {
             finalMoveVec += horVec;
         }
-        if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance))
+        if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance) || hit.collider.isTrigger)
         {
             finalMoveVec += vertVec;
         }
