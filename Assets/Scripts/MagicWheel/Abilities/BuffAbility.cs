@@ -44,6 +44,9 @@ public class BuffAbility : Ability
 
     public override void AddMods(Mod _mods)
     {
+        if (_mods.type == ModType.None)
+            return;
+
         // BuffEnd Behaviours (Additive)
         foreach (OnBuffEndBehaviour n in mods.onBuffEnd)
         {

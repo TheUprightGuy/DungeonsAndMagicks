@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a31a4e17ea4618549b9e6f67fbc5b1fe, type: 3}
-  m_Name: Projectile
+  m_Name: SimpleWandAbility
   m_EditorClassIdentifier: 
   modsApplied: []
   startRings:
-  - {fileID: 11400000, guid: baa09af20cbfa554f99acead084453d9, type: 2}
-  - {fileID: 11400000, guid: 7f904a6cfbe29714b801ce72a8aaf75e, type: 2}
-  - {fileID: 11400000, guid: 7269b6a3bd5f8834fba7d3baed9ee6db, type: 2}
+  - {fileID: 11400000, guid: e951544d5c2cb6f4cacc63c26c7d866c, type: 2}
   type: 0
   modRings:
-  - {fileID: 11400000, guid: baa09af20cbfa554f99acead084453d9, type: 2}
-  - {fileID: 11400000, guid: 7f904a6cfbe29714b801ce72a8aaf75e, type: 2}
-  - {fileID: 11400000, guid: 7269b6a3bd5f8834fba7d3baed9ee6db, type: 2}
+  - {fileID: 11400000, guid: e951544d5c2cb6f4cacc63c26c7d866c, type: 2}
   buffs: []
   mods:
     numProj: 1
@@ -33,5 +29,5 @@ MonoBehaviour:
     onShoot: 0
     onHit: 
     projPrefab: {fileID: 0}
-  projectilePrefab: {fileID: 3803912664757873177, guid: 1a68deed04548184f8555677b48c4349,
+  projectilePrefab: {fileID: 3803912664757873177, guid: 0f0a27b635f2ce746b813a3bb615b38f,
     type: 3}

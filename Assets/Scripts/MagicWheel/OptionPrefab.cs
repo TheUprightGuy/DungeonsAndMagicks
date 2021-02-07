@@ -24,7 +24,7 @@ public class OptionPrefab : MonoBehaviour
 
     public void Use(Ability _ability)
     {
-        if (!selected)
+        if (!selected && element.type != ModType.None)
         {
             _ability.modsApplied.Add(element);
             _ability.AddMods(element);

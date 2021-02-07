@@ -106,6 +106,10 @@ public class ProjectileAbility : Ability
 
     public override void AddMods(Mod _mods)
     {
+        if (_mods.type == ModType.None)
+            return;
+
+
         // Number of Projectiles (Additive)
         mods.numProj += _mods.projModifiers.numProj;
 

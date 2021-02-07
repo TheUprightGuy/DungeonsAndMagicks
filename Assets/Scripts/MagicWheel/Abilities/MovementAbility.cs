@@ -68,6 +68,9 @@ public class MovementAbility : Ability
 
     public override void AddMods(Mod _mods)
     {
+        if (_mods.type == ModType.None)
+            return;
+
         // Hit Behaviours (Additive)
         foreach (OnEndBehaviour n in mods.onEnd)
         {

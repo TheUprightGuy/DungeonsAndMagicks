@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
+    public List<Item> equipment;
+
+
+
+
     public List<Ability> abilities;
     [HideInInspector] public int activeIndex = 0;
     Animator animator;
@@ -18,12 +23,8 @@ public class Controller : MonoBehaviour
     }
 
     private void Start()
-    {
+    { 
         Invoke("SetupAbilityReferences", 0.1f);
-        // This needs to go
-        abilities[0].StartUp();
-        abilities[1].StartUp();
-        abilities[2].StartUp();
 
         Invoke("SetupStuff", 0.1f);
     }
@@ -32,22 +33,50 @@ public class Controller : MonoBehaviour
     {
         CallbackHandler.instance.SetCastSpeed(castspeed);
         activeIndex = 0;
-        CallbackHandler.instance.SetActiveAbility(0);
     }
 
     private void OnApplicationQuit()
     {
-        // required
-        abilities[0].ResetMods();
-        abilities[1].ResetMods();
-        abilities[2].ResetMods();
+        foreach(Ability n in abilities)
+        {
+            n.ResetMods();
+        }
+    }
+
+    public void EquipItem(Item _item)
+    {
+        if (equipment.Count > 3)
+        {
+            equipment[activeIndex] = _item;
+            abilities[activeIndex] = _item.ability;
+        }
+        else
+        {
+            equipment.Add(_item);
+            abilities.Add(_item.ability);
+        }
+
+        _item.ability.StartUp();
+        SetupAbilityReferences();
+        if (equipment.Count == 1)
+        {
+            CallbackHandler.instance.SetActiveAbility(0);
+        }
     }
 
     public void SetupAbilityReferences()
     {
-        for (int i = 0; i < abilities.Count; i++)
+        for (int i = 0; i < 3; i++)
         {
-            CallbackHandler.instance.SetAbilityReference(i, abilities[i]);
+            if (i < abilities.Count)
+            {
+                CallbackHandler.instance.ShowAbility(i);
+                CallbackHandler.instance.SetAbilityReference(i, abilities[i]);
+            }
+            else
+            {
+                CallbackHandler.instance.HideAbility(i);
+            }
         }
     }
 

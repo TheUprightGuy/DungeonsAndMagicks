@@ -65,6 +65,24 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<int> showAbility;
+    public void ShowAbility(int _i)
+    {
+        if (showAbility != null)
+        {
+            showAbility(_i);
+        }
+    }
+
+    public Action<int> hideAbility;
+    public void HideAbility(int _i)
+    {
+        if (hideAbility != null)
+        {
+            hideAbility(_i);
+        }
+    }
+
     public Action<float> updateHealth;
     public void UpdateHealth(float _health)
     {
