@@ -36,6 +36,8 @@ public abstract class Ability : ScriptableObject
 
     public abstract void ResetMods();
 
+    public abstract void ResetRings();
+
     #region Coroutines
     private CoroutineSurrogate ___routiner;
     protected CoroutineSurrogate Routiner => ___routiner != null ? ___routiner : ___routiner = GetCoroutineSurrogate();

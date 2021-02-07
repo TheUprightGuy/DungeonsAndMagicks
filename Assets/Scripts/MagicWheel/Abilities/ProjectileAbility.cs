@@ -165,5 +165,14 @@ public class ProjectileAbility : Ability
             startRings.Add(n);
         }
         buffs.Clear();
+        ResetRings();
+    }
+
+    public override void ResetRings()
+    {
+        foreach(RingMenu n in modRings)
+        {
+            n.ResetMods();
+        }
     }
 }

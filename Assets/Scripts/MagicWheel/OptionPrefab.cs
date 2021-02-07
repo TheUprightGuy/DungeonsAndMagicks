@@ -16,6 +16,7 @@ public class OptionPrefab : MonoBehaviour
     [HideInInspector] public Mod element;
     [HideInInspector] public bool selected;
     [HideInInspector] public RingInterface parent;
+    public int id;
 
     private void OnEnable()
     {
@@ -41,5 +42,13 @@ public class OptionPrefab : MonoBehaviour
         }
         CallbackHandler.instance.UpdateAbilityModList(_ability);
         MagicCanvas.instance.NextRing();
+    }
+
+    public void SetMod(Mod _mod)
+    {
+        element = _mod;
+        icon.sprite = element.icon;
+
+        parent.data[parent.currentData].elements[id] = _mod;
     }
 }

@@ -28,12 +28,12 @@ public class RingInterface : MonoBehaviour
         currentData = _current;
 
         // Position Data
-        float stepLength = 360.0f / data[currentData].elements.Length;
+        float stepLength = 360.0f / data[currentData].elements.Count;
         float iconDist = Vector3.Distance(optionPrefab.icon.transform.position, optionPrefab.piece.transform.position);
         pieces = new List<OptionPrefab>();
 
         // Iterate through Menu Elements and Instantiate Prefabs w/ Attributes
-        for (int i = 0; i < data[currentData].elements.Length; i++)
+        for (int i = 0; i < data[currentData].elements.Count; i++)
         {
             // Instantiate Prefab
             pieces.Add(Instantiate(optionPrefab, transform));
@@ -42,7 +42,7 @@ public class RingInterface : MonoBehaviour
             pieces[i].transform.localPosition = Vector3.zero;
             pieces[i].transform.localRotation = Quaternion.identity;
             // Set Piece Position & Fill
-            pieces[i].piece.fillAmount = 1f / data[currentData].elements.Length - gapWidthDegree / 360f;
+            pieces[i].piece.fillAmount = 1f / data[currentData].elements.Count - gapWidthDegree / 360f;
             pieces[i].piece.transform.localPosition = Vector3.zero;
             pieces[i].piece.transform.localRotation = Quaternion.Euler(0, 0, -stepLength / 2f + gapWidthDegree / 2f + i * stepLength);
             // Set Icon Position & Sprite
@@ -51,6 +51,7 @@ public class RingInterface : MonoBehaviour
             pieces[i].icon.sprite = data[currentData].elements[i].icon;
             // Set Parent
             pieces[i].parent = this;
+            pieces[i].id = i;
         }
     }
 
@@ -82,12 +83,12 @@ public class RingInterface : MonoBehaviour
     private void Update()
     {
         // Get Highlighted Option
-        float stepLength = 360.0f / data[currentData].elements.Length;
+        float stepLength = 360.0f / data[currentData].elements.Count;
         float mouseAngle = NormalizeAngle(Vector3.SignedAngle(Vector3.up, Input.mousePosition - transform.position, Vector3.forward) + stepLength / 2f);
         int activeElement = (int)(mouseAngle / stepLength);
 
         // Check if Highlighted
-        for (int i = 0; i < data[currentData].elements.Length; i++)
+        for (int i = 0; i < data[currentData].elements.Count; i++)
         {
             pieces[i].backPlate.sprite = (i == activeElement) ? pieces[i].selectedSprite : pieces[i].notSelectedSprite;
         }

@@ -5,6 +5,13 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IDropHandler
 {
+    public OptionPrefab parent;
+
+    private void Awake()
+    {
+        parent = GetComponentInParent<OptionPrefab>();
+    }
+
     public GameObject item
     {
         get
@@ -21,7 +28,10 @@ public class Slot : MonoBehaviour, IDropHandler
     {
         if (!item)
         {
-            Rune.dragObject.transform.SetParent(transform);
+            Destroy(Rune.dragObject);
+            //Rune.dragObject.transform.SetParent(transform);
+            parent.SetMod(Rune.dragObject.GetComponent<Rune>().mod);
+            //parent.element = Rune.dragObject.GetComponent<Rune>().mod;
         }
     }
 }
