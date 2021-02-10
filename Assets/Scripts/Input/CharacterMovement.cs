@@ -78,6 +78,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance))
         {
+           
             finalMoveVec += horVec;
         }
         if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance))
@@ -177,7 +178,7 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
-        mainCam.transform.position = Vector3.SmoothDamp(oldPos, newPos, ref velocity, smoothTime); ;
+        mainCam.transform.position = Vector3.SmoothDamp(oldPos, newPos, ref velocity, smoothTime);
         mainCam.transform.rotation = camRot;
     }
 

@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 7559492186264385007}
   - component: {fileID: 2801288779563577000}
   - component: {fileID: 3916420650284269245}
+  - component: {fileID: 5787998717666643076}
   m_Layer: 0
   m_Name: Tomb04_a
   m_TagString: Untagged
@@ -242,6 +243,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.000002, y: 0.35317758, z: 0.898485}
   m_Center: {x: -2.5000014, y: 0, z: 0.4492425}
+--- !u!208 &5787998717666643076
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338332309978800095}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5, y: 0.177, z: 0.44900003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.5, y: 0, z: 0.44900003}
+  m_TimeToStationary: 0.5
 --- !u!1 &2717589708760092528
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +272,7 @@ GameObject:
   - component: {fileID: 1146495918139278293}
   - component: {fileID: 8038691920597343822}
   - component: {fileID: 4931990674848022035}
+  - component: {fileID: 312240813643070383}
   m_Layer: 0
   m_Name: Tomb04_a
   m_TagString: Untagged
@@ -357,6 +375,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.000002, y: 0.35317758, z: 0.898485}
   m_Center: {x: -2.5000014, y: 0, z: 0.4492425}
+--- !u!208 &312240813643070383
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2717589708760092528}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5, y: 0.177, z: 0.44900003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.5, y: 0, z: 0.44900003}
+  m_TimeToStationary: 0.5
 --- !u!1 &2795995932783236341
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +404,7 @@ GameObject:
   - component: {fileID: 7514325350313923361}
   - component: {fileID: 8099332073149136101}
   - component: {fileID: 7557694706214465772}
+  - component: {fileID: 5250327741467081159}
   m_Layer: 0
   m_Name: Tomb02_d
   m_TagString: Untagged
@@ -472,6 +507,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5120831, y: 0.5120863, z: 1.3129507}
   m_Center: {x: 0.0000012218952, y: -0.0000006109478, z: 0.65647537}
+--- !u!208 &5250327741467081159
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795995932783236341}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.256, y: 0.256, z: 0.656}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.656}
+  m_TimeToStationary: 0.5
 --- !u!1 &4052560907903682842
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +536,7 @@ GameObject:
   - component: {fileID: 168316362058940130}
   - component: {fileID: 3887670023679622725}
   - component: {fileID: 4644735632575648560}
+  - component: {fileID: 4535963591137142496}
   m_Layer: 0
   m_Name: Tomb02_d
   m_TagString: Untagged
@@ -587,6 +639,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5120831, y: 0.5120863, z: 1.3129507}
   m_Center: {x: 0.0000012218952, y: -0.0000006109478, z: 0.65647537}
+--- !u!208 &4535963591137142496
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052560907903682842}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.256, y: 0.256, z: 0.656}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.656}
+  m_TimeToStationary: 0.5
 --- !u!1 &6572632295287312782
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +781,22 @@ Transform:
   m_Father: {fileID: 2075504307688842399}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &692448864997420020
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7885719700362814261}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.256, y: 0.256, z: 0.565}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.55}
+  m_TimeToStationary: 0.5
 --- !u!1 &9138584307541969430
 GameObject:
   m_ObjectHideFlags: 0
@@ -5170,6 +5254,12 @@ PrefabInstance:
 --- !u!4 &7885719700362723093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bbefdad86b0051342964e591789fd280,
+    type: 3}
+  m_PrefabInstance: {fileID: 7885719700362847637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7885719700362814261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bbefdad86b0051342964e591789fd280,
     type: 3}
   m_PrefabInstance: {fileID: 7885719700362847637}
   m_PrefabAsset: {fileID: 0}

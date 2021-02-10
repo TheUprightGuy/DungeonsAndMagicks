@@ -24,7 +24,8 @@ public class AIAgent
     protected DetectionStatus agentStatus;
     public AIType thisAIType;
 
-    protected List<AIAction> ActionQueue = new List<AIAction>();
+    public List<AIAction> AttackQueue = new List<AIAction>();
+    public List<AIAction> MovementQueue = new List<AIAction>();
 
     protected bool LockMovementQueue = false;
     protected Vector3 MoveToTarget = Vector3.zero;
@@ -37,9 +38,7 @@ public class AIAgent
     public NavMeshAgent AINavAgent;
     
 
-    protected float MinTrackDist = 1;
-    protected float MaxTrackDist = 10;
-
+    protected float ViewRange = 10;
     protected float ViewAngle = 180.0f;
    
     /// <summary>
@@ -49,14 +48,38 @@ public class AIAgent
     private void UpdateDetection()
     {
         float AIToPlayerDist = Vector3.Distance(TargetTransform.position, RootTransform.position);
-        if (AIToPlayerDist > MaxTrackDist)
+        if (AIToPlayerDist > ViewRange)
         {
             agentStatus = DetectionStatus.OUTOFRANGE;
         }
-        else if (AIToPlayerDist < MaxTrackDist)
+        else if (AIToPlayerDist < ViewRange)
         {
             agentStatus = DetectionStatus.INRANGE;
+
+            Vector3 rootPos = RootTransform.position;
+            Vector3 targetPos = TargetTransform.position;
+            rootPos.y = 0.0f;
+            targetPos.y = 0.0f;
+
+            Vector3 playerDir = (targetPos - rootPos).normalized;
+            float angle = Vector3.Angle(playerDir, RootTransform.forward);
+            if (angle < (ViewAngle / 2)) //Within the forward view angle of the AI
+            {
+                RaycastHit hit = new RaycastHit();
+                rootPos.y = 1.0f;
+                if (Physics.Raycast(rootPos, playerDir,
+                    out hit,
+                    Vector3.Distance(TargetTransform.position, RootTransform.position)
+                    ))
+                {
+                    if (hit.collider.tag == "Player")
+                    {
+                        agentStatus = DetectionStatus.DETECTED;
+                    }
+                }
+            }
         }
+
     }
 
     /// <summary>
@@ -73,35 +96,74 @@ public class AIAgent
     }
 
 
-    private int ActionIndex = 0;
-    private float timer = 0.0f;
+    public int AttackIndex = 0;
+    private int MovementIndex = 0;
+
+    private float attackChangeTimer = 0.0f;
+    private float movementChangeTimer = 0.0f;
+
+    private float attackDelayTimer = 0.0f;
+    private float movementDelayTimer = 0.0f;
     public void DoActionQueue()
     {
-        if (ActionQueue.Count < 1)
+        if (AttackQueue.Count < 1 && MovementQueue.Count < 1)
         {
             Debug.Log(RootTransform.name + " AIAgent has no actions in its queue");
             return;
         }
 
-        if (timer > ActionQueue[ActionIndex].m_fTimeForAction)
+        //Attack Action handling
+        /*******************************************************************/
+        if (attackChangeTimer > AttackQueue[AttackIndex].m_fTimeForAction) //Check if next action needs to be queued
         {
-            ActionIndex++;
-            ActionIndex = ActionIndex % ActionQueue.Count;
-            timer = 0.0f;
+            AttackIndex++;
+            AttackIndex = AttackIndex % AttackQueue.Count;//Loop if required
+            attackChangeTimer = 0.0f;//Reset timer
         }
         else
         {
-            timer += Time.deltaTime;
+            attackChangeTimer += Time.deltaTime; //Continue 
         }
 
-        if (!LockMovementQueue)
+        if (attackDelayTimer >= AttackQueue[AttackIndex].m_fActionDelay //Check for delay between each action call
+            && !LockAttackQueue) //Check the queue isn't locked
         {
-            ActionQueue[ActionIndex].Move(TargetTransform, RootTransform);
+            AttackQueue[AttackIndex].Attack(TargetTransform, RootTransform);
+            attackDelayTimer = 0.0f;
         }
-        if (!LockAttackQueue)
+        else if(!LockAttackQueue) //Comment this if out if wanting to time while locked
         {
-            ActionQueue[ActionIndex].Attack(TargetTransform, RootTransform);
+            attackDelayTimer += Time.deltaTime;
         }
+        /*******************************************************************/
+
+
+        //Movement Action handling
+        /*******************************************************************/
+        if (movementChangeTimer > MovementQueue[MovementIndex].m_fTimeForAction) //Check if next action needs to be queued
+        {
+            MovementIndex++;
+            MovementIndex = MovementIndex % MovementQueue.Count;//Loop if required
+            movementChangeTimer = 0.0f;//Reset timer
+        }
+        else
+        {
+            movementChangeTimer += Time.deltaTime; //Continue 
+        }
+
+        if (movementDelayTimer >= MovementQueue[MovementIndex].m_fActionDelay //Check for delay between each action call
+            && !LockMovementQueue) //Check the queue isn't locked
+        {
+            MovementQueue[MovementIndex].Move(TargetTransform, RootTransform);
+            movementDelayTimer = 0.0f;
+        }
+        else if (!LockMovementQueue) //Comment this if out if wanting to time while locked
+        {
+            movementDelayTimer += Time.deltaTime;
+        }
+        /*******************************************************************/
+
+
     }
 
     /// <summary>
@@ -122,38 +184,7 @@ public class AIAgent
     }
 
 
-    /// <summary>
-    /// Get a valid target in the navmesh environment
-    /// </summary>
-    /// <returns>The valid destination</returns>
-    //public Vector3 GetValidTarget()
-    //{
-    //    Vector3 validTarget = Target;
-
-    //    int counter = 0;
-    //    const int breakOutCount = 100;
-
-    //    while (counter < breakOutCount) //found a complete path or had to break out
-    //    {
-    //        Vector2 randPoint = RandomInTorus(Target, ClosestDist, FurthestDist);
-    //        validTarget = new Vector3(randPoint.x, 0.0f, randPoint.y);
-
-    //        NavMeshPath path = new NavMeshPath();
-    //        AINavAgent.CalculatePath(validTarget, path);
-
-    //        if (path.status == NavMeshPathStatus.PathComplete)//Check for a completable path
-    //        {
-    //            break;
-    //        }
-    //        else
-    //        {
-    //            validTarget = Target;
-    //        }
-
-    //        counter++;
-    //    }
-    //    return validTarget;
-    //}
+    
 
     /// <summary>
     /// Gets a random point on a torus in 2D within two distances

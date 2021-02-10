@@ -6,7 +6,8 @@ public class AIObject : MonoBehaviour
 {
     public AIType thisType;
 
-    private AIAgent thisAgent;
+    [HideInInspector]
+    public AIAgent thisAgent;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,4 @@ public class AIObject : MonoBehaviour
         thisAgent.Act();
     }
 
-
-    
 }

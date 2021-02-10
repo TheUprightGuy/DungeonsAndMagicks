@@ -8,6 +8,7 @@ public class BaseMove : AIAction
     public NavMeshAgent agent = null;
     public override void Move(Transform _target, Transform _root)
     {
+        m_fActionDelay = 0.0f;
         if (agent == null)
         {
             agent = _root.GetComponent<NavMeshAgent>();
