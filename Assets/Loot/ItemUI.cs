@@ -51,7 +51,15 @@ public class ItemUI : MonoBehaviour
 
             for (int i = 0; i < rings.Length; i++)
             {
-                rings[i].SetActive(i < items[0].numRings);
+                if (i < items[0].numRings)
+                {
+                    rings[i].SetActive(true);
+                    rings[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(items[0].ability.startRings[i].elements.Count.ToString());
+                }
+                else
+                {
+                    rings[i].SetActive(false);
+                }
             }
         }
         else

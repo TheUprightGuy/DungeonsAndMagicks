@@ -21,6 +21,7 @@ public class CraftingTable : MonoBehaviour
         if (other.GetComponent<Controller>())
         {
             cc.pc = null;
+            CallbackHandler.instance.CloseCraftInterface(false);
         }
     }
 }

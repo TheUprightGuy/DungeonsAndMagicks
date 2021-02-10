@@ -46,7 +46,7 @@ public class ProjectileAbility : Ability
         {
             case OnShootBehaviour.Normal:
             {
-                Projectile temp = Instantiate(projectilePrefab, _user.transform.position + _user.transform.forward, Quaternion.identity).GetComponent<Projectile>();
+                Projectile temp = Instantiate((mods.projPrefab) ? mods.projPrefab : projectilePrefab, _user.transform.position + _user.transform.forward, Quaternion.identity).GetComponent<Projectile>();
                 temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f);
 
                 temp.Setup(mods);
@@ -61,7 +61,7 @@ public class ProjectileAbility : Ability
                 // Fan behaviour
                 for (int i = 0; i < mods.numProj; i++)
                 {
-                    Projectile temp = Instantiate(projectilePrefab, _user.transform.position + _user.transform.forward, Quaternion.identity).GetComponent<Projectile>();
+                    Projectile temp = Instantiate((mods.projPrefab) ? mods.projPrefab : projectilePrefab, _user.transform.position + _user.transform.forward, Quaternion.identity).GetComponent<Projectile>();
                     temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y + angleArray[i], 0.0f);
 
                     temp.Setup(mods);
@@ -77,7 +77,7 @@ public class ProjectileAbility : Ability
                     // Check if left or right
                     int side = (i % 2 != 0) ? -1 * space : 1 * space;
 
-                    Projectile temp = Instantiate(projectilePrefab, _user.transform.position + _user.transform.forward + _user.transform.right * side, Quaternion.identity).GetComponent<Projectile>();              
+                    Projectile temp = Instantiate((mods.projPrefab) ? mods.projPrefab : projectilePrefab, _user.transform.position + _user.transform.forward + _user.transform.right * side, Quaternion.identity).GetComponent<Projectile>();              
                     temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f); 
 
                     temp.Setup(mods);
@@ -97,7 +97,7 @@ public class ProjectileAbility : Ability
         // Add minor delay between instantiate
         for (int i = 0; i < mods.numProj; i++)
         {
-            Projectile temp = Instantiate(projectilePrefab, _user.transform.position, Quaternion.identity).GetComponent<Projectile>();
+            Projectile temp = Instantiate((mods.projPrefab) ? mods.projPrefab : projectilePrefab, _user.transform.position, Quaternion.identity).GetComponent<Projectile>();
             temp.transform.rotation = Quaternion.Euler(0.0f, _user.transform.rotation.eulerAngles.y, 0.0f);
             temp.Setup(mods);
             yield return new WaitForSeconds(_delay);
@@ -136,7 +136,7 @@ public class ProjectileAbility : Ability
 
         if (_mods.projModifiers.projPrefab)
         {
-            projectilePrefab = _mods.projModifiers.projPrefab;
+            mods.projPrefab = _mods.projModifiers.projPrefab;
         }
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CraftingCanvas : MonoBehaviour
 {
     [HideInInspector] public RingInterface ringInterface;
+    [HideInInspector] public RunesUI runesUI;
     public Controller pc;
     public static CraftingCanvas instance;
 
@@ -12,11 +13,10 @@ public class CraftingCanvas : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
-            ToggleRingInterface(true);
+            CallbackHandler.instance.ToggleCraftInterface();
             SetRingAbility(pc.abilities[pc.activeIndex]);
         }
     }
-
 
     private void Awake()
     {
@@ -27,21 +27,34 @@ public class CraftingCanvas : MonoBehaviour
         }
         instance = this;
         ringInterface = GetComponentInChildren<RingInterface>();
+        runesUI = GetComponentInChildren<RunesUI>();
     }
 
     private void Start()
     {
-        ToggleRingInterface(false);
+        CallbackHandler.instance.toggleCraftInterface += ToggleCraftInterface;
+        CallbackHandler.instance.closeCraftInterface += CloseCraftInterface;
+        CallbackHandler.instance.setRingAbility += SetRingAbility;
+
+        CloseCraftInterface(false);
+    }
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.toggleCraftInterface -= ToggleCraftInterface;
+        CallbackHandler.instance.closeCraftInterface -= CloseCraftInterface;
+        CallbackHandler.instance.setRingAbility -= SetRingAbility;
     }
 
-    public void ToggleRingInterface(bool _toggle)
+    public void CloseCraftInterface(bool _toggle)
     {
         ringInterface.gameObject.SetActive(_toggle);
+        runesUI.gameObject.SetActive(_toggle);
     }
 
-    public void ToggleRingInterface()
+    public void ToggleCraftInterface()
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
+        runesUI.gameObject.SetActive(!runesUI.gameObject.activeSelf);
     }
 
     public void ResetAbility()
@@ -67,7 +80,7 @@ public class CraftingCanvas : MonoBehaviour
         if (!ringInterface.NextRing())
         {
             ringInterface.currentData = 0;
-            ToggleRingInterface();
+            ToggleCraftInterface();
         }
     }
 }

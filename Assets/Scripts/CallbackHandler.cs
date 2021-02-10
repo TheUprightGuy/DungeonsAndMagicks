@@ -47,6 +47,24 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action toggleCraftInterface;
+    public void ToggleCraftInterface()
+    {
+        if (toggleCraftInterface != null)
+        {
+            toggleCraftInterface();
+        }
+    }
+
+    public Action<bool> closeCraftInterface;
+    public void CloseCraftInterface(bool _toggle)
+    {
+        if (closeCraftInterface != null)
+        {
+            closeCraftInterface(_toggle);
+        }
+    }
+
     public Action<Ability> setRingAbility;
     public void SetRingAbility(Ability _ability)
     {

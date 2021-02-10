@@ -80,7 +80,7 @@ public class RingInterface : MonoBehaviour
         return false;      
     }
 
-    private void Update()
+    public virtual void Update()
     {
         // Get Highlighted Option
         float stepLength = 360.0f / data[currentData].elements.Count;
@@ -113,5 +113,5 @@ public class RingInterface : MonoBehaviour
         modList.ClearIcons();
     }
 
-    private float NormalizeAngle(float a) => (a + 360f) % 360f;
+    public float NormalizeAngle(float a) => (a + 360f) % 360f;
 }
