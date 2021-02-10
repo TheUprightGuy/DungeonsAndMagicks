@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4eddba6637ba74f9d2e9803a606d37, type: 3}
   m_Name: Nova
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   name: Nova
   description: Creates a small explosion on hit.
   icon: {fileID: 21300000, guid: 77d596f991f01d34b9fc31566056124f, type: 3}
