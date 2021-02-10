@@ -6,6 +6,7 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     public List<Item> equipment;
+    public List<Mod> runes;
 
 
 

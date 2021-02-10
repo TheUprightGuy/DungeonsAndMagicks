@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     ProjectileAbilityModifiers mods;
     public float speed;
     public float lifetime;
+    // temp
+    public float damage;
 
     private List<Transform> chainTargets = new List<Transform>();
 
@@ -104,6 +106,8 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Hit Enemy");
+            // temp
+            collision.GetComponent<EnemyStats>().TakeDamage(damage);
 
             foreach (OnHitBehaviour n in mods.onHit)
             {
@@ -131,7 +135,6 @@ public class Projectile : MonoBehaviour
                     }
                 }
             }
-
         }
     }
 }

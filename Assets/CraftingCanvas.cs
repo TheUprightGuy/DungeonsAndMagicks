@@ -15,6 +15,7 @@ public class CraftingCanvas : MonoBehaviour
         {
             CallbackHandler.instance.ToggleCraftInterface();
             SetRingAbility(pc.abilities[pc.activeIndex]);
+            SetRunes(pc.runes);
         }
     }
 
@@ -55,6 +56,16 @@ public class CraftingCanvas : MonoBehaviour
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
         runesUI.gameObject.SetActive(!runesUI.gameObject.activeSelf);
+
+        if (!runesUI.gameObject.activeSelf)
+        {
+            runesUI.CleanUp();
+        }
+    }
+
+    public void SetRunes(List<Mod> _runes)
+    {
+        runesUI.DisplayRunes(_runes);
     }
 
     public void ResetAbility()

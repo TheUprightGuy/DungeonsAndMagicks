@@ -35,6 +35,8 @@ public class LootDrop : MonoBehaviour
             pc.EquipItem(item);
             ItemUI.instance.HideItem(item);
             Destroy(this.gameObject);
+
+            TutorialTracking.instance.CheckQuest(this.gameObject);
         }
     }
 }

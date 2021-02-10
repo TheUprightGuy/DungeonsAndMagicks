@@ -31,8 +31,7 @@ public class ItemUI : MonoBehaviour
     public void ShowItem(Item _item)
     {
         items.Add(_item);
-        DisplayItem();
-        
+        DisplayItem(); 
     }
 
     public void HideItem(Item _item)
