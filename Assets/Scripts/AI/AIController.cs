@@ -21,7 +21,8 @@ public class AIController : Singleton<AIController>
     public List<AIAction> AttackActions = new List<AIAction>();
     [HideInInspector]
     public List<AIAgent> AgentTemplates = new List<AIAgent>();
-
+    [HideInInspector]
+    public List<Transform> AgentTransforms = new List<Transform>();
     private void RegisterActions()
     {
         //Add each action, add to approriate List<>
@@ -43,8 +44,22 @@ public class AIController : Singleton<AIController>
     {
         RegisterActions();
         GenerateTemplates();
+        barHandler = transform.GetComponentInChildren<AIBarHandler>();
     }
 
+    private void Update()
+    {
+        foreach (var item in AgentTransforms)
+        {
+            if (item == null)
+            {
+                AgentTransforms.Remove(item);
+            }
+        }
+    }
+
+
+    AIBarHandler barHandler;
     /// <summary>
     /// Gets the AIAgentTemplate from the list, applys a random muation based on MutationChance
     /// </summary>
@@ -65,6 +80,7 @@ public class AIController : Singleton<AIController>
                 CopiedAgent.RootTransform = _AttachedTransform;
                 CopiedAgent.AINavAgent = _AttachedTransform.GetComponent<NavMeshAgent>();
 
+                AgentTransforms.Add(_AttachedTransform);
 
                 float randChance = UnityEngine.Random.Range(0.0f, 1.0f);
                 if (randChance > MutationChance) //Check if mutation present

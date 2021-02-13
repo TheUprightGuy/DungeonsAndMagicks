@@ -37,8 +37,7 @@ public class ScoutAI : AIAgent
         Vector3 flatTargetPos = TargetTransform.position;
         flatTargetPos.y = 0.0f;
         Vector3 flatRootPos = RootTransform.position;
-        flatTargetPos.y = 0.0f
-            ;
+        flatTargetPos.y = 0.0f;
         Vector3 AIToPlayerDir = (flatTargetPos - flatRootPos).normalized;
         switch (agentStatus)
         {

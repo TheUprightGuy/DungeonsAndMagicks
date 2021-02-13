@@ -19,9 +19,9 @@ public class BaseAttack : AIAction
 
     public override void Attack(Transform _target, Transform _root)
     {
-        animHandler = _root.GetComponentInChildren<EnemyAnimatorFunctions>();
 
-        animHandler.Attack();
+        //animHandler = _root.GetComponentInChildren<EnemyAnimatorFunctions>();
+        //animHandler.Attack();
         Vector2 pos = Random.insideUnitCircle * Accuracy;
         Vector3 convPos = new Vector3(pos.x, 0.0f, pos.y);
         proj.transform.forward = (_target.position + convPos) - _root.position;

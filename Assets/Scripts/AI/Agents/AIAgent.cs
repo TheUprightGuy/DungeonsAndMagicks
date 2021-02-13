@@ -112,6 +112,18 @@ public class AIAgent
             return;
         }
 
+
+        AttackQueueHandling();
+        MovementQueueHandling();
+    }
+
+    private void AttackQueueHandling()
+    {
+
+        if (AttackQueue.Count <= 0) //Error Handling
+        {
+            return;
+        }
         //Attack Action handling
         /*******************************************************************/
         if (attackChangeTimer > AttackQueue[AttackIndex].m_fTimeForAction) //Check if next action needs to be queued
@@ -131,13 +143,19 @@ public class AIAgent
             AttackQueue[AttackIndex].Attack(TargetTransform, RootTransform);
             attackDelayTimer = 0.0f;
         }
-        else if(!LockAttackQueue) //Comment this if out if wanting to time while locked
+        else if (!LockAttackQueue) //Comment this if out if wanting to time while locked
         {
             attackDelayTimer += Time.deltaTime;
         }
         /*******************************************************************/
+    }
 
-
+    private void MovementQueueHandling()
+    {
+        if (MovementQueue.Count <= 0) //Error Handling
+        {
+            return;
+        }
         //Movement Action handling
         /*******************************************************************/
         if (movementChangeTimer > MovementQueue[MovementIndex].m_fTimeForAction) //Check if next action needs to be queued
@@ -163,9 +181,7 @@ public class AIAgent
         }
         /*******************************************************************/
 
-
     }
-
     /// <summary>
     /// Pulls a random AIAction queue, adding AbilityCount amount of AIActions if stack true
     /// Clears then adds if stack is false

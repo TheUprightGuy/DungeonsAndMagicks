@@ -49,6 +49,8 @@ public class Projectile : MonoBehaviour
             if (n.gameObject.CompareTag("Enemy"))
             {
                 // Damage Enemy
+                _transform.GetComponent<AIEnemyStats>().TakeDamage(10.0f); //Wayd pls remove magic numbers and put in proper call for damage amount
+
             }
         }
         End();
@@ -57,6 +59,8 @@ public class Projectile : MonoBehaviour
     private void Pierce(Transform _transform)
     {
         // Damage Enemy
+        _transform.GetComponent<AIEnemyStats>().TakeDamage(10.0f); //Wayd HERE TOO
+
     }
 
     public void Chain(Transform _transform)
@@ -65,7 +69,7 @@ public class Projectile : MonoBehaviour
         chainTargets.Add(_transform);
 
         // Damage Enemy
-
+        _transform.GetComponent<AIEnemyStats>().TakeDamage(10.0f); //Wayd HERE TOO
 
         // Check for nearby                                                 // chain distance
         Collider[] hitColliders = Physics.OverlapSphere(_transform.position, 5.0f);
@@ -132,6 +136,10 @@ public class Projectile : MonoBehaviour
                 }
             }
 
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            //Wayd pls thx I dunno how your applying damage to player
         }
     }
 }
