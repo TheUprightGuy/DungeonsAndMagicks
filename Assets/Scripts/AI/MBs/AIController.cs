@@ -10,8 +10,26 @@ public enum AIType
     TURRET
 }
 
-public class AIController : Singleton<AIController>
+public class AIController : MonoBehaviour
 {
+
+    public static AIController Instance;
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("More than one Callback Handler Exists!");
+            Destroy(this.gameObject);
+        }
+        Instance = this;
+
+        RegisterActions();
+        GenerateTemplates();
+        barHandler = transform.GetComponentInChildren<AIBarHandler>();
+
+    }
+
+
     [HideInInspector]
     public float MutationChance = 0.0f;
 
@@ -26,26 +44,19 @@ public class AIController : Singleton<AIController>
     private void RegisterActions()
     {
         //Add each action, add to approriate List<>
-        MoveActions.Add(new BaseMove());
-        AttackActions.Add(new AIAction());
+        //MoveActions.Add(new BaseMove());
+        AttackActions.Add(new HomingAttack());
     }
      
     private void GenerateTemplates()
     {
         ScoutAI scoutAI = new ScoutAI();
-        scoutAI.Randomise(2);
+        scoutAI.Randomise(1);
         AgentTemplates.Add(scoutAI);
 
         //Create each sub-class, add to AgentTemplates
     }
 
-
-    private void Awake()
-    {
-        RegisterActions();
-        GenerateTemplates();
-        barHandler = transform.GetComponentInChildren<AIBarHandler>();
-    }
 
     private void Update()
     {

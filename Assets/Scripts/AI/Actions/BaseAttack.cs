@@ -8,6 +8,7 @@ public class BaseAttack : AIAction
 
     public BaseAttack()
     {
+        m_fTimeForAction = 1.0f;
         m_fActionDelay = 2.0f;
         id = "BaseAttack";
         proj = Resources.Load<GameObject>("Projectile");

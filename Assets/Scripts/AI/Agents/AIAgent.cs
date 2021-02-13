@@ -190,7 +190,28 @@ public class AIAgent
     /// <param name="stack">clears queues before adding if false, default is true</param>
     public virtual void Randomise(uint AbilityCount, bool stack = true)
     {
+        if (!stack)
+        {
+            MovementQueue.Clear();
+            AttackQueue.Clear();
+        }
+        for (int i = 0; i < AbilityCount; i++)
+        {
+            if (AIController.Instance.MoveActions.Count <= 0)
+            {
+                break;
+            }
+            MovementQueue.Add(AIController.Instance.MoveActions[Random.Range(0, AIController.Instance.MoveActions.Count - 1)]);
+        }
 
+        for (int i = 0; i < AbilityCount; i++)
+        {
+            if (AIController.Instance.AttackActions.Count <= 0)
+            {
+                break;
+            }
+            AttackQueue.Add(AIController.Instance.AttackActions[Random.Range(0, AIController.Instance.AttackActions.Count - 1)]);
+        }
     }
 
 

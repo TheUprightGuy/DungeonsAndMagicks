@@ -27,6 +27,7 @@ public class ScoutAI : AIAgent
     public override void Randomise(uint AbilityCount, bool stack = true)
     {
         base.Randomise(AbilityCount, stack);
+       
     }
 
     public override void Act()
