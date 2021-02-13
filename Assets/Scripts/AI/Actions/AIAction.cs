@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class AIAction
+public class AIAction :ScriptableObject
 {
-    public string Name;
+    public string id;
 
     ///<summary>
     ///Time that the AI
     ///Action is used for
     ///</summary>
     public float m_fTimeForAction = 1.0f;
-
+    public float m_fActionDelay = 1.0f;
     ///<summary>
     ///Base Movement method 
     ///</summary>

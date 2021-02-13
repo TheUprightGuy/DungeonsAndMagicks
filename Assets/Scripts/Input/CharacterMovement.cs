@@ -78,6 +78,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance) || hit.collider.isTrigger)
         {
+           
             finalMoveVec += horVec;
         }
         if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance) || hit.collider.isTrigger)
@@ -170,14 +171,14 @@ public class CharacterMovement : MonoBehaviour
             newPos.x = oldPos.x;
         }
 
-        if ((!topCheck && calcPos.y > oldPos.y) ||//Over the top edge and going further
-            (!botCheck && calcPos.y < oldPos.y))//Over the bottom edge and going further
+        if ((!topCheck && calcPos.z > oldPos.z) ||//Over the top edge and going further
+            (!botCheck && calcPos.z < oldPos.z))//Over the bottom edge and going further
         {
-            newPos.y = oldPos.y;
+            newPos.z = oldPos.z;
         }
 
 
-        mainCam.transform.position = Vector3.SmoothDamp(oldPos, newPos, ref velocity, smoothTime); ;
+        mainCam.transform.position = Vector3.SmoothDamp(oldPos, newPos, ref velocity, smoothTime);
         mainCam.transform.rotation = camRot;
     }
 

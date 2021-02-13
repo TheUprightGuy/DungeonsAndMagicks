@@ -10,36 +10,67 @@ public enum AIType
     TURRET
 }
 
-public class AIController : Singleton<AIController>
+public class AIController : MonoBehaviour
 {
+
+    public static AIController Instance;
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("More than one Callback Handler Exists!");
+            Destroy(this.gameObject);
+        }
+        Instance = this;
+
+        RegisterActions();
+        GenerateTemplates();
+        barHandler = transform.GetComponentInChildren<AIBarHandler>();
+
+    }
+
+
+    [HideInInspector]
     public float MutationChance = 0.0f;
 
+    [HideInInspector]
     public List<AIAction> MoveActions = new List<AIAction>();
+    [HideInInspector]
     public List<AIAction> AttackActions = new List<AIAction>();
-
+    [HideInInspector]
     public List<AIAgent> AgentTemplates = new List<AIAgent>();
-
+    [HideInInspector]
+    public List<Transform> AgentTransforms = new List<Transform>();
     private void RegisterActions()
     {
         //Add each action, add to approriate List<>
+        //MoveActions.Add(new BaseMove());
+        AttackActions.Add(new HomingAttack());
     }
      
     private void GenerateTemplates()
     {
         ScoutAI scoutAI = new ScoutAI();
-        scoutAI.Randomise(2);
+        scoutAI.Randomise(1);
         AgentTemplates.Add(scoutAI);
 
         //Create each sub-class, add to AgentTemplates
     }
 
 
-    private void Awake()
+    private void Update()
     {
-        RegisterActions();
-        GenerateTemplates();
+        foreach (var item in AgentTransforms)
+        {
+            if (item == null)
+            {
+                AgentTransforms.Remove(item);
+            }
+        }
     }
 
+
+    AIBarHandler barHandler;
     /// <summary>
     /// Gets the AIAgentTemplate from the list, applys a random muation based on MutationChance
     /// </summary>
@@ -60,6 +91,7 @@ public class AIController : Singleton<AIController>
                 CopiedAgent.RootTransform = _AttachedTransform;
                 CopiedAgent.AINavAgent = _AttachedTransform.GetComponent<NavMeshAgent>();
 
+                AgentTransforms.Add(_AttachedTransform);
 
                 float randChance = UnityEngine.Random.Range(0.0f, 1.0f);
                 if (randChance > MutationChance) //Check if mutation present
