@@ -39,7 +39,7 @@ public class AIController : MonoBehaviour
     public List<AIAction> AttackActions = new List<AIAction>();
     [HideInInspector]
     public List<AIAgent> AgentTemplates = new List<AIAgent>();
-    [HideInInspector]
+    //[HideInInspector]
     public List<Transform> AgentTransforms = new List<Transform>();
     private void RegisterActions()
     {
