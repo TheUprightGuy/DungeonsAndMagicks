@@ -91,6 +91,11 @@ public class Controller : MonoBehaviour
             CallbackHandler.instance.ToggleRingInterface(abilities[activeIndex]);
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            CallbackHandler.instance.SetText("Testing Callback", 3.0f);
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
             if (CharacterStats.instance.Control())

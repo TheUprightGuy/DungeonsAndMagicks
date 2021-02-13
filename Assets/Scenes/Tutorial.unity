@@ -27021,82 +27021,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1065046455}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1079987031
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1079987032}
-  - component: {fileID: 1079987033}
-  - component: {fileID: 1079987034}
-  m_Layer: 5
-  m_Name: AbilityToggle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1079987032
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079987031}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1523986868}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 650, y: 220}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1079987033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079987031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 10
-    m_Right: 10
-    m_Top: 10
-    m_Bottom: 10
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 200, y: 200}
-  m_Spacing: {x: 10, y: 10}
-  m_Constraint: 0
-  m_ConstraintCount: 2
---- !u!114 &1079987034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079987031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec7a459a0ba45a248be6e7cb3695c703, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  togglePrefab: {fileID: 6763554321555587238, guid: 91cd00e28ff85c9438a95c1d5b07470b,
-    type: 3}
-  toggles: []
 --- !u!1 &1116236857
 GameObject:
   m_ObjectHideFlags: 0
@@ -28840,12 +28764,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456976482}
   m_Mesh: {fileID: 4300000, guid: dd856c7b916b9834ebbf02aa4342755f, type: 3}
---- !u!224 &1523986868 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3446581037601472437, guid: 372910808665bb34e8d4b5d2f121bffa,
-    type: 3}
-  m_PrefabInstance: {fileID: 817664114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1573695012
 GameObject:
   m_ObjectHideFlags: 0

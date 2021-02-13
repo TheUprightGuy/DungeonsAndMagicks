@@ -154,6 +154,15 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<string, float> setText;
+    public void SetText(string _text, float _time)
+    {
+        if (setText != null)
+        {
+            setText(_text, _time);
+        }
+    }
+
     public void QuitToMenu()
     {
         // SceneLoad here
