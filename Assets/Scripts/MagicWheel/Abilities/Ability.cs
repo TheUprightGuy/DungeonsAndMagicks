@@ -12,7 +12,8 @@ public enum Element
 
 public enum AbilityType
 {
-    Projectile = 0,
+    None = 0,
+    Projectile,
     Buff,
     Movement
 }

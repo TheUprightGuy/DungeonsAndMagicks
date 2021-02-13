@@ -6,9 +6,18 @@ public class GameplayUI : MonoBehaviour
 {
     public AbilityUI[] abilityReferences;
 
+    public static GameplayUI instance;
+
     #region SetupIDs
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogError("More than one GameplayUI Exists!");
+            Destroy(gameObject);
+        }
+
+        instance = this;
         abilityReferences = GetComponentsInChildren<AbilityUI>();
         for (int i = 0; i < abilityReferences.Length; i++)
         {

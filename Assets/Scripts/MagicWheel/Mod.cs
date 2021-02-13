@@ -7,7 +7,7 @@ using Object = UnityEngine.Object;
 
 public enum ModType
 {
-    None,
+    None = 0,
     Projectile,
     Buff,
     Movement

@@ -15,7 +15,7 @@ MonoBehaviour:
   modsApplied: []
   startRings:
   - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
-  type: 2
+  type: 3
   modRings:
   - {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
   buffs: []

@@ -6,6 +6,8 @@ public class CraftingCanvas : MonoBehaviour
 {
     [HideInInspector] public RingInterface ringInterface;
     [HideInInspector] public RunesUI runesUI;
+    [HideInInspector] public AbilityToggleUI toggleUI;
+
     public Controller pc;
     public static CraftingCanvas instance;
 
@@ -15,7 +17,8 @@ public class CraftingCanvas : MonoBehaviour
         {
             CallbackHandler.instance.ToggleCraftInterface();
             SetRingAbility(pc.abilities[pc.activeIndex]);
-            SetRunes(pc.runes);
+            SetRunes(pc.abilities[pc.activeIndex]);
+            SetAbilities(pc.abilities);
         }
     }
 
@@ -29,6 +32,7 @@ public class CraftingCanvas : MonoBehaviour
         instance = this;
         ringInterface = GetComponentInChildren<RingInterface>();
         runesUI = GetComponentInChildren<RunesUI>();
+        toggleUI = GetComponentInChildren<AbilityToggleUI>();
     }
 
     private void Start()
@@ -50,22 +54,34 @@ public class CraftingCanvas : MonoBehaviour
     {
         ringInterface.gameObject.SetActive(_toggle);
         runesUI.gameObject.SetActive(_toggle);
+        toggleUI.gameObject.SetActive(_toggle);
+
+        GameplayUI.instance.gameObject.SetActive(!_toggle);
     }
 
     public void ToggleCraftInterface()
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
         runesUI.gameObject.SetActive(!runesUI.gameObject.activeSelf);
+        toggleUI.gameObject.SetActive(!toggleUI.gameObject.activeSelf);
 
         if (!runesUI.gameObject.activeSelf)
         {
             runesUI.CleanUp();
+            toggleUI.CleanUp();
         }
+
+        GameplayUI.instance.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
     }
 
-    public void SetRunes(List<Mod> _runes)
+    public void SetAbilities(List<Ability> _abilities)
     {
-        runesUI.DisplayRunes(_runes);
+        toggleUI.Setup(_abilities);
+    }
+
+    public void SetRunes(Ability _ability)
+    {
+        runesUI.DisplayRunes(pc.runes, _ability);
     }
 
     public void ResetAbility()
