@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Settings", menuName = "Settings/Saved", order = 1)]
+[CreateAssetMenu(fileName = "Settings", menuName = "Data/Settings", order = 1)]
 public class GameSettings : ScriptableObject
 {
     [Header("Game Settings")]

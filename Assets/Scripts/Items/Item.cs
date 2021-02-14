@@ -10,7 +10,7 @@ public enum Rarity
     Epic
 }
 
-[CreateAssetMenu(fileName = "Wand", menuName = "Item/Wand", order = 1)]
+[CreateAssetMenu(fileName = "Weapon", menuName = "Item/Weapon", order = 1)]
 public class Item : ScriptableObject
 {
     public List<Ability> abilities;

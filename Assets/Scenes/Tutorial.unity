@@ -30367,6 +30367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16852fe12f0f1f49b2f9c415347fc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emptySocket: {fileID: 11400000, guid: 84aacd945aaf81a49a5671fa826b6f8e, type: 2}
   data: {fileID: 11400000, guid: 098c43eedf5f8d44aaaa922de223bf60, type: 2}
 --- !u!4 &1970123418
 Transform:

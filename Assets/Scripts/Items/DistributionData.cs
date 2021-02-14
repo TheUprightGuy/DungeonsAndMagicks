@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DistributionData", menuName = "Data/DistributionData", order = 2)]
+[CreateAssetMenu(fileName = "DistributionData", menuName = "Magic/Data/DistributionData", order = 3)]
 public class DistributionData : ScriptableObject
 {
     public List<Mod> mods;

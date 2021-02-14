@@ -23,7 +23,7 @@ public struct MovementAbilityModifiers
     public List<OnEndBehaviour> onEnd;
 }
 
-[CreateAssetMenu(fileName = "MovementAbility", menuName = "Ability/MovementAbility", order = 1)]
+[CreateAssetMenu(fileName = "MovementAbility", menuName = "Magic/Ability/MovementAbility", order = 1)]
 public class MovementAbility : Ability
 {
     public MovementAbilityModifiers mods;
@@ -114,6 +114,7 @@ public class MovementAbility : Ability
     // Called Through Startup - Sets Elements to Start Elements
     public override void ResetStartingModifiers()
     {
+        modRing = ScriptableObject.CreateInstance<RingMenu>();
         modRing.ResetMods(sockets);
     }
 }

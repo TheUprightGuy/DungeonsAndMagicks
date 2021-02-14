@@ -28,7 +28,7 @@ public struct ProjectileAbilityModifiers
     public GameObject projPrefab;
 }
 
-[CreateAssetMenu(fileName = "ProjectileAbility", menuName = "Ability/ProjectileAbility", order = 1)]
+[CreateAssetMenu(fileName = "ProjectileAbility", menuName = "Magic/Ability/ProjectileAbility", order = 1)]
 public class ProjectileAbility : Ability
 {
     public ProjectileAbilityModifiers mods;
@@ -163,6 +163,7 @@ public class ProjectileAbility : Ability
     // Called Through Startup - Sets Elements to Start Elements
     public override void ResetStartingModifiers()
     {
+        modRing = ScriptableObject.CreateInstance<RingMenu>();
         modRing.ResetMods(sockets);
     }
 }

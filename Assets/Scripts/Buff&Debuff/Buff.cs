@@ -30,7 +30,7 @@ public struct ShieldBuffModifiers
     public bool shield;
 }
 
-[CreateAssetMenu(fileName = "Buff", menuName = "Buff/Buff", order = 1)]
+[CreateAssetMenu(fileName = "Buff", menuName = "Magic/Mod/Buff", order = 1)]
 public class Buff : ScriptableObject
 {
     public Sprite icon;

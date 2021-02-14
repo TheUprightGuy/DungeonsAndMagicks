@@ -22,7 +22,7 @@ public struct BuffAbilityModifiers
     public List<OnBuffEndBehaviour> onBuffEnd;
 }
 
-[CreateAssetMenu(fileName = "BuffAbility", menuName = "Ability/BuffAbility", order = 2)]
+[CreateAssetMenu(fileName = "BuffAbility", menuName = "Magic/Ability/BuffAbility", order = 2)]
 public class BuffAbility : Ability
 {
     public BuffAbilityModifiers mods;
@@ -90,6 +90,7 @@ public class BuffAbility : Ability
     // Called Through Startup - Sets Elements to Start Elements
     public override void ResetStartingModifiers()
     {
+        modRing = ScriptableObject.CreateInstance<RingMenu>();
         modRing.ResetMods(sockets);
     }
 }

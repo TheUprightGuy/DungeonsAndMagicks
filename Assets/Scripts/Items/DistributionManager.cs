@@ -5,6 +5,7 @@ using UnityEngine;
 public class DistributionManager : MonoBehaviour
 {
     public static DistributionManager instance;
+    public Mod emptySocket;
     private void Awake()
     {
         if (instance != null)

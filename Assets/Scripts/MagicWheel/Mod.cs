@@ -13,7 +13,7 @@ public enum ModType
     Movement
 }
 
-[CreateAssetMenu(fileName = "Mod", menuName = "RingMenu/Mod", order = 2)]
+[CreateAssetMenu(fileName = "Mod", menuName = "Magic/Mod/Mod", order = 1)]
 public class Mod : ScriptableObject
 {
     public ModType type;
