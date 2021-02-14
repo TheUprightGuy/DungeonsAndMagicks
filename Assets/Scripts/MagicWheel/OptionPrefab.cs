@@ -31,17 +31,9 @@ public class OptionPrefab : MonoBehaviour
             _ability.AddMods(element);
             parent.modList.CreateMod(icon.sprite, parent.modPrefab);
 
-
-            if (element.followUp)
-            {
-                parent.data.Add(element.followUp);
-            }
-
-
             selected = true;
         }
         CallbackHandler.instance.UpdateAbilityModList(_ability);
-        MagicCanvas.instance.NextRing();
     }
 
     public void SetMod(Mod _mod)
@@ -49,6 +41,6 @@ public class OptionPrefab : MonoBehaviour
         element = _mod;
         icon.sprite = element.icon;
 
-        parent.data[parent.currentData].elements[id] = _mod;
+        parent.data.mods[id] = _mod;
     }
 }

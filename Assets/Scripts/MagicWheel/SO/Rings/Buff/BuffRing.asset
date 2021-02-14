@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8def16fb34fbf82498d13cbb9c114bed, type: 3}
   m_Name: BuffRing
   m_EditorClassIdentifier: 
-  elements:
-  - {fileID: 11400000, guid: 5b10ccdf2f2440040b7c4e7676d0b2c8, type: 2}
+  startMods: []
+  emptySocket: {fileID: 11400000, guid: 84aacd945aaf81a49a5671fa826b6f8e, type: 2}
+  mods:
+  - {fileID: 0}
+  - {fileID: 0}

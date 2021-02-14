@@ -16,9 +16,12 @@ public class CraftingCanvas : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
             CallbackHandler.instance.ToggleCraftInterface();
-            SetRingAbility(pc.abilities[pc.activeIndex]);
-            SetRunes(pc.abilities[pc.activeIndex]);
-            SetAbilities(pc.abilities);
+            if (ringInterface.gameObject.activeSelf)
+            {
+                SetRingAbility(pc.equipment.abilities[pc.activeIndex]);
+                SetRunes(pc.equipment.abilities[pc.activeIndex]);
+                SetAbilities(pc.equipment.abilities);
+            }
         }
     }
 
@@ -99,15 +102,6 @@ public class CraftingCanvas : MonoBehaviour
     {
         ringInterface.SetActiveAbility(_ability);
         ResetAbility();
-        ringInterface.CreateRing(0);
-    }
-
-    public void NextRing()
-    {
-        if (!ringInterface.NextRing())
-        {
-            ringInterface.currentData = 0;
-            ToggleCraftInterface();
-        }
+        ringInterface.CreateRing();
     }
 }

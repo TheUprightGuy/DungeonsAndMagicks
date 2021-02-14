@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8def16fb34fbf82498d13cbb9c114bed, type: 3}
   m_Name: MovementOptions
   m_EditorClassIdentifier: 
-  elements:
-  - {fileID: 11400000, guid: 5584fa7aee9bdf64eb575254014c4f50, type: 2}
-  - {fileID: 11400000, guid: 0b1c7b848378cb549be2bfbad49354b5, type: 2}
+  startMods: []
+  emptySocket: {fileID: 11400000, guid: 84aacd945aaf81a49a5671fa826b6f8e, type: 2}
+  mods:
+  - {fileID: 0}
+  - {fileID: 0}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8def16fb34fbf82498d13cbb9c114bed, type: 3}
   m_Name: ProjElement
   m_EditorClassIdentifier: 
-  elements:
-  - {fileID: 11400000, guid: f466a620ecb96234ea1b72ec341d057f, type: 2}
-  - {fileID: 11400000, guid: 7f848ac334ed3eb42b754bce196158b2, type: 2}
-  - {fileID: 11400000, guid: 4eada1c3958ff9b428f019850206cadd, type: 2}
+  startMods: []
+  emptySocket: {fileID: 11400000, guid: 84aacd945aaf81a49a5671fa826b6f8e, type: 2}
+  mods:
+  - {fileID: 0}

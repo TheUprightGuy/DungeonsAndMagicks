@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   modsApplied: []
-  startRings:
-  - {fileID: 11400000, guid: 1ebb336ef2a60ee42817a05e279201f0, type: 2}
-  type: 1
-  modRings:
-  - {fileID: 11400000, guid: 1ebb336ef2a60ee42817a05e279201f0, type: 2}
+  startRing: {fileID: 0}
+  type: 2
+  icon: {fileID: 21300000, guid: c08c21c3a347bc048a0a3c39b9e0e46a, type: 3}
+  modRing: {fileID: 11400000, guid: 1ebb336ef2a60ee42817a05e279201f0, type: 2}
   buffs: []
+  sockets: 2
   mods:
     onBuff: 0
     onBuffEnd: 

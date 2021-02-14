@@ -93,37 +93,27 @@ public class MovementAbility : Ability
         }
     }
 
+    // Called on End Run / Press Q
     public override void ResetMods()
     {
         mods = startMods;
         modsApplied.Clear();
-        modRings.Clear();
-        foreach(RingMenu n in startRings)
-        {
-            modRings.Add(n);
-        }
         buffs.Clear();
     }
 
+    // Called on Equip
     public override void StartUp()
     {
         mods.onEnd.Clear();
         mods.onMove = OnMoveBehaviour.Normal;
         startMods = mods;
-        startRings.Clear();
-        foreach (RingMenu n in modRings)
-        {
-            startRings.Add(n);
-        }
         buffs.Clear();
-        ResetRings();
+        ResetStartingModifiers();
     }
 
-    public override void ResetRings()
+    // Called Through Startup - Sets Elements to Start Elements
+    public override void ResetStartingModifiers()
     {
-        foreach (RingMenu n in modRings)
-        {
-            n.ResetMods();
-        }
+        modRing.ResetMods(sockets);
     }
 }

@@ -21,23 +21,24 @@ public enum AbilityType
 
 public abstract class Ability : ScriptableObject
 {
-    // temp
     [HideInInspector] public List<Mod> modsApplied;
-    [HideInInspector] public List<RingMenu> startRings;
 
     public AbilityType type;
-
-    public List<RingMenu> modRings;
+    public Sprite icon;
+    public RingMenu modRing;
     public List<Buff> buffs;
-
-    public abstract void StartUp();
+    public int sockets;
 
     public abstract void Use(Transform _user);
     public abstract void AddMods(Mod _element);
 
+    // Called on Equip
+    public abstract void StartUp();
+    // Called on End Run / Press Q
     public abstract void ResetMods();
 
-    public abstract void ResetRings();
+    // Called Through Startup - Sets Elements to Start Elements
+    public abstract void ResetStartingModifiers();
 
     #region Coroutines
     private CoroutineSurrogate ___routiner;

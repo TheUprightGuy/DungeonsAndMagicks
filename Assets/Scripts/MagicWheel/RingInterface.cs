@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class RingInterface : MonoBehaviour
 {
     [Header("Required Setup")]
-    public int currentData = 0;
-    public List<RingMenu> data;
+    public RingMenu data;
     public OptionPrefab optionPrefab;
     public ModList modList;
     public GameObject modPrefab;
@@ -21,34 +20,32 @@ public class RingInterface : MonoBehaviour
     private float gapWidthDegree = 1.0f;
     [HideInInspector] public Ability activeAbility;
 
-    public void CreateRing(int _current)
+    public void CreateRing()
     {
         CleanUp();
 
-        currentData = _current;
-
         // Position Data
-        float stepLength = 360.0f / data[currentData].elements.Count;
+        float stepLength = 360.0f / data.mods.Count;
         float iconDist = Vector3.Distance(optionPrefab.icon.transform.position, optionPrefab.piece.transform.position);
         pieces = new List<OptionPrefab>();
 
         // Iterate through Menu Elements and Instantiate Prefabs w/ Attributes
-        for (int i = 0; i < data[currentData].elements.Count; i++)
+        for (int i = 0; i < data.mods.Count; i++)
         {
             // Instantiate Prefab
             pieces.Add(Instantiate(optionPrefab, transform));
-            pieces[i].element = data[currentData].elements[i];
+            pieces[i].element = data.mods[i];
             // Set Root Element
             pieces[i].transform.localPosition = Vector3.zero;
             pieces[i].transform.localRotation = Quaternion.identity;
             // Set Piece Position & Fill
-            pieces[i].piece.fillAmount = 1f / data[currentData].elements.Count - gapWidthDegree / 360f;
+            pieces[i].piece.fillAmount = 1f / data.mods.Count - gapWidthDegree / 360f;
             pieces[i].piece.transform.localPosition = Vector3.zero;
             pieces[i].piece.transform.localRotation = Quaternion.Euler(0, 0, -stepLength / 2f + gapWidthDegree / 2f + i * stepLength);
             // Set Icon Position & Sprite
             pieces[i].icon.transform.localPosition = pieces[i].piece.transform.localPosition + Quaternion.AngleAxis(i * stepLength, Vector3.forward) * Vector3.up * iconDist;
             pieces[i].backPlate.transform.localPosition = pieces[i].piece.transform.localPosition + Quaternion.AngleAxis(i * stepLength, Vector3.forward) * Vector3.up * iconDist;
-            pieces[i].icon.sprite = data[currentData].elements[i].icon;
+            pieces[i].icon.sprite = data.mods[i].icon;
             // Set Parent
             pieces[i].parent = this;
             pieces[i].id = i;
@@ -67,28 +64,15 @@ public class RingInterface : MonoBehaviour
         }
     }
 
-    public bool NextRing()
-    {
-        CleanUp();
-        currentData++;
-
-        if (currentData < data.Count)
-        {
-            CreateRing(currentData);
-            return true;
-        }
-        return false;      
-    }
-
     public virtual void Update()
     {
         // Get Highlighted Option
-        float stepLength = 360.0f / data[currentData].elements.Count;
+        float stepLength = 360.0f / data.mods.Count;
         float mouseAngle = NormalizeAngle(Vector3.SignedAngle(Vector3.up, Input.mousePosition - transform.position, Vector3.forward) + stepLength / 2f);
         int activeElement = (int)(mouseAngle / stepLength);
 
         // Check if Highlighted
-        for (int i = 0; i < data[currentData].elements.Count; i++)
+        for (int i = 0; i < data.mods.Count; i++)
         {
             pieces[i].backPlate.sprite = (i == activeElement) ? pieces[i].selectedSprite : pieces[i].notSelectedSprite;
         }
@@ -109,7 +93,7 @@ public class RingInterface : MonoBehaviour
     public void SetActiveAbility(Ability _ability)
     {
         activeAbility = _ability;
-        data = _ability.modRings;
+        data = _ability.modRing;
         modList.ClearIcons();
     }
 

@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public List<Item> equipment;
+    public Item equipment;
     public List<Mod> runes;
 
 
 
 
-    public List<Ability> abilities;
+    //public List<Ability> abilities;
     [HideInInspector] public int activeIndex = 0;
     Animator animator;
 
@@ -38,41 +38,37 @@ public class Controller : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        foreach(Ability n in abilities)
+        if (equipment)
         {
-            n.ResetMods();
+            foreach (Ability n in equipment.abilities)
+            {
+                n.ResetMods();
+            }
         }
     }
 
     public void EquipItem(Item _item)
     {
-        if (equipment.Count > 3)
-        {
-            equipment[activeIndex] = _item;
-            abilities[activeIndex] = _item.ability;
-        }
-        else
-        {
-            equipment.Add(_item);
-            abilities.Add(_item.ability);
-        }
+        equipment = _item;
 
-        _item.ability.StartUp();
-        SetupAbilityReferences();
-        if (equipment.Count == 1)
+        foreach(Ability n in _item.abilities)
         {
-            CallbackHandler.instance.SetActiveAbility(0);
+            //abilities.Add(n);
+            n.StartUp();
         }
+        //abilities[activeIndex] = _item.abilities[0];
+        SetupAbilityReferences();
+        CallbackHandler.instance.SetActiveAbility(0);
     }
 
     public void SetupAbilityReferences()
     {
         for (int i = 0; i < 3; i++)
         {
-            if (i < abilities.Count)
+            if (equipment && i < equipment.abilities.Count)
             {
                 CallbackHandler.instance.ShowAbility(i);
-                CallbackHandler.instance.SetAbilityReference(i, abilities[i]);
+                CallbackHandler.instance.SetAbilityReference(i, equipment.abilities[i]);
             }
             else
             {
@@ -88,7 +84,7 @@ public class Controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            CallbackHandler.instance.ToggleRingInterface(abilities[activeIndex]);
+            CallbackHandler.instance.ToggleRingInterface(equipment.abilities[activeIndex]);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -98,11 +94,11 @@ public class Controller : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            if (CharacterStats.instance.Control())
+            if (CharacterStats.instance.Control() && equipment)
             {
                 // Callback might be better for this
 
-                switch(abilities[activeIndex].type)
+                switch(equipment.abilities[activeIndex].type)
                 {
                     case AbilityType.Projectile:
                     {
@@ -120,7 +116,6 @@ public class Controller : MonoBehaviour
                         break;
                     }
                 }
-
             }
         }
 
@@ -143,6 +138,6 @@ public class Controller : MonoBehaviour
 
     public void Cast()
     {
-        abilities[activeIndex].Use(transform);
+        equipment.abilities[activeIndex].Use(transform);
     }
 }

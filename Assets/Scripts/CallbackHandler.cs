@@ -46,6 +46,14 @@ public class CallbackHandler : MonoBehaviour
             SetRingAbility(_ability);
         }
     }
+    public Action<Ability> setRingAbility;
+    public void SetRingAbility(Ability _ability)
+    {
+        if (setRingAbility != null)
+        {
+            setRingAbility(_ability);
+        }
+    }
 
     public Action toggleCraftInterface;
     public void ToggleCraftInterface()
@@ -65,14 +73,7 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
-    public Action<Ability> setRingAbility;
-    public void SetRingAbility(Ability _ability)
-    {
-        if (setRingAbility != null)
-        {
-            setRingAbility(_ability);
-        }
-    }
+
 
     public Action<int, Ability> setAbilityReference;
     public void SetAbilityReference(int _id, Ability _ability)

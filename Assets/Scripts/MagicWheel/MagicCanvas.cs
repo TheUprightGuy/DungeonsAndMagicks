@@ -44,8 +44,13 @@ public class MagicCanvas : MonoBehaviour
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
     }
 
-    public void ResetAbility()
+    // Player Presses Q
+    public void SetRingAbility(Ability _ability)
     {
+        // Canvas Displays Current Ability
+        ringInterface.SetActiveAbility(_ability);
+
+        // Reset Selected Modifiers
         if (ringInterface.gameObject.activeSelf)
         {
             if (ringInterface.activeAbility)
@@ -53,21 +58,7 @@ public class MagicCanvas : MonoBehaviour
                 ringInterface.activeAbility.ResetMods();
             }
         }
-    }
 
-    public void SetRingAbility(Ability _ability)
-    {
-        ringInterface.SetActiveAbility(_ability);
-        ResetAbility();
-        ringInterface.CreateRing(0);
-    }
-
-    public void NextRing()
-    {
-        if (!ringInterface.NextRing())
-        {
-            ringInterface.currentData = 0;
-            ToggleRingInterface();
-        }
+        ringInterface.CreateRing();
     }
 }

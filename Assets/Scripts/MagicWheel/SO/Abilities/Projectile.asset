@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: Projectile
   m_EditorClassIdentifier: 
   modsApplied: []
-  startRings: []
-  type: 0
-  modRings:
-  - {fileID: 11400000, guid: baa09af20cbfa554f99acead084453d9, type: 2}
-  - {fileID: 11400000, guid: 7f904a6cfbe29714b801ce72a8aaf75e, type: 2}
-  - {fileID: 11400000, guid: 7269b6a3bd5f8834fba7d3baed9ee6db, type: 2}
+  startRing: {fileID: 0}
+  type: 1
+  icon: {fileID: 21300000, guid: ec6e4cd84bb4be94d8720955d33e0b4b, type: 3}
+  modRing: {fileID: 11400000, guid: baa09af20cbfa554f99acead084453d9, type: 2}
   buffs: []
+  sockets: 3
   mods:
     numProj: 1
     onShoot: 0

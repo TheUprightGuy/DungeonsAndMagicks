@@ -18,7 +18,7 @@ public class ItemUI : MonoBehaviour
 
     public TMPro.TextMeshProUGUI itemName;
     public Image image;
-    public GameObject[] rings;
+    public GameObject[] abilities;
     public GameObject container;
 
     public List<Item> items;
@@ -46,24 +46,17 @@ public class ItemUI : MonoBehaviour
         {
             container.SetActive(true);
             itemName.SetText(items[0].name);
-            image.sprite = items[0].sprite;
+            image.sprite = items[0].icon;
 
-            for (int i = 0; i < rings.Length; i++)
+            for (int i = 0; i < items[0].abilities.Count; i++)
             {
-                if (i < items[0].numRings)
-                {
-                    rings[i].SetActive(true);
-                    rings[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(items[0].ability.startRings[i].elements.Count.ToString());
-                }
-                else
-                {
-                    rings[i].SetActive(false);
-                }
+                abilities[i].SetActive(true);
+                abilities[i].GetComponent<Image>().sprite = items[0].abilities[i].icon;
+                abilities[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(items[0].abilities[i].sockets.ToString());
             }
         }
         else
         {
-            // hide
             container.SetActive(false);
         }
     }

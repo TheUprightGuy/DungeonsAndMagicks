@@ -8,11 +8,15 @@ public class AbilityToggle : MonoBehaviour
     public Ability ability;
     public Image icon;
 
+    private void Awake()
+    {
+        icon = GetComponent<Image>();
+    }
 
     public void Setup(Ability _ability)
     {
         ability = _ability;
-        // set icon
+        icon.sprite = _ability.icon;
     }
 
     public void ToggleAbility()

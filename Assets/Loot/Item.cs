@@ -2,13 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public enum Rarity
 {
-    public Ability ability;
+    Common = 1,
+    Uncommon,
+    Rare,
+    Epic
+}
+
+[CreateAssetMenu(fileName = "Wand", menuName = "Item/Wand", order = 1)]
+public class Item : ScriptableObject
+{
+    public List<Ability> abilities;
 
     new public string name;
-    public Sprite sprite;
+    public Sprite icon;
+    public Rarity rarity;
 
-    //list of rings
-    public int numRings;
+    public void SetupLoot()
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            // Clone original ability & setup
+            abilities[i] = Instantiate(abilities[i]);
+            abilities[i].sockets = Random.Range((int)rarity, (int)rarity + 2);
+            abilities[i].ResetStartingModifiers();
+        }
+    }
 }

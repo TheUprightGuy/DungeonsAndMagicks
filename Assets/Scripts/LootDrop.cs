@@ -6,7 +6,14 @@ public class LootDrop : MonoBehaviour
 {
     public Item item;
     public Transform rot;
-    public Controller pc;
+    Controller pc;
+
+    private void Awake()
+    {
+        // Clone self and Setup
+        item = Instantiate(item);
+        item.SetupLoot();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,7 +43,7 @@ public class LootDrop : MonoBehaviour
             ItemUI.instance.HideItem(item);
             Destroy(this.gameObject);
 
-            TutorialTracking.instance.CheckQuest(this.gameObject);
+            //TutorialTracking.instance.CheckQuest(this.gameObject);
         }
     }
 }

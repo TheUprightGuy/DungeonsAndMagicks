@@ -6,16 +6,24 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RingMenu", menuName = "RingMenu/Ring", order = 1)]
 public class RingMenu : ScriptableObject
 {
-    public List<Mod> startElements;
-    [HideInInspector] public List<Mod> elements;
+    public List<Mod> startMods;
+    public Mod emptySocket;
+    [HideInInspector] public List<Mod> mods;
 
-    public void ResetMods()
+    public void ResetMods(int _sockets)
     {
-        elements.Clear();
+        mods.Clear();
 
-        foreach(Mod n in startElements)
+        for (int i = 0; i < _sockets; i++)
         {
-            elements.Add(n);
+            if (i < startMods.Count)
+            {
+                mods.Add(startMods[i]);
+            }
+            else
+            {
+                mods.Add(Instantiate(emptySocket));
+            }
         }
     }
 }
