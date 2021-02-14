@@ -34,7 +34,7 @@ public class RingInterface : MonoBehaviour
         {
             // Instantiate Prefab
             pieces.Add(Instantiate(optionPrefab, transform));
-            pieces[i].element = data.mods[i];
+            pieces[i].mod = data.mods[i];
             // Set Root Element
             pieces[i].transform.localPosition = Vector3.zero;
             pieces[i].transform.localRotation = Quaternion.identity;
@@ -78,9 +78,9 @@ public class RingInterface : MonoBehaviour
         }
 
         // Update Centre Text w/ Element Description
-        elementName.SetText(pieces[activeElement].element.name);
-        elementDescription.SetText(pieces[activeElement].element.description);
-        elementIcon.sprite = pieces[activeElement].element.icon;
+        elementName.SetText(pieces[activeElement].mod.name);
+        elementDescription.SetText(pieces[activeElement].mod.description);
+        elementIcon.sprite = pieces[activeElement].mod.icon;
 
         // Clicked Element
         if (Input.GetMouseButtonDown(0))

@@ -21,10 +21,15 @@ public enum OnShootBehaviour
 [System.Serializable]
 public struct ProjectileAbilityModifiers
 {
+    [Header("Buff & Debuffs")]
+    public Buff buff;
+    [Header("Projectile Modifiers")]
     public int numProj;
+    [Header("Projectile Behaviours")]
     public OnShootBehaviour onShoot;
     public List<OnHitBehaviour> onHit;
 
+    // Change this for pfx of projectile turned on
     public GameObject projPrefab;
 }
 
@@ -106,15 +111,15 @@ public class ProjectileAbility : Ability
 
     public override void AddMods(Mod _mods)
     {
-        if (_mods.type == ModType.None)
-            return;
+        /*if (_mods.DisplayModifiers == ModType.None)
+            return;*/
 
 
         // Number of Projectiles (Additive)
-        mods.numProj += _mods.projModifiers.numProj;
+        mods.numProj += _mods.ProjectileModifiers.numProj;
 
         // Hit Behaviours (Additive)
-        foreach (OnHitBehaviour n in _mods.projModifiers.onHit)
+        foreach (OnHitBehaviour n in _mods.ProjectileModifiers.onHit)
         {
             if (!mods.onHit.Contains(n))
             {
@@ -123,20 +128,20 @@ public class ProjectileAbility : Ability
         }
 
         // Shoot Behaviours (Override)
-        if ((int)_mods.projModifiers.onShoot > (int)mods.onShoot)
+        if ((int)_mods.ProjectileModifiers.onShoot > (int)mods.onShoot)
         {
-            mods.onShoot = _mods.projModifiers.onShoot;
+            mods.onShoot = _mods.ProjectileModifiers.onShoot;
         }
 
         // Add Buffs if Any
-        if (_mods.buff)
+        if (_mods.ProjectileModifiers.buff)
         {
-            buffs.Add(_mods.buff);
+            buffs.Add(_mods.ProjectileModifiers.buff);
         }
 
-        if (_mods.projModifiers.projPrefab)
+        if (_mods.ProjectileModifiers.projPrefab)
         {
-            mods.projPrefab = _mods.projModifiers.projPrefab;
+            mods.projPrefab = _mods.ProjectileModifiers.projPrefab;
         }
     }
 

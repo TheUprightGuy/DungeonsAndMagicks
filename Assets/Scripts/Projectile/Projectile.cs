@@ -111,7 +111,7 @@ public class Projectile : MonoBehaviour
         {
             Debug.Log("Hit Enemy");
             // temp
-            collision.GetComponent<EnemyStats>().TakeDamage(damage);
+            collision.GetComponent<AIEnemyStats>().TakeDamage(damage);
 
             foreach (OnHitBehaviour n in mods.onHit)
             {

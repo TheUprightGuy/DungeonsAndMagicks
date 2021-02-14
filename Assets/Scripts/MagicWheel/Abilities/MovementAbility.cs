@@ -19,6 +19,9 @@ public enum OnMoveBehaviour
 [System.Serializable]
 public struct MovementAbilityModifiers
 {
+    [Header("Buff & Debuffs")]
+    public Buff buff;
+    [Header("Movement Behaviours")]
     public OnMoveBehaviour onMove;
     public List<OnEndBehaviour> onEnd;
 }
@@ -66,13 +69,13 @@ public class MovementAbility : Ability
     }
 
 
-    public override void AddMods(Mod _mods)
+    public override void AddMods(Mod _mod)
     {
-        if (_mods.type == ModType.None)
-            return;
+        /*if (_mods.DisplayModifiers == ModType.None)
+            return;*/
 
         // Hit Behaviours (Additive)
-        foreach (OnEndBehaviour n in mods.onEnd)
+        foreach (OnEndBehaviour n in _mod.MovementModifiers.onEnd)
         {
             if (!mods.onEnd.Contains(n))
             {
@@ -81,15 +84,15 @@ public class MovementAbility : Ability
         }
 
         // Move Behaviours (Override)
-        if ((int)_mods.movementModifiers.onMove > (int)mods.onMove)
+        if ((int)_mod.MovementModifiers.onMove > (int)mods.onMove)
         {
-            mods.onMove = _mods.movementModifiers.onMove;
+            mods.onMove = _mod.MovementModifiers.onMove;
         }
 
         // Add Buffs if Any
-        if (_mods.buff)
+        if (_mod.MovementModifiers.buff)
         {
-            buffs.Add(_mods.buff);
+            buffs.Add(_mod.MovementModifiers.buff);
         }
     }
 

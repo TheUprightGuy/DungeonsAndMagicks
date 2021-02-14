@@ -58,17 +58,10 @@ public class AIController : MonoBehaviour
     }
 
 
-    private void Update()
+    public void RemoveAgent(Transform _transform)
     {
-        foreach (var item in AgentTransforms)
-        {
-            if (item == null)
-            {
-                AgentTransforms.Remove(item);
-            }
-        }
+        AgentTransforms.Remove(_transform);
     }
-
 
     AIBarHandler barHandler;
     /// <summary>

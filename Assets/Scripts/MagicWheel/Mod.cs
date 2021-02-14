@@ -5,34 +5,20 @@ using UnityEngine;
 using UnityEditor;
 using Object = UnityEngine.Object;
 
-public enum ModType
-{
-    None = 0,
-    Projectile,
-    Buff,
-    Movement
-}
-
 [CreateAssetMenu(fileName = "Mod", menuName = "Magic/Mod/Mod", order = 1)]
 public class Mod : ScriptableObject
 {
-    public ModType type;
-
+    [Header("Mod Details")]
     new public string name;
     public string description;
     public Sprite icon;
-    public Element element;
 
-    public RingMenu followUp;
-
-    // temp
-    public Buff buff;
-
-
-    [HideIfEnumValue("type", HideIf.NotEqual, (int)ModType.Projectile)]
-    public ProjectileAbilityModifiers projModifiers;
-    [HideIfEnumValue("type", HideIf.NotEqual, (int)ModType.Buff)]
-    public BuffAbilityModifiers buffModifiers;
-    [HideIfEnumValue("type", HideIf.NotEqual, (int)ModType.Movement)]
-    public MovementAbilityModifiers movementModifiers;
+    [Header("Modifiers")]
+    public AbilityType DisplayModifiers;    
+    [HideIfEnumValue("DisplayModifiers", HideIf.NotEqual, (int)AbilityType.Projectile)]
+    public ProjectileAbilityModifiers ProjectileModifiers;
+    [HideIfEnumValue("DisplayModifiers", HideIf.NotEqual, (int)AbilityType.Buff)]
+    public BuffAbilityModifiers BuffModifiers;
+    [HideIfEnumValue("DisplayModifiers", HideIf.NotEqual, (int)AbilityType.Movement)]
+    public MovementAbilityModifiers MovementModifiers;   
 }

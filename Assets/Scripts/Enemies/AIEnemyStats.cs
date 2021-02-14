@@ -14,15 +14,18 @@ public class AIEnemyStats : MonoBehaviour
         MaxHealth = Health;
     }
 
-    private void Update()
-    {
-        if (Health <= 0.0f)
-        {
-            Destroy(this.gameObject);
-        }
-    }
     public void TakeDamage(float _damage)
     {
         Health -= _damage;
+        if (Health <= 0.0f)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        AIController.Instance.RemoveAgent(this.transform);
+        Destroy(this.gameObject);
     }
 }

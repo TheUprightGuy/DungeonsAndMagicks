@@ -34,7 +34,7 @@ public class Slot : MonoBehaviour, IDropHandler
             //parent.element = Rune.dragObject.GetComponent<Rune>().mod;
 
             // temp
-            TutorialTracking.instance.CheckQuest(parent.element);
+            TutorialTracking.instance.CheckQuest(parent.mod);
         }
     }
 }

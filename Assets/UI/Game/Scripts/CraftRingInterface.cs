@@ -20,8 +20,8 @@ public class CraftRingInterface : RingInterface
         }
 
         // Update Centre Text w/ Element Description
-        elementName.SetText(pieces[activeElement].element.name);
-        elementDescription.SetText(pieces[activeElement].element.description);
-        elementIcon.sprite = pieces[activeElement].element.icon;
+        elementName.SetText(pieces[activeElement].mod.name);
+        elementDescription.SetText(pieces[activeElement].mod.description);
+        elementIcon.sprite = pieces[activeElement].mod.icon;
     }
 }

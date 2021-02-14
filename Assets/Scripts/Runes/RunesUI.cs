@@ -15,7 +15,7 @@ public class RunesUI : MonoBehaviour
 
         foreach(Mod n in _runes)
         {
-            if ((int)n.type == (int)_ability.type)
+            //if ((int)n.DisplayModifiers == (int)_ability.type)
             {
                 Rune temp = Instantiate(runePrefab, this.transform).GetComponentInChildren<Rune>();
                 temp.mod = n;

@@ -18,6 +18,9 @@ public enum OnBuffBehaviour
 [System.Serializable]
 public struct BuffAbilityModifiers
 {
+    [Header("Buff & Debuffs")]
+    public Buff buff;
+    [Header("Buff Behaviours")]
     public OnBuffBehaviour onBuff;
     public List<OnBuffEndBehaviour> onBuffEnd;
 }
@@ -42,13 +45,13 @@ public class BuffAbility : Ability
         }
     }
 
-    public override void AddMods(Mod _mods)
+    public override void AddMods(Mod _mod)
     {
-        if (_mods.type == ModType.None)
-            return;
+        /*if (_mods.DisplayModifiers == ModType.None)
+            return;*/
 
         // BuffEnd Behaviours (Additive)
-        foreach (OnBuffEndBehaviour n in mods.onBuffEnd)
+        foreach (OnBuffEndBehaviour n in _mod.BuffModifiers.onBuffEnd)
         {
             if (!mods.onBuffEnd.Contains(n))
             {
@@ -57,15 +60,15 @@ public class BuffAbility : Ability
         }
 
         // Buff Behaviours (Override)
-        if ((int)_mods.buffModifiers.onBuff > (int)mods.onBuff)
+        if ((int)_mod.BuffModifiers.onBuff > (int)mods.onBuff)
         {
-            mods.onBuff = _mods.buffModifiers.onBuff;
+            mods.onBuff = _mod.BuffModifiers.onBuff;
         }
 
         // Add Buffs if Any
-        if (_mods.buff)
+        if (_mod.BuffModifiers.buff)
         {
-            buffs.Add(_mods.buff);
+            buffs.Add(_mod.BuffModifiers.buff);
         }
     }
 

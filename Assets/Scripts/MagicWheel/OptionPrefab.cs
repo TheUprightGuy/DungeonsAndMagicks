@@ -13,7 +13,7 @@ public class OptionPrefab : MonoBehaviour
     public Sprite notSelectedSprite;
     public Sprite selectedSprite;
 
-    [HideInInspector] public Mod element;
+    [HideInInspector] public Mod mod;
     [HideInInspector] public bool selected;
     [HideInInspector] public RingInterface parent;
     public int id;
@@ -25,10 +25,10 @@ public class OptionPrefab : MonoBehaviour
 
     public void Use(Ability _ability)
     {
-        if (!selected && element.type != ModType.None)
+        if (!selected)// && mod.DisplayModifiers != ModType.None)
         {
-            _ability.modsApplied.Add(element);
-            _ability.AddMods(element);
+            _ability.modsApplied.Add(mod);
+            _ability.AddMods(mod);
             parent.modList.CreateMod(icon.sprite, parent.modPrefab);
 
             selected = true;
@@ -38,8 +38,8 @@ public class OptionPrefab : MonoBehaviour
 
     public void SetMod(Mod _mod)
     {
-        element = _mod;
-        icon.sprite = element.icon;
+        mod = _mod;
+        icon.sprite = mod.icon;
 
         parent.data.mods[id] = _mod;
     }
