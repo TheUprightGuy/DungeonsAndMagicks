@@ -124,7 +124,7 @@ public class CharacterMovement : MonoBehaviour
         levelPlane.Raycast(leftRay, out enterDist);
         Vector3 intersectPoint = leftRay.origin + (leftRay.direction * enterDist);
 
-        bool leftCheck = LTU.PointWithinLevelBounds(intersectPoint);
+        bool leftCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
         //RightCheck
         /*********************************************/
@@ -134,7 +134,7 @@ public class CharacterMovement : MonoBehaviour
         levelPlane.Raycast(rightRay, out right);
         intersectPoint = rightRay.origin + (rightRay.direction * right);
 
-        bool rightCheck = LTU.PointWithinLevelBounds(intersectPoint);
+        bool rightCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
         //TopCheck
         /*********************************************/
@@ -145,7 +145,7 @@ public class CharacterMovement : MonoBehaviour
         levelPlane.Raycast(topRay, out top);
         intersectPoint = topRay.origin + (topRay.direction * top);
 
-        bool topCheck = LTU.PointWithinLevelBounds(intersectPoint);
+        bool topCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
         //BottomCheck
         /*********************************************/
@@ -155,7 +155,7 @@ public class CharacterMovement : MonoBehaviour
         levelPlane.Raycast(botRay, out bot);
         intersectPoint = botRay.origin + (botRay.direction * bot);
 
-        bool botCheck = LTU.PointWithinLevelBounds(intersectPoint);
+        bool botCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
 
         mainCam.transform.rotation = Quaternion.identity;
@@ -194,7 +194,7 @@ public class CharacterMovement : MonoBehaviour
         levelPlane.Raycast(leftRay, out enterDist);
         Vector3 intersectPoint = leftRay.origin + (leftRay.direction * enterDist);
 
-        bool leftCheck = LTU.PointWithinLevelBounds(intersectPoint);
+        bool leftCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
         Gizmos.color = (leftCheck) ? (Color.white) : (Color.red);
         Gizmos.DrawSphere(intersectPoint, 0.5f);
@@ -205,7 +205,7 @@ public class CharacterMovement : MonoBehaviour
         levelPlane.Raycast(rightRay, out right);
         intersectPoint = rightRay.origin + (rightRay.direction * right);
 
-        bool rightCheck = LTU.PointWithinLevelBounds(intersectPoint);
+        bool rightCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
         Gizmos.color = (rightCheck) ? (Color.white) : (Color.red);
         Gizmos.DrawSphere(intersectPoint, 0.5f);

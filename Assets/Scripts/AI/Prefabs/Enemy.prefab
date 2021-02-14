@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1592676198645554357}
   - component: {fileID: 1592676198645554359}
   - component: {fileID: 1592676198645554358}
-  - component: {fileID: 1592676198645554352}
   - component: {fileID: 3370751454141776207}
+  - component: {fileID: 887677317}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592676198645554356}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.09, y: 0.09, z: -0.194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -70,19 +70,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1592676198645554352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592676198645554356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b6e34f93a5fff4c8ddf74aec27d209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
 --- !u!114 &3370751454141776207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +84,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   MaxHealth: 0
+--- !u!136 &887677317
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592676198645554356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.7
+  m_Height: 3.69
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.8, z: 0}
 --- !u!114 &1592676197962574278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!1001 &1592676196930756546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,6 +203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WarningMessage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c5d1248a2142e9b4fa89c8b91505e657,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8004296825673555102, guid: c5d1248a2142e9b4fa89c8b91505e657,
         type: 3}

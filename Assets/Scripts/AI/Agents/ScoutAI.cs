@@ -14,8 +14,8 @@ public class ScoutAI : AIAgent
 
         thisAIType = AIType.SCOUT;
 
-        stopDist = 10.0f;
-        ViewRange = 50.0f;
+        stopDist = 25.0f;
+        ViewRange = 40.0f;
         ViewAngle = 180.0f;
     }
 
