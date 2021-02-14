@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6782e794467f5d040ad50131f193ff86, type: 3}
   m_Name: Starting Wand
   m_EditorClassIdentifier: 
-  abilities:
-  - {fileID: 11400000, guid: 6ca6f573f7d50754d85a097896e1712f, type: 2}
-  - {fileID: 11400000, guid: 2d1fba555e6507443b1fe516ac415172, type: 2}
-  - {fileID: 11400000, guid: 7dfe45504e4b398478c6b3a136c6a4ac, type: 2}
+  abilities: []
   name: Starting Wand
   icon: {fileID: 21300000, guid: e4e38ad02f12d0b4bad4bf4e55fc9999, type: 3}
   rarity: 1

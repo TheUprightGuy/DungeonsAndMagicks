@@ -21,10 +21,9 @@ public class Item : ScriptableObject
 
     public void SetupLoot()
     {
-        for (int i = 0; i < abilities.Count; i++)
+        for (int i = 0; i < 3; i++)
         {
-            // Clone original ability & setup
-            abilities[i] = Instantiate(abilities[i]);
+            abilities.Add(Instantiate(DistributionManager.instance.RequestAbility()));
             abilities[i].sockets = Random.Range((int)rarity, (int)rarity + 2);
             abilities[i].ResetStartingModifiers();
         }

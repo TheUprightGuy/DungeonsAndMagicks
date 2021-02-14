@@ -6,6 +6,11 @@ public class RuneDrop : MonoBehaviour
 {
     public Mod rune;
 
+    private void Start()
+    {
+        rune = Instantiate(DistributionManager.instance.RequestMod());
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Controller>())

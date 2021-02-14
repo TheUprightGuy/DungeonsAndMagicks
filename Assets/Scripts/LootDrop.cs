@@ -7,8 +7,8 @@ public class LootDrop : MonoBehaviour
     public Item item;
     public Transform rot;
     Controller pc;
-
-    private void Awake()
+    
+    private void Start()
     {
         // Clone self and Setup
         item = Instantiate(item);
