@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAnimatorFunctions : MonoBehaviour
 {
     public Animator animator;
-
+    public NavMeshAgent agent;
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        agent = GetComponentInParent<NavMeshAgent>();
+    }
+
+    public void Update()
+    {
+        if (agent)
+        {
+            animator.SetFloat("MovementSpeed", agent.velocity.magnitude);
+        }
     }
 
     public void Attack()
