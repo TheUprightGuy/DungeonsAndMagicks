@@ -22,8 +22,8 @@ public class HomingAttack : AIAction
     Transform target;
     Transform root;
 
-    float maxspeed = 7.0f;
-    float maxforce = 0.25f;
+    float maxspeed = 5.0f;
+    float maxforce = 1.0f;
 
 
     public override void Attack(Transform _target, Transform _root)
@@ -64,6 +64,6 @@ public class HomingAttack : AIAction
         accel *= 0.0f;
 
 
-        _trans.forward = vel.normalized;
+        //_trans.forward = vel.normalized;
     }
 }

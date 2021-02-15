@@ -188,9 +188,9 @@ MonoBehaviour:
   EnemyTypePrefabs:
   - {fileID: 1592676198645554356, guid: 22292d9e87d61bf4d8f1d75a6b8e40d7, type: 3}
   LTU: {fileID: 1346005951}
-  EnemiesInLevel: 20
+  EnemiesInLevel: 12
   MinPossibleSquadSize: 1
-  MaxPossibleSquadSize: 4
+  MaxPossibleSquadSize: 3
   SquadTightness: 6
 --- !u!1001 &401023735
 PrefabInstance:
