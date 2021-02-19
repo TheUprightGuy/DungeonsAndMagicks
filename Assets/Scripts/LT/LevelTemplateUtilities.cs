@@ -21,7 +21,7 @@ public class LevelTemplateUtilities : MonoBehaviour
     /// </summary>
     /// <param name="_point"></param>
     /// <returns>True if the point is within the level</returns>
-    public bool PointWithinLevelBounds(Vector3 _point)
+    public bool CheckPointWithinLevelBounds(Vector3 _point)
     {
         float baseSize = Template.TileBaseSize;
         bool returnVal = false;
@@ -42,7 +42,31 @@ public class LevelTemplateUtilities : MonoBehaviour
         return returnVal;
     }
 
-    
+
+    public Vector3 RandPointWithinLevelBounds()
+    {
+        Vector3 final = Vector3.zero;
+
+        int randIndex = (int)Random.Range(0, Template.LevelLayout.Count - 1);
+        final = RandPointInTile(randIndex);
+
+        return final;
+    }
+
+    public Vector3 RandPointInTile(int _tileIndex)
+    {
+        Vector3 final = Vector3.zero;
+        TileInfo tile = Template.LevelLayout[_tileIndex];
+        float baseSize = Template.TileBaseSize;
+        Vector2 size = new Vector2(baseSize, baseSize);
+
+        Vector2 centrePoint = new Vector2(tile.PosIndex.x * (baseSize), tile.PosIndex.y * (baseSize));
+        Vector2 botLeft = centrePoint - (size / 2);
+        Vector2 topRight = centrePoint + (size / 2);
+
+        final = new Vector3(Random.Range(botLeft.x, topRight.x), 0, Random.Range(topRight.y, botLeft.y));
+        return final;
+    }
 
     private void OnDrawGizmos()
     {
