@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  agent: {fileID: 0}
 --- !u!1001 &1592676196930756546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,6 +202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WarningMessage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c5d1248a2142e9b4fa89c8b91505e657,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8004296825673555102, guid: c5d1248a2142e9b4fa89c8b91505e657,
         type: 3}
