@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NEWAbilityToggle : MonoBehaviour
+public class AbilityToggle : MonoBehaviour
 {
     Ability ability;
     Image image;
@@ -22,6 +22,6 @@ public class NEWAbilityToggle : MonoBehaviour
 
     public void ToggleAbility()
     {
-        NEWMagicCanvas.instance.ToggleAbility(ability);
+        MagicUI.instance.ToggleAbility(ability);
     }
 }

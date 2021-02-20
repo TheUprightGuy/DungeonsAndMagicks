@@ -33,15 +33,7 @@ public class PauseMenuCanvasController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
     #endregion Singleton
-
-    [HideInInspector] public MenuOptions menu = MenuOptions.Main;
-    [HideInInspector] public MenuOptions prevMenu;
-    [HideInInspector] public AudioSource audioSource;
-
-    [Header("Game Settings")]
-    public GameSettings gameSettings;
-    public GameSettings defaultSettings;
-
+    #region Setup
     private void Start()
     {
         prevMenu = menu;
@@ -52,6 +44,15 @@ public class PauseMenuCanvasController : MonoBehaviour
     {
         ToggleMenuOption(menu);
     }
+    #endregion Setup
+
+    [HideInInspector] public MenuOptions menu = MenuOptions.Main;
+    [HideInInspector] public MenuOptions prevMenu;
+    [HideInInspector] public AudioSource audioSource;
+
+    [Header("Game Settings")]
+    public GameSettings gameSettings;
+    public GameSettings defaultSettings;
 
     public Action<MenuOptions> toggleMenuOption;
     public void ToggleMenuOption(MenuOptions _option)

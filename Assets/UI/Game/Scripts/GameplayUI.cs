@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class GameplayUI : MonoBehaviour
 {
-    public AbilityUI[] abilityReferences;
-
+    #region Singleton
     public static GameplayUI instance;
-
-    #region SetupIDs
     private void Awake()
     {
         if (instance != null)
@@ -24,8 +21,8 @@ public class GameplayUI : MonoBehaviour
             abilityReferences[i].abilityID = i;
         }
     }
-    #endregion SetupIDs
-
+    #endregion Singleton
+    #region Callbacks
     private void Start()
     {
         CallbackHandler.instance.showAbility += ShowAbility;
@@ -37,6 +34,9 @@ public class GameplayUI : MonoBehaviour
         CallbackHandler.instance.showAbility -= ShowAbility;
         CallbackHandler.instance.hideAbility -= HideAbility;
     }
+    #endregion Callbacks
+
+    [HideInInspector] public AbilityUI[] abilityReferences;
 
     public void ShowAbility(int _i)
     {

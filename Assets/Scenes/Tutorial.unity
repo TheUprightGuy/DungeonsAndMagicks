@@ -2474,6 +2474,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4943462751895871242, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_Name
+      value: MagicUI
+      objectReference: {fileID: 0}
     - target: {fileID: 6187611175671609809, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}
       propertyPath: player
@@ -2623,6 +2628,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529365786444445892, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529365786444445892, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529365786444445892, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 2560
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529365786444445892, guid: 372910808665bb34e8d4b5d2f121bffa,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1440
       objectReference: {fileID: 0}
     - target: {fileID: 7529365786444445944, guid: 372910808665bb34e8d4b5d2f121bffa,
         type: 3}

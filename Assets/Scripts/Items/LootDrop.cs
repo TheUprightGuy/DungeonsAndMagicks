@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class LootDrop : MonoBehaviour
 {
+    [Header("Item Field")]
     public Item item;
+
+    [Header("Required Fields")]
     public Transform rot;
-    Controller pc;
+    Player pc;
     
     private void Start()
     {
@@ -17,16 +20,16 @@ public class LootDrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<CharacterStats>())
+        pc = other.GetComponent<Player>();
+        if (pc)
         {
             ItemUI.instance.ShowItem(item);
-            pc = other.GetComponent<Controller>();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<CharacterStats>())
+        if (other.GetComponent<Player>())
         {
             ItemUI.instance.HideItem(item);
             pc = null;
@@ -40,11 +43,9 @@ public class LootDrop : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
             pc.EquipItem(item);
-            NEWMagicCanvas.instance.EquipItem();
+            MagicUI.instance.SetupItem();
             ItemUI.instance.HideItem(item);
             Destroy(this.gameObject);
-
-            //TutorialTracking.instance.CheckQuest(this.gameObject);
         }
     }
 }

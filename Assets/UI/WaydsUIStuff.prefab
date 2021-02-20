@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 7985690062489688341}
   - component: {fileID: 6187611175671609809}
   m_Layer: 5
-  m_Name: NEWMAGICCANVAS
+  m_Name: MagicUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,7 +497,7 @@ RectTransform:
   - {fileID: 2146391269991930244}
   - {fileID: 2443459658657517836}
   m_Father: {fileID: 7529365786219671427}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -577,17 +577,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aceb98ba21a893d46a311500f484ae6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  display: 1
-  crafting: 0
   ringPrefab: {fileID: 3306411268075083385, guid: 2778537802df9234aaacd4923de0aecc,
     type: 3}
   togglePrefab: {fileID: 4380581162061308261, guid: 3dedf2ec46f576a4e96f25a8905d6d13,
     type: 3}
   runePrefab: {fileID: 2836447675618151309, guid: 6d1acd66222aca147b277747b1e0324c,
     type: 3}
-  abilities: []
-  toggles: []
   ringContainer: {fileID: 5654336875077422469}
   toggleContainer: {fileID: 3460196347218094174}
   runeContainer: {fileID: 6576640051500321757}
@@ -755,9 +750,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7529365786444445894}
+  - {fileID: 5391256306175379563}
   - {fileID: 6322162425135484731}
   - {fileID: 7529365786418189878}
-  - {fileID: 5391256306175379563}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -803,7 +798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7529365786219671427}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7529365786418189877
 MonoBehaviour:
@@ -939,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 3507701377533644476, guid: 10a2800d6c907cc40a2ac7c443645164,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3507701377533644476, guid: 10a2800d6c907cc40a2ac7c443645164,
         type: 3}
@@ -1178,21 +1173,9 @@ PrefabInstance:
       objectReference: {fileID: 1380258041516128480}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b77d9e9e563deac4e844151f69104fe7, type: 3}
---- !u!1 &7362513135221597663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 94175231109750606, guid: b77d9e9e563deac4e844151f69104fe7,
-    type: 3}
-  m_PrefabInstance: {fileID: 7449645855439075985}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4200533930315651779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6712965117674823762, guid: b77d9e9e563deac4e844151f69104fe7,
-    type: 3}
-  m_PrefabInstance: {fileID: 7449645855439075985}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &6075571075978644641 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3689212099381196336, guid: b77d9e9e563deac4e844151f69104fe7,
     type: 3}
   m_PrefabInstance: {fileID: 7449645855439075985}
   m_PrefabAsset: {fileID: 0}
@@ -1217,6 +1200,18 @@ GameObject:
 --- !u!224 &6321793632344498315 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3520109291003468314, guid: b77d9e9e563deac4e844151f69104fe7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7449645855439075985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7362513135221597663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 94175231109750606, guid: b77d9e9e563deac4e844151f69104fe7,
+    type: 3}
+  m_PrefabInstance: {fileID: 7449645855439075985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &6075571075978644641 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3689212099381196336, guid: b77d9e9e563deac4e844151f69104fe7,
     type: 3}
   m_PrefabInstance: {fileID: 7449645855439075985}
   m_PrefabAsset: {fileID: 0}

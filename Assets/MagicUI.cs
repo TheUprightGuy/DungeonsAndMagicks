@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NEWMagicCanvas : MonoBehaviour
+public class MagicUI : MonoBehaviour
 {
     #region Singleton
-    public static NEWMagicCanvas instance;
+    public static MagicUI instance;
     private void Awake()
     {
         if (instance != null)
@@ -17,43 +17,34 @@ public class NEWMagicCanvas : MonoBehaviour
         instance = this;
     }
     #endregion Singleton
-
+    #region Setup
+    private void Start()
+    {
+        player = Player.instance;
+        ToggleCanvas();
+    }
+    #endregion Setup
     // Player Reference
-    public Controller player;
+    Player player;
+    // Display Status
+    bool display = true;
+    bool crafting = false;
+    // Container Element References
+    RingInterface activeIndex;
+    List<RingInterface> abilities;
+    List<AbilityToggle> toggles;
 
-    // Switched On/Off
-    public bool display = true;
-    public bool crafting = false;
-
-    // Ring Interface prefab;
+    /* CHANGE THESE TO RESOURCE LOAD IN FUTURE */
+    [Header("Prefab References")]
     public GameObject ringPrefab;
     public GameObject togglePrefab;
     public GameObject runePrefab;
-
-    // Reference to Ability Rings
-    public List<NEWRingInterface> abilities;
-    NEWRingInterface activeIndex;
-    public List<NEWAbilityToggle> toggles;
-
-    // Reference to container Object
+    [Header("Container References")]
     public GameObject ringContainer;
     public GameObject toggleContainer;
     public GameObject runeContainer;
 
-    private void Start()
-    {
-        ToggleCanvas();
-    }
-
-    public void EquipItem()
-    {
-        ToggleCanvas();
-        SetupAbilities();
-        SetupRunes();
-        ToggleCanvas();
-    }
-
-    // Toggles Canvas
+    // Toggles Canvas & Elements On/Off
     public void ToggleCanvas()
     {
         display = !display;
@@ -66,7 +57,15 @@ public class NEWMagicCanvas : MonoBehaviour
             ToggleAbility(player.equipment.abilities[player.activeIndex]);
         }
     }
-    
+
+    // Sets up Ability & Rune references
+    public void SetupItem()
+    {
+        ToggleCanvas();
+        SetupAbilities();
+        SetupRunes();
+        ToggleCanvas();
+    }
     // Sets ring up for each Ability
     public void SetupAbilities()
     {
@@ -74,11 +73,11 @@ public class NEWMagicCanvas : MonoBehaviour
 
         foreach (Ability n in player.equipment.abilities)
         {
-            NEWRingInterface temp = Instantiate(ringPrefab, ringContainer.transform).GetComponent<NEWRingInterface>();
+            RingInterface temp = Instantiate(ringPrefab, ringContainer.transform).GetComponent<RingInterface>();
             temp.CreateRing(n);
             abilities.Add(temp);
 
-            NEWAbilityToggle toggle = Instantiate(togglePrefab, toggleContainer.transform).GetComponent<NEWAbilityToggle>();
+            AbilityToggle toggle = Instantiate(togglePrefab, toggleContainer.transform).GetComponent<AbilityToggle>();
             toggle.Setup(n);
             toggles.Add(toggle);
         }
@@ -90,7 +89,7 @@ public class NEWMagicCanvas : MonoBehaviour
     // Toggling between each Ability
     public void ToggleAbility(Ability _ability)
     {
-        foreach(NEWRingInterface n in abilities)
+        foreach(RingInterface n in abilities)
         {
             if (n.ability == _ability)
             {
@@ -102,14 +101,14 @@ public class NEWMagicCanvas : MonoBehaviour
         }
     }
 
-    // Show Mod/Socket Details
-    public void ShowDetails(NEWOptionPrefab _option)
+    // Show Mod/Socket Details on Mouseover
+    public void ShowDetails(SocketPrefab _option)
     {
         activeIndex.ShowDetails(_option);
     }
 
     // Show Ability Details
-    public void ShowAbility(NEWOptionPrefab _option)
+    public void ShowAbility(SocketPrefab _option)
     {
         activeIndex.ShowAbility();
     }
@@ -144,5 +143,9 @@ public class NEWMagicCanvas : MonoBehaviour
             Destroy(toggles[i].gameObject);
         }
         toggles.Clear();
+    }
+    public void SetCrafting(bool _toggle)
+    {
+        crafting = _toggle;
     }
 }

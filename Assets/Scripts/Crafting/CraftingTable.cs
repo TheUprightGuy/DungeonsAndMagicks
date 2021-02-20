@@ -7,18 +7,18 @@ public class CraftingTable : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // temp
-        if (other.GetComponent<Controller>())
+        if (other.GetComponent<Player>())
         {
-            NEWMagicCanvas.instance.crafting = true;
+            MagicUI.instance.SetCrafting(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         // temp
-        if (other.GetComponent<Controller>())
+        if (other.GetComponent<Player>())
         {
-            NEWMagicCanvas.instance.crafting = false;          
+            MagicUI.instance.SetCrafting(false);          
         }
     }
 }

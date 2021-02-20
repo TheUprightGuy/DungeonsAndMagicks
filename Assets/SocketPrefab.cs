@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NEWOptionPrefab : MonoBehaviour
+public class SocketPrefab : MonoBehaviour
 {
     [Header("Setup Fields")]
     public Image piece;
@@ -15,7 +15,7 @@ public class NEWOptionPrefab : MonoBehaviour
 
     [HideInInspector] public Mod mod;
     [HideInInspector] public bool selected;
-    [HideInInspector] public NEWRingInterface parent;
+    [HideInInspector] public RingInterface parent;
     public int id;
 
     private void OnEnable()
@@ -31,7 +31,6 @@ public class NEWOptionPrefab : MonoBehaviour
 
             selected = true;
         }
-        //CallbackHandler.instance.UpdateAbilityModList(parent.activeAbility);
     }
 
     public void SetMod(Mod _mod)

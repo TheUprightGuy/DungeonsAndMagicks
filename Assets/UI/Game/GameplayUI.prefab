@@ -1181,11 +1181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 2560, y: 1440}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1959,10 +1959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: {fileID: 3742423285251886019}
   image: {fileID: 2125776800142814038}
-  rings:
-  - {fileID: 6712965117674823762}
-  - {fileID: 94175231109750606}
-  - {fileID: 8378344641813660273}
+  abilities: []
   container: {fileID: 4251332744560427585}
   items: []
 --- !u!1 &7528101940765321943

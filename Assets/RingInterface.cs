@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NEWRingInterface : MonoBehaviour
+public class RingInterface : MonoBehaviour
 {
     [Header("Required Setup")]
     // Ability Reference
     public Ability ability;
     // Socket Prefab
-    public NEWOptionPrefab optionPrefab;
+    public SocketPrefab optionPrefab;
     public GameObject modPrefab;
     public ModList modList;
 
@@ -31,7 +31,7 @@ public class NEWRingInterface : MonoBehaviour
         // Position Data
         float stepLength = 360.0f / ability.modRing.mods.Count;
         float iconDist = Vector3.Distance(optionPrefab.icon.transform.position, optionPrefab.piece.transform.position);
-        List<NEWOptionPrefab> pieces = new List<NEWOptionPrefab>();
+        List<SocketPrefab> pieces = new List<SocketPrefab>();
 
         // Iterate through Menu Elements and Instantiate Prefabs w/ Attributes
         for (int i = 0; i < ability.modRing.mods.Count; i++)
@@ -73,7 +73,7 @@ public class NEWRingInterface : MonoBehaviour
     }
 
     // Show Mod Details
-    public void ShowDetails(NEWOptionPrefab _piece)
+    public void ShowDetails(SocketPrefab _piece)
     {
         elementName.SetText(_piece.mod.name);
         elementDescription.SetText(_piece.mod.GetText(ability.type));

@@ -2,49 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Controller : MonoBehaviour
+/* Player class currently handles inventory management, hotkey input and animations. */
+public class Player : MonoBehaviour
 {
-    public Item equipment;
-    public List<Mod> runes;
-
-
-
-
-    //public List<Ability> abilities;
-    [HideInInspector] public int activeIndex = 0;
-    Animator animator;
-
-    public float castspeed = 1.0f;
-
+    #region Singleton
+    public static Player instance;
     private void Awake()
     {
+        if (instance != null)
+        {
+            Debug.LogError("More than one Player exists!");
+            Destroy(this.gameObject);
+        }
+        instance = this;
+
         animator = GetComponentInChildren<Animator>();
         GetComponentInChildren<PCAnimatorFunctions>().controller = this;
     }
-
+    #endregion Singleton
+    #region Setup & Callbacks
     private void Start()
     {
         CallbackHandler.instance.addRune += AddRune;
         CallbackHandler.instance.removeRune += RemoveRune;
 
-        Invoke("SetupAbilityReferences", 0.1f);
-
         Invoke("SetupStuff", 0.1f);
     }
-
     private void OnDestroy()
     {
         CallbackHandler.instance.addRune -= AddRune;
         CallbackHandler.instance.removeRune -= RemoveRune;
     }
-
     public void SetupStuff()
     {
+        SetupAbilityReferences();
         CallbackHandler.instance.SetCastSpeed(castspeed);
         activeIndex = 0;
     }
-
+    #endregion Setup & Callbacks
+    #region EditorFunctions
     private void OnApplicationQuit()
     {
         if (equipment)
@@ -55,69 +51,39 @@ public class Controller : MonoBehaviour
             }
         }
     }
+    #endregion EditorFunctions
 
-    public void AddRune(Mod _rune)
-    {
-        runes.Add(_rune);
-    }
-
-    public void RemoveRune(Mod _rune)
-    {
-        runes.Remove(_rune);
-    }
-
-    public void EquipItem(Item _item)
-    {
-        equipment = _item;
-
-        foreach(Ability n in _item.abilities)
-        {
-            //abilities.Add(n);
-            n.StartUp();
-        }
-        //abilities[activeIndex] = _item.abilities[0];
-        SetupAbilityReferences();
-        CallbackHandler.instance.SetActiveAbility(0);
-    }
-
-    public void SetupAbilityReferences()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            if (equipment && i < equipment.abilities.Count)
-            {
-                CallbackHandler.instance.ShowAbility(i);
-                CallbackHandler.instance.SetAbilityReference(i, equipment.abilities[i]);
-            }
-            else
-            {
-                CallbackHandler.instance.HideAbility(i);
-            }
-        }
-    }
+    [HideInInspector] public Item equipment;
+    [HideInInspector] public List<Mod> runes;
+    [HideInInspector] public int activeIndex = 0;
+    Animator animator;
+       
+    [Header("Setup Fields")]
+    public float castspeed = 1.0f;
 
     private void Update()
     {
+        // Reset Animator Booleans
         animator.SetBool("ProjectileCast", false);
         animator.SetBool("MovementCast", false);
 
-        // Toggle Magic Menus
+        // Toggle Magic Menus - temp
         if (Input.GetKeyDown(KeyCode.C))
         {
-            NEWMagicCanvas.instance.ToggleCanvas();
+            MagicUI.instance.ToggleCanvas();
         }
-
+        // Testing Dialogue Box - temp
         if (Input.GetKeyDown(KeyCode.R))
         {
             CallbackHandler.instance.SetText("Testing Callback", 3.0f);
         }
 
+        // Use Ability on Right Click - consider changing this to hotkeys instead
         if (Input.GetMouseButtonDown(1))
         {
             if (CharacterStats.instance.Control() && equipment)
             {
                 // Callback might be better for this
-
                 switch(equipment.abilities[activeIndex].type)
                 {
                     case AbilityType.Projectile:
@@ -139,23 +105,65 @@ public class Controller : MonoBehaviour
             }
         }
 
+        // Switch ability on num press - consider changing this in future
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             activeIndex = 0;
-            CallbackHandler.instance.SetActiveAbility(0);
+            CallbackHandler.instance.SetActiveAbility(activeIndex);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             activeIndex = 1;
-            CallbackHandler.instance.SetActiveAbility(1);
+            CallbackHandler.instance.SetActiveAbility(activeIndex);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             activeIndex = 2;
-            CallbackHandler.instance.SetActiveAbility(2);
+            CallbackHandler.instance.SetActiveAbility(activeIndex);
         }
     }
 
+    // Pretty self explanatory
+    public void AddRune(Mod _rune)
+    {
+        runes.Add(_rune);
+    }
+    public void RemoveRune(Mod _rune)
+    {
+        runes.Remove(_rune);
+    }
+
+    // Sets up Abilities on Item pickup
+    public void EquipItem(Item _item)
+    {
+        equipment = _item;
+
+        foreach (Ability n in _item.abilities)
+        {
+            n.StartUp();
+        }
+        SetupAbilityReferences();
+        CallbackHandler.instance.SetActiveAbility(0);
+    }
+
+    // Links Equipment Abilities to UI Elements
+    public void SetupAbilityReferences()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (equipment && i < equipment.abilities.Count)
+            {
+                CallbackHandler.instance.ShowAbility(i);
+                CallbackHandler.instance.SetAbilityReference(i, equipment.abilities[i]);
+            }
+            else
+            {
+                CallbackHandler.instance.HideAbility(i);
+            }
+        }
+    }
+
+    // Use ability at index
     public void Cast()
     {
         equipment.abilities[activeIndex].Use(transform);
