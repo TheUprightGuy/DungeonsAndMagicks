@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class QuestObjective : MonoBehaviour
 {
-    public int id;
-    private void OnDestroy()
+    public virtual void OnDestroy()
     {
         QuestManager.instance.CompleteObjective(this);
     }

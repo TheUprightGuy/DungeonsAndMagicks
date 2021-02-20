@@ -64,23 +64,21 @@ public class RingInterface : MonoBehaviour
         }
     }
 
-    public virtual void Update()
+    public void ShowAbility()
     {
-        // Get Highlighted Option
-        float stepLength = 360.0f / data.mods.Count;
-        float mouseAngle = NormalizeAngle(Vector3.SignedAngle(Vector3.up, Input.mousePosition - transform.position, Vector3.forward) + stepLength / 2f);
-        int activeElement = (int)(mouseAngle / stepLength);
-
-        // Check if Highlighted
-        for (int i = 0; i < data.mods.Count; i++)
+        if (activeAbility)
         {
-            pieces[i].backPlate.sprite = (i == activeElement) ? pieces[i].selectedSprite : pieces[i].notSelectedSprite;
+            elementName.SetText(activeAbility.name);
+            elementDescription.SetText("");
+            elementIcon.sprite = activeAbility.icon;
         }
+    }
 
-        // Update Centre Text w/ Element Description
-        elementName.SetText(pieces[activeElement].mod.name);
-        elementDescription.SetText(pieces[activeElement].mod.GetText(activeAbility.type));
-        elementIcon.sprite = pieces[activeElement].mod.icon;
+    public void ShowDetails(OptionPrefab _piece)
+    {
+        elementName.SetText(_piece.mod.name);
+        elementDescription.SetText(_piece.mod.GetText(activeAbility.type));
+        elementIcon.sprite = _piece.mod.icon;
     }
 
     public void SetActiveAbility(Ability _ability)

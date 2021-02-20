@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour, IDropHandler
+public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public OptionPrefab parent;
 
@@ -29,9 +29,18 @@ public class Slot : MonoBehaviour, IDropHandler
         if (!item)
         {
             Destroy(Rune.dragObject);
-            //Rune.dragObject.transform.SetParent(transform);
             parent.SetMod(Rune.dragObject.GetComponent<Rune>().mod);
-            //parent.element = Rune.dragObject.GetComponent<Rune>().mod;
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        parent.parent.ShowDetails(parent);
+        parent.SetSprite(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        parent.parent.ShowAbility();
+        parent.SetSprite(false);
     }
 }

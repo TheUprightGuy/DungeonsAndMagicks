@@ -23,22 +23,9 @@ public class OptionPrefab : MonoBehaviour
         selected = false;
     }
 
-    /*public void Use(Ability _ability)
-    {
-        if (!selected)// && mod.DisplayModifiers != ModType.None)
-        {
-            _ability.modsApplied.Add(mod);
-            _ability.AddMods(mod);
-            parent.modList.CreateMod(icon.sprite, parent.modPrefab);
-
-            selected = true;
-        }
-        CallbackHandler.instance.UpdateAbilityModList(_ability);
-    }*/
-
     public void Use()
     {
-        if (!selected)// && mod.DisplayModifiers != ModType.None)
+        if (!selected)
         {
             parent.activeAbility.modsApplied.Add(mod);
             parent.activeAbility.AddMods(mod);
@@ -55,5 +42,10 @@ public class OptionPrefab : MonoBehaviour
         icon.sprite = mod.icon;
 
         parent.data.mods[id] = _mod;
+    }
+
+    public void SetSprite(bool _active)
+    {
+        backPlate.sprite = _active ? selectedSprite : notSelectedSprite;
     }
 }

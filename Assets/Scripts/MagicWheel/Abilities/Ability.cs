@@ -22,7 +22,7 @@ public enum AbilityType
 public abstract class Ability : ScriptableObject
 {
     [HideInInspector] public List<Mod> modsApplied;
-
+    new public string name;
     public AbilityType type;
     public Sprite icon;
     public RingMenu modRing;

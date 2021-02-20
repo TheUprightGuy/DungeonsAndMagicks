@@ -40,12 +40,14 @@ public class MagicCanvas : MonoBehaviour
     {
         ringInterface.gameObject.SetActive(_toggle);
         toggleUI.gameObject.SetActive(_toggle);
+        ringInterface.ShowAbility();
     }
 
     public void ToggleRingInterface()
     {
         ringInterface.gameObject.SetActive(!ringInterface.gameObject.activeSelf);
         toggleUI.gameObject.SetActive(!toggleUI.gameObject.activeSelf);
+        ringInterface.ShowAbility();
 
         if (!toggleUI.gameObject.activeSelf)
         {
@@ -64,6 +66,7 @@ public class MagicCanvas : MonoBehaviour
     {
         // Canvas Displays Current Ability
         ringInterface.SetActiveAbility(_abilities[_index]);
+        ringInterface.ShowAbility();
 
         // Reset Selected Modifiers
         if (ringInterface.gameObject.activeSelf)

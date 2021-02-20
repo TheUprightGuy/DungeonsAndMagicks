@@ -20,18 +20,9 @@ public class QuestManager : MonoBehaviour
 
     public List<QuestObjective> quests;
 
-    public void CompleteObjective(QuestObjective _quest)
+    public virtual void CompleteObjective(QuestObjective _quest)
     {
         quests.Remove(_quest);
         Debug.Log("Quest Completed");
-    }
-
-    public Action<int> progress;
-    public virtual void Progress(int _id)
-    {
-        if (progress != null)
-        {
-            progress(_id);
-        }
     }
 }

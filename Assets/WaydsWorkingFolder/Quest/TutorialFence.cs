@@ -6,7 +6,7 @@ public class TutorialFence : MonoBehaviour
 {
     public int id;
 
-    private void Start()
+    /*private void Start()
     {
         TutorialTracking.instance.progress += Progress;
     }
@@ -21,5 +21,5 @@ public class TutorialFence : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
+    }*/
 }
