@@ -101,9 +101,10 @@ public class Controller : MonoBehaviour
         animator.SetBool("ProjectileCast", false);
         animator.SetBool("MovementCast", false);
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        // Toggle Magic Menus
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            CallbackHandler.instance.ToggleRingInterface(equipment.abilities, activeIndex);
+            NEWMagicCanvas.instance.ToggleCanvas();
         }
 
         if (Input.GetKeyDown(KeyCode.R))

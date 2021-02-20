@@ -39,52 +39,6 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
-    public Action toggleRingInterface;
-    public void ToggleRingInterface(List<Ability> _abilities, int _index)
-    {
-        /*if (toggleRingInterface != null)
-        {
-            toggleRingInterface();
-            SetRingAbilities(_abilities, _index);
-        }*/
-    }
-
-    public Action<List<Ability>, int> setRingAbilities;
-    public void SetRingAbilities(List<Ability> _abilities, int _index)
-    {
-        /*if (setRingAbilities != null)
-        {
-            setRingAbilities(_abilities, _index);
-        }*/
-    }
-
-    public Action<Ability> setRingAbility;
-    public void SetRingAbility(Ability _ability)
-    {
-        /*if (setRingAbility != null)
-        {
-            setRingAbility(_ability);
-        }*/
-    }
-
-    public Action toggleCraftInterface;
-    public void ToggleCraftInterface()
-    {
-        /*if (toggleCraftInterface != null)
-        {
-            toggleCraftInterface();
-        }*/
-    }
-
-    public Action<bool> closeCraftInterface;
-    public void CloseCraftInterface(bool _toggle)
-    {
-        /*if (closeCraftInterface != null)
-        {
-            closeCraftInterface(_toggle);
-        }*/
-    }
-
     public Action<Mod> addRune;
     public void AddRune(Mod _rune)
     {

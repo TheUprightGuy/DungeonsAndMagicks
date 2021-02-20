@@ -45,15 +45,6 @@ public class NEWMagicCanvas : MonoBehaviour
         ToggleCanvas();
     }
 
-    private void Update()
-    {
-        // temp
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ToggleCanvas();
-        }
-    }
-
     public void EquipItem()
     {
         ToggleCanvas();
@@ -69,6 +60,11 @@ public class NEWMagicCanvas : MonoBehaviour
         ringContainer.SetActive(display);
         toggleContainer.SetActive(display);
         runeContainer.SetActive(crafting && display);
+
+        if (player.equipment)
+        {
+            ToggleAbility(player.equipment.abilities[player.activeIndex]);
+        }
     }
     
     // Sets ring up for each Ability
