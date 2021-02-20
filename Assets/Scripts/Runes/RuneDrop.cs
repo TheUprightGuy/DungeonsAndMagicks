@@ -16,7 +16,6 @@ public class RuneDrop : MonoBehaviour
         if (other.GetComponent<Controller>())
         {
             other.GetComponent<Controller>().runes.Add(rune);
-            TutorialTracking.instance.CheckQuest(this.gameObject);
             Destroy(this.gameObject);
         }
     }

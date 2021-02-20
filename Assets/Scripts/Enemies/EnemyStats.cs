@@ -17,7 +17,6 @@ public class EnemyStats : MonoBehaviour
 
     public void Die()
     {
-        TutorialTracking.instance.CheckQuest(this.gameObject);
         Destroy(this.gameObject);
     }
 }

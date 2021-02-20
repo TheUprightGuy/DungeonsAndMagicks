@@ -24,10 +24,19 @@ public class Controller : MonoBehaviour
     }
 
     private void Start()
-    { 
+    {
+        CallbackHandler.instance.addRune += AddRune;
+        CallbackHandler.instance.removeRune += RemoveRune;
+
         Invoke("SetupAbilityReferences", 0.1f);
 
         Invoke("SetupStuff", 0.1f);
+    }
+
+    private void OnDestroy()
+    {
+        CallbackHandler.instance.addRune -= AddRune;
+        CallbackHandler.instance.removeRune -= RemoveRune;
     }
 
     public void SetupStuff()
@@ -45,6 +54,16 @@ public class Controller : MonoBehaviour
                 n.ResetMods();
             }
         }
+    }
+
+    public void AddRune(Mod _rune)
+    {
+        runes.Add(_rune);
+    }
+
+    public void RemoveRune(Mod _rune)
+    {
+        runes.Remove(_rune);
     }
 
     public void EquipItem(Item _item)
@@ -84,7 +103,7 @@ public class Controller : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            CallbackHandler.instance.ToggleRingInterface(equipment.abilities[activeIndex]);
+            CallbackHandler.instance.ToggleRingInterface(equipment.abilities, activeIndex);
         }
 
         if (Input.GetKeyDown(KeyCode.R))

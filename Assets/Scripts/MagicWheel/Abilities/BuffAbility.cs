@@ -78,6 +78,7 @@ public class BuffAbility : Ability
         mods = startMods;
         modsApplied.Clear();
         buffs.Clear();
+        buffs = startingBuffs;
     }
 
     // Called on Equip
@@ -86,7 +87,7 @@ public class BuffAbility : Ability
         mods.onBuffEnd.Clear();
         mods.onBuff = OnBuffBehaviour.Normal;
         startMods = mods;
-        buffs.Clear();
+        startingBuffs = buffs;
         ResetStartingModifiers();
     }
 

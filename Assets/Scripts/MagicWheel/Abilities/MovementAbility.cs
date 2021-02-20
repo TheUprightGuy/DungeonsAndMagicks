@@ -102,6 +102,7 @@ public class MovementAbility : Ability
         mods = startMods;
         modsApplied.Clear();
         buffs.Clear();
+        buffs = startingBuffs;
     }
 
     // Called on Equip
@@ -110,7 +111,7 @@ public class MovementAbility : Ability
         mods.onEnd.Clear();
         mods.onMove = OnMoveBehaviour.Normal;
         startMods = mods;
-        buffs.Clear();
+        startingBuffs = buffs;
         ResetStartingModifiers();
     }
 

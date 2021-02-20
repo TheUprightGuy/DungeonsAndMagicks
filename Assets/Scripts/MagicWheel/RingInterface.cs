@@ -79,15 +79,8 @@ public class RingInterface : MonoBehaviour
 
         // Update Centre Text w/ Element Description
         elementName.SetText(pieces[activeElement].mod.name);
-        elementDescription.SetText(pieces[activeElement].mod.description);
+        elementDescription.SetText(pieces[activeElement].mod.GetText(activeAbility.type));
         elementIcon.sprite = pieces[activeElement].mod.icon;
-
-        // Clicked Element
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Add Functionality
-            pieces[activeElement].Use(activeAbility);
-        }
     }
 
     public void SetActiveAbility(Ability _ability)

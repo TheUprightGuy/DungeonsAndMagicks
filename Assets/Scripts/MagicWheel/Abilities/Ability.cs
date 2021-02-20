@@ -27,6 +27,7 @@ public abstract class Ability : ScriptableObject
     public Sprite icon;
     public RingMenu modRing;
     public List<Buff> buffs;
+    [HideInInspector] public List<Buff> startingBuffs;
     public int sockets;
 
     public abstract void Use(Transform _user);

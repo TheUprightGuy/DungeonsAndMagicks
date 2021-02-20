@@ -152,6 +152,7 @@ public class ProjectileAbility : Ability
         mods.onHit.Clear();
         modsApplied.Clear();
         buffs.Clear();
+        buffs = startingBuffs;
     }
 
     // Called on Equip
@@ -161,7 +162,7 @@ public class ProjectileAbility : Ability
         mods.onHit.Clear();
         mods.onShoot = OnShootBehaviour.Normal;
         startMods = mods;
-        buffs.Clear();
+        startingBuffs = buffs;
         ResetStartingModifiers();
     }
 

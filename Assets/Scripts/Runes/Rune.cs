@@ -19,6 +19,7 @@ public class Rune : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     public void OnBeginDrag(PointerEventData eventdata)
     {
+        CallbackHandler.instance.RemoveRune(mod);
         dragObject = gameObject;
         startPosition = transform.position;
         startParent = transform.parent;
@@ -36,6 +37,7 @@ public class Rune : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         if (transform.parent == startParent)
         {
+            CallbackHandler.instance.AddRune(mod);
             transform.position = startPosition;
         }
     }

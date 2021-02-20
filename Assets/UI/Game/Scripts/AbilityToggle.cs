@@ -21,7 +21,14 @@ public class AbilityToggle : MonoBehaviour
 
     public void ToggleAbility()
     {
-        CraftingCanvas.instance.SetRingAbility(ability);
-        CraftingCanvas.instance.SetRunes(ability);
+        if (CraftingCanvas.instance.ringInterface.gameObject.activeSelf)
+        {
+            CraftingCanvas.instance.SetRingAbility(ability);
+            CraftingCanvas.instance.DisplayRunes();
+        }
+        if (MagicCanvas.instance.ringInterface.gameObject.activeSelf)
+        {
+            MagicCanvas.instance.SetRingAbility(ability);
+        }
     }
 }

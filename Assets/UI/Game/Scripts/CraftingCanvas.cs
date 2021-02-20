@@ -19,7 +19,7 @@ public class CraftingCanvas : MonoBehaviour
             if (ringInterface.gameObject.activeSelf)
             {
                 SetRingAbility(pc.equipment.abilities[pc.activeIndex]);
-                SetRunes(pc.equipment.abilities[pc.activeIndex]);
+                DisplayRunes();
                 SetAbilities(pc.equipment.abilities);
             }
         }
@@ -82,9 +82,9 @@ public class CraftingCanvas : MonoBehaviour
         toggleUI.Setup(_abilities);
     }
 
-    public void SetRunes(Ability _ability)
+    public void DisplayRunes()
     {
-        runesUI.DisplayRunes(pc.runes, _ability);
+        runesUI.DisplayRunes(pc.runes);
     }
 
     public void ResetAbility()

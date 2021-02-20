@@ -38,14 +38,24 @@ public class CallbackHandler : MonoBehaviour
     }
 
     public Action toggleRingInterface;
-    public void ToggleRingInterface(Ability _ability)
+    public void ToggleRingInterface(List<Ability> _abilities, int _index)
     {
         if (toggleRingInterface != null)
         {
             toggleRingInterface();
-            SetRingAbility(_ability);
+            SetRingAbilities(_abilities, _index);
         }
     }
+
+    public Action<List<Ability>, int> setRingAbilities;
+    public void SetRingAbilities(List<Ability> _abilities, int _index)
+    {
+        if (setRingAbilities != null)
+        {
+            setRingAbilities(_abilities, _index);
+        }
+    }
+
     public Action<Ability> setRingAbility;
     public void SetRingAbility(Ability _ability)
     {
@@ -73,7 +83,23 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<Mod> addRune;
+    public void AddRune(Mod _rune)
+    {
+        if (addRune != null)
+        {
+            addRune(_rune);
+        }
+    }
 
+    public Action<Mod> removeRune;
+    public void RemoveRune(Mod _rune)
+    {
+        if (removeRune != null)
+        {
+            removeRune(_rune);
+        }
+    }
 
     public Action<int, Ability> setAbilityReference;
     public void SetAbilityReference(int _id, Ability _ability)
