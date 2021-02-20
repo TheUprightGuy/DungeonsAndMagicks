@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public OptionPrefab parent;
+    public NEWOptionPrefab parent;
 
     private void Awake()
     {
-        parent = GetComponentInParent<OptionPrefab>();
+        parent = GetComponentInParent<NEWOptionPrefab>();
     }
 
     public GameObject item
@@ -35,12 +35,14 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        parent.parent.ShowDetails(parent);
+        NEWMagicCanvas.instance.ShowDetails(parent);
+        //parent.parent.ShowDetails(parent);
         parent.SetSprite(true);
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        parent.parent.ShowAbility();
+        NEWMagicCanvas.instance.ShowAbility(parent);
+        //parent.parent.ShowAbility();
         parent.SetSprite(false);
     }
 }
