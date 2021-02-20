@@ -5,6 +5,7 @@ using System;
 
 public class CallbackHandler : MonoBehaviour
 {
+    #region Singleton
     public static CallbackHandler instance;
     private void Awake()
     {
@@ -15,12 +16,13 @@ public class CallbackHandler : MonoBehaviour
         }
         instance = this;
     }
+    #endregion Singleton
 
     public Action togglePause;
     public void TogglePause()
     {
         // Temp
-        CanvasController.instance.gameObject.SetActive(!CanvasController.instance.gameObject.activeSelf);
+        PauseMenuCanvasController.instance.gameObject.SetActive(!PauseMenuCanvasController.instance.gameObject.activeSelf);
 
         if (togglePause != null)
         {
@@ -40,47 +42,47 @@ public class CallbackHandler : MonoBehaviour
     public Action toggleRingInterface;
     public void ToggleRingInterface(List<Ability> _abilities, int _index)
     {
-        if (toggleRingInterface != null)
+        /*if (toggleRingInterface != null)
         {
             toggleRingInterface();
             SetRingAbilities(_abilities, _index);
-        }
+        }*/
     }
 
     public Action<List<Ability>, int> setRingAbilities;
     public void SetRingAbilities(List<Ability> _abilities, int _index)
     {
-        if (setRingAbilities != null)
+        /*if (setRingAbilities != null)
         {
             setRingAbilities(_abilities, _index);
-        }
+        }*/
     }
 
     public Action<Ability> setRingAbility;
     public void SetRingAbility(Ability _ability)
     {
-        if (setRingAbility != null)
+        /*if (setRingAbility != null)
         {
             setRingAbility(_ability);
-        }
+        }*/
     }
 
     public Action toggleCraftInterface;
     public void ToggleCraftInterface()
     {
-        if (toggleCraftInterface != null)
+        /*if (toggleCraftInterface != null)
         {
             toggleCraftInterface();
-        }
+        }*/
     }
 
     public Action<bool> closeCraftInterface;
     public void CloseCraftInterface(bool _toggle)
     {
-        if (closeCraftInterface != null)
+        /*if (closeCraftInterface != null)
         {
             closeCraftInterface(_toggle);
-        }
+        }*/
     }
 
     public Action<Mod> addRune;

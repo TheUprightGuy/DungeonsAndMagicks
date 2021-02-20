@@ -10,8 +10,8 @@ public class DefaultsButton : MenuButton, IPointerEnterHandler, IPointerExitHand
 
     private void Start()
     {
-        gameSettings = CanvasController.instance.gameSettings;
-        defaults = CanvasController.instance.defaultSettings;
+        gameSettings = PauseMenuCanvasController.instance.gameSettings;
+        defaults = PauseMenuCanvasController.instance.defaultSettings;
     }
 
     public override void Update()
@@ -72,6 +72,6 @@ public class DefaultsButton : MenuButton, IPointerEnterHandler, IPointerExitHand
         }
 
         Debug.Log("Reset " + menuOptions.ToString() + " options to defaults.");
-        CanvasController.instance.SetSettings();
+        PauseMenuCanvasController.instance.SetSettings();
     }
 }

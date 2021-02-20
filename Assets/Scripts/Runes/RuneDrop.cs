@@ -16,6 +16,7 @@ public class RuneDrop : MonoBehaviour
         if (other.GetComponent<Controller>())
         {
             other.GetComponent<Controller>().runes.Add(rune);
+            NEWMagicCanvas.instance.AddRune(rune);
             Destroy(this.gameObject);
         }
     }

@@ -25,16 +25,16 @@ public class DisplayValue : MonoBehaviour
     }
     private void Start()
     {
-        settings = CanvasController.instance.gameSettings;
+        settings = PauseMenuCanvasController.instance.gameSettings;
         SetSettings();
         SetText();
 
-        CanvasController.instance.setSettings += SetSettings;
+        PauseMenuCanvasController.instance.setSettings += SetSettings;
     }
 
     private void OnDestroy()
     {
-        CanvasController.instance.setSettings -= SetSettings;
+        PauseMenuCanvasController.instance.setSettings -= SetSettings;
     }
     #endregion Setup
 

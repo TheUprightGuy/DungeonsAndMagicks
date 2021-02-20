@@ -40,6 +40,7 @@ public class LootDrop : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
             pc.EquipItem(item);
+            NEWMagicCanvas.instance.EquipItem();
             ItemUI.instance.HideItem(item);
             Destroy(this.gameObject);
 

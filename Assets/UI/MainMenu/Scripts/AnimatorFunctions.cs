@@ -6,6 +6,6 @@ public class AnimatorFunctions : MonoBehaviour
 {
     public void PlaySound(AudioClip _sound)
     {
-        CanvasController.instance.audioSource.PlayOneShot(_sound);
+        PauseMenuCanvasController.instance.audioSource.PlayOneShot(_sound);
     }
 }

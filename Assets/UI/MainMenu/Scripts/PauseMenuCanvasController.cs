@@ -18,10 +18,10 @@ public enum MenuOptions
     Continue
 }
 
-public class CanvasController : MonoBehaviour
+public class PauseMenuCanvasController : MonoBehaviour
 {
     #region Singleton
-    public static CanvasController instance;
+    public static PauseMenuCanvasController instance;
     private void Awake()
     {
         if (instance != null)
