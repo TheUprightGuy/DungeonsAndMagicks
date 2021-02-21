@@ -22,9 +22,9 @@ public class Quest : ScriptableObject
     {
         CallbackHandler.instance.CreateQuestTracker(this);
         questListener = new UnityAction(ProgressQuest);
-        EventManager.StartListening(objectives[index].eventName, questListener);
         index = 0;
         tracking = 0;
+        EventManager.StartListening(objectives[index].eventName, questListener);
         CallbackHandler.instance.SetQuestText(this, objectives[index].eventName + " " + tracking + "/" + objectives[index].quant);
     }
 

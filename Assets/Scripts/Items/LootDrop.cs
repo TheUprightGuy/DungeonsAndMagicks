@@ -45,8 +45,8 @@ public class LootDrop : MonoBehaviour
             pc.EquipItem(item);
             MagicUI.instance.SetupItem();
             ItemUI.instance.HideItem(item);
-            Destroy(this.gameObject);
             EventManager.TriggerEvent("Pick Up Wand");
+            Destroy(this.gameObject);
         }
     }
 }

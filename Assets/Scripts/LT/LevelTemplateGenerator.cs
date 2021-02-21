@@ -104,7 +104,7 @@ public class LevelTemplateGenerator : MonoBehaviour
         int iRandIndex = Random.Range(0, possibleTiles.Count);
 
         GameObject newTile = Instantiate(possibleTiles[iRandIndex]);
-        newTile.transform.position = new Vector3(tileInfo.PosIndex.x * TileSize, 0.0f, tileInfo.PosIndex.y * TileSize);
+        newTile.transform.position = new Vector3(tileInfo.PosIndex.x * TileSize, 0.0f, tileInfo.PosIndex.y * TileSize) + transform.position;
         newTile.transform.forward = dirInfo;
         newTile.GetComponent<TilePrefabInfo>().TileLayoutIndex = tileInfo.PosIndex;
         newTile.transform.parent = transform;

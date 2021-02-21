@@ -233,7 +233,7 @@ public class LevelTemplateBuilderEditor : Editor
                 /************************************************************************/
                 else if (Event.current.isKey && 
                         Event.current.type.Equals(EventType.KeyDown) &&
-                        Event.current.keyCode == KeyCode.D) //D for delete
+                        Event.current.keyCode == KeyCode.X) //X for delete
                 {
                     Debug.Log("d");
                     t.Template.LevelLayout.RemoveAt(ActiveIndex); //Remove at current index

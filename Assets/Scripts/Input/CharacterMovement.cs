@@ -44,7 +44,7 @@ public class CharacterMovement : MonoBehaviour
     {
         RotateCharacter();
         MoveCharacter();
-        MoveCamera();
+        //MoveCamera();
     }
     private void LateUpdate()
     {
