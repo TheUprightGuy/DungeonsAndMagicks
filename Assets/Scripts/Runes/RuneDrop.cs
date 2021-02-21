@@ -19,6 +19,7 @@ public class RuneDrop : MonoBehaviour
             pc.runes.Add(rune);
             MagicUI.instance.AddRune(rune);
             Destroy(this.gameObject);
+            EventManager.TriggerEvent("Pick Up Rune");
         }
     }
 }

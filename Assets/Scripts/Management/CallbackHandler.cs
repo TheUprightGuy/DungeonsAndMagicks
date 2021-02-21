@@ -146,6 +146,24 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Action<Quest,string> setQuestText;
+    public void SetQuestText(Quest _quest, string _text)
+    {
+        if (setQuestText != null)
+        {
+            setQuestText(_quest, _text);
+        }
+    }
+
+    public Action<Quest> createQuestTracker;
+    public void CreateQuestTracker(Quest _quest)
+    {
+        if (createQuestTracker != null)
+        {
+            createQuestTracker(_quest);
+        }
+    }
+
     public void QuitToMenu()
     {
         // SceneLoad here

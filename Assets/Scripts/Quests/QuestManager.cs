@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestManager : MonoBehaviour
 {
@@ -18,11 +19,23 @@ public class QuestManager : MonoBehaviour
     }
     #endregion Singleton
 
-    public List<QuestObjective> quests;
+    public List<Quest> activeQuests;
 
-    public virtual void CompleteObjective(QuestObjective _quest)
+    private void Start()
     {
-        quests.Remove(_quest);
-        Debug.Log("Quest Completed");
+        Invoke("Setup", 0.1f);
+    }
+
+    void Setup()
+    {
+        foreach (Quest n in activeQuests)
+        {
+            n.Setup();
+        }
+    }
+
+    public void AddQuest()
+    {
+        
     }
 }

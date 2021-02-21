@@ -30,19 +30,18 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
         {
             Destroy(Rune.dragObject);
             parent.SetMod(Rune.dragObject.GetComponent<Rune>().mod);
+            EventManager.TriggerEvent("Socket Rune");
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         MagicUI.instance.ShowDetails(parent);
-        //parent.parent.ShowDetails(parent);
         parent.SetSprite(true);
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         MagicUI.instance.ShowAbility(parent);
-        //parent.parent.ShowAbility();
         parent.SetSprite(false);
     }
 }

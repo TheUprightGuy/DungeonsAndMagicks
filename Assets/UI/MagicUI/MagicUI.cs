@@ -31,8 +31,8 @@ public class MagicUI : MonoBehaviour
     bool crafting = false;
     // Container Element References
     RingInterface activeIndex;
-    List<RingInterface> abilities;
-    List<AbilityToggle> toggles;
+    List<RingInterface> abilities = new List<RingInterface>();
+    List<AbilityToggle> toggles = new List<AbilityToggle>();
 
     /* CHANGE THESE TO RESOURCE LOAD IN FUTURE */
     [Header("Prefab References")]

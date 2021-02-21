@@ -41,5 +41,4 @@ public class Rune : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             transform.position = startPosition;
         }
     }
-
 }
