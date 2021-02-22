@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 33000013918717924}
   - component: {fileID: 23000013462697434}
   - component: {fileID: 64000013123528018}
+  - component: {fileID: 5479313079558877076}
   m_Layer: 0
   m_Name: RHE_SpruceA_Trunk
   m_TagString: Untagged
@@ -128,6 +129,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: b6e127cb00c9dda40b7cac23fea4d82d, type: 3}
+--- !u!208 &5479313079558877076
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011155360908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5, y: 25.355001, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.126, y: 20.203001, z: -0.065000005}
+  m_TimeToStationary: 0.5
 --- !u!1 &1000013313497444
 GameObject:
   m_ObjectHideFlags: 0
