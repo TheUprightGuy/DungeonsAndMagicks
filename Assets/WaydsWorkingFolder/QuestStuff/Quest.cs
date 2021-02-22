@@ -8,6 +8,7 @@ public struct QuestObjective
 {
     public string eventName;
     public int quant;
+    public string dialogueText;
 }
 
 [CreateAssetMenu(fileName = "Quest", menuName = "Quests/Quest", order = 1)]
@@ -26,6 +27,7 @@ public class Quest : ScriptableObject
         tracking = 0;
         EventManager.StartListening(objectives[index].eventName, questListener);
         CallbackHandler.instance.SetQuestText(this, objectives[index].eventName + " " + tracking + "/" + objectives[index].quant);
+        CallbackHandler.instance.SetDialogueText(objectives[index].dialogueText, 3.0f);
     }
 
     private void OnDisable()
@@ -58,6 +60,7 @@ public class Quest : ScriptableObject
             {
                 EventManager.StartListening(objectives[index].eventName, questListener);
                 CallbackHandler.instance.SetQuestText(this, objectives[index].eventName + " " + tracking + "/" + objectives[index].quant);
+                CallbackHandler.instance.SetDialogueText(objectives[index].dialogueText, 3.0f);
             }
         }
         // Else just update quest text

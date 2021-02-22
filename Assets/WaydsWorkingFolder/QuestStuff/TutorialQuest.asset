@@ -15,11 +15,17 @@ MonoBehaviour:
   objectives:
   - eventName: Pick Up Wand
     quant: 1
+    dialogueText: Rough night... now where's my wand?
   - eventName: Pick Up Rune
     quant: 1
+    dialogueText: This wands sockets are empty, I should try find a rune.
   - eventName: Socket Rune
     quant: 1
+    dialogueText: Ahah! Time to find a crafting station, there should be one around
+      here.
   - eventName: Defeat Enemy
     quant: 3
+    dialogueText: Bandits?! I need to deal with them before progressing.
   - eventName: Progress Chapter
     quant: 1
+    dialogueText: Temp

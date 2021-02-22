@@ -137,12 +137,12 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
-    public Action<string, float> setText;
-    public void SetText(string _text, float _time)
+    public Action<string, float> setDialogueText;
+    public void SetDialogueText(string _text, float _time)
     {
-        if (setText != null)
+        if (setDialogueText != null)
         {
-            setText(_text, _time);
+            setDialogueText(_text, _time);
         }
     }
 

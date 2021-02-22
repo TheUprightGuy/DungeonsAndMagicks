@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
         // Testing Dialogue Box - temp
         if (Input.GetKeyDown(KeyCode.R))
         {
-            CallbackHandler.instance.SetText("Testing Callback", 3.0f);
+            CallbackHandler.instance.SetDialogueText("Testing Callback", 3.0f);
         }
 
         // Use Ability on Right Click - consider changing this to hotkeys instead

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TextBillboard : MonoBehaviour
 {
     public TMPro.TextMeshPro text;
+    Coroutine myCoroutine = null;
 
     private void Awake()
     {
@@ -13,18 +14,24 @@ public class TextBillboard : MonoBehaviour
 
     private void Start()
     {
-        CallbackHandler.instance.setText += SetText;
+        CallbackHandler.instance.setDialogueText += SetText;
     }
 
     private void OnDestroy()
     {
-        CallbackHandler.instance.setText -= SetText;
+        CallbackHandler.instance.setDialogueText -= SetText;
     }
 
     public void SetText(string _text, float _time)
     {
         text.SetText(_text);
-        StartCoroutine(DisableAfter(_time));
+        // Cancels previous Dialogue
+        if (myCoroutine != null)
+        {
+            StopCoroutine(myCoroutine);
+        }
+        // Start new Dialogue
+        myCoroutine = StartCoroutine(DisableAfter(_time));
     }
 
     IEnumerator DisableAfter(float _time)
