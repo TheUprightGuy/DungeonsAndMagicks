@@ -2142,6 +2142,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 448563178}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &455623099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2974014161375205092, guid: 08b9a8c20a169bf48a61b562ed53138f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5218629171972437787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &482967187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6721,6 +6727,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1959703115}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1450901342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3620445892302818332, guid: 08b9a8c20a169bf48a61b562ed53138f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5218629171972437787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1454778544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7943,7 +7955,7 @@ Transform:
   - {fileID: 1430269153}
   - {fileID: 1404988550}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1615692088
 PrefabInstance:
@@ -11412,9 +11424,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072436239275875014, guid: 08b9a8c20a169bf48a61b562ed53138f,
         type: 3}
-      propertyPath: greeting
-      value: Hail Traveller! Care to take a look at my wares?
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 1450901342}
+    - target: {fileID: 2072436239275875014, guid: 08b9a8c20a169bf48a61b562ed53138f,
+        type: 3}
+      propertyPath: shopUI
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2072436239275875014, guid: 08b9a8c20a169bf48a61b562ed53138f,
+        type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 5906837935857296696, guid: 6170b410a01a7d048b1f429797a933bb,
+        type: 3}
+    - target: {fileID: 2072436239275875014, guid: 08b9a8c20a169bf48a61b562ed53138f,
+        type: 3}
+      propertyPath: displayGroup
+      value: 
+      objectReference: {fileID: 455623099}
     - target: {fileID: 4948649244228192175, guid: 08b9a8c20a169bf48a61b562ed53138f,
         type: 3}
       propertyPath: m_Name
@@ -11423,7 +11451,7 @@ PrefabInstance:
     - target: {fileID: 5757556253405109525, guid: 08b9a8c20a169bf48a61b562ed53138f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5757556253405109525, guid: 08b9a8c20a169bf48a61b562ed53138f,
         type: 3}

@@ -6,11 +6,24 @@ public class Shopkeeper : MonoBehaviour
 {
     Player pc;
     ShopTextBillboard shopText;
+    ShopUI shopUI;
+    GameObject shop;
+
     public string greeting;
+
+    public List<Item> shopInventory;
 
     private void Awake()
     {
+        shop = GetComponentInChildren<Canvas>().gameObject;
         shopText = GetComponentInChildren<ShopTextBillboard>();
+        shopUI = GetComponentInChildren<ShopUI>();
+    }
+
+    private void Start()
+    {
+        shopUI.Setup(shopInventory);
+        shop.SetActive(false);
     }
 
     private void Update()
@@ -18,6 +31,7 @@ public class Shopkeeper : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
             // Open Shop Menu
+            shop.SetActive(!shop.activeSelf);
         }
     }
 
