@@ -10,7 +10,13 @@ public class LootDrop : MonoBehaviour
     [Header("Required Fields")]
     public Transform rot;
     Player pc;
-    
+    Rigidbody rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void Start()
     {
         // Clone self and Setup

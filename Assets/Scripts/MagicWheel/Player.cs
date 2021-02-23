@@ -53,6 +53,8 @@ public class Player : MonoBehaviour
     }
     #endregion EditorFunctions
 
+    //[HideInInspector]
+    public int gold;
     [HideInInspector] public Item equipment;
     [HideInInspector] public List<Mod> runes;
     [HideInInspector] public int activeIndex = 0;
@@ -167,5 +169,10 @@ public class Player : MonoBehaviour
     public void Cast()
     {
         equipment.abilities[activeIndex].Use(transform);
+    }
+
+    public void GiveGold(int _gold)
+    {
+        gold += _gold;
     }
 }
