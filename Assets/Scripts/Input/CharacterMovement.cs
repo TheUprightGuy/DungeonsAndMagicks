@@ -1,26 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class CharacterMovement : MonoBehaviour
 {
-    [Header("Settings")]
+    public enum MoveModes
+    {
+        //NAVMESH, //Felt terrible and gross
+        UPDATED,
+        OLD,
+    }
+
+    [Header("Character Movement Settings")]
+    public MoveModes MovementMode = MoveModes.UPDATED;
     public float collisionCheckDistance;
     public float PlayerSpeed = 10.0f;
+    [HideIfEnumValue("MovementMode", HideIf.NotEqual, (int)MoveModes.UPDATED)]
+    public LayerMask LayerMaskOnGround;
+    [HideIfEnumValue("MovementMode", HideIf.NotEqual, (int)MoveModes.UPDATED)]
+    public float StepUpHeight = 0.5f;
+    [HideIfEnumValue("MovementMode", HideIf.NotEqual, (int)MoveModes.UPDATED)]
+    public float OffsetHeight;
+    public enum CamModes
+    {
+        [Tooltip("Has no border awareness and just follows the player")]
+        EASY,
+        [Tooltip("Attempts to avoid viewing over the edge")]
+        SMART
+    }
+    [Header("Camera Settings")]
 
-
-    [Range(0.0f, 1000.0f)]
-    public float BorderThiccNess = 0.0f;
+    public CamModes CameraMode = CamModes.EASY;
+    [Tooltip("PlayerCamera will fetch from Camera.main if not set")]
+    public Camera PlayerCamera;
+    [HideIfEnumValue("CameraMode", HideIf.NotEqual, (int)CamModes.SMART)]
+    public LevelTemplateUtilities LTU;
+    [HideIfEnumValue("CameraMode", HideIf.NotEqual, (int)CamModes.SMART)]
+    public float ScreenBorderSize = 0.0f;
+    [HideIfEnumValue("CameraMode", HideIf.NotEqual, (int)CamModes.SMART)]
     public float smoothTime = 0.3F;
 
-    [Header("Required Components")]
-    public LevelTemplateUtilities LTU;
-
-
-    GetMouseInWorld getMousePos;
+    //RandomShit
     Vector3 camOffset;
     Quaternion camRot = Quaternion.identity;
-    public Camera mainCam;
     private Vector3 velocity = Vector3.zero;
 
     #region Animation Variables
@@ -32,28 +54,56 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        getMousePos = GetComponent<GetMouseInWorld>();
+        PlayerCamera = (PlayerCamera == null) ? (Camera.main) : (PlayerCamera); //Get Main Camera if not set
 
-        mainCam = Camera.main;
-        camOffset = Vector3.Normalize( mainCam.transform.position - transform.position ) * Vector3.Distance(transform.position, mainCam.transform.position);
-        camRot = mainCam.transform.rotation;
+        camOffset = Vector3.Normalize( PlayerCamera.transform.position - transform.position ) * Vector3.Distance(transform.position, PlayerCamera.transform.position);
+        camRot = PlayerCamera.transform.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
         RotateCharacter();
+
+
         MoveCharacter();
+        switch (CameraMode)
+        {
+            case CamModes.EASY:
+                EasyCam();
+                break;
+            case CamModes.SMART:
+                SmartCam();
+                break;
+            default:
+                break;
+        }
         //MoveCamera();
     }
+
+    #region Rotation Stuff
     private void LateUpdate()
     {
-        
+        //Create a ray from the Mouse click position
+        Ray ray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        //Initialise the enter variable
+        float enter = 0.0f;
+
+        if (groundPlane.Raycast(ray, out enter))
+        {
+            //Get the point that is clicked
+            Vector3 hitPoint = ray.GetPoint(enter);
+            hitPoint.y = 0.0f;
+
+            MouseToWorldPos = hitPoint;
+        }
     }
 
+    Vector3 MouseToWorldPos = Vector3.zero;
     void RotateCharacter()
     {
-        Vector3 a = getMousePos.MouseToWorldPos;
+        Vector3 a = MouseToWorldPos;
         a.y = 0.0f;
 
         Vector3 b = transform.position;
@@ -61,6 +111,8 @@ public class CharacterMovement : MonoBehaviour
         Vector3 dir = Vector3.Normalize(a - b);
         transform.forward = dir;
     }
+    #endregion Rotation Stuff
+
     void MoveCharacter()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -72,13 +124,20 @@ public class CharacterMovement : MonoBehaviour
         Vector3 finalMoveVec = Vector3.zero;
 
         Vector3 rayStart = transform.position;
-        rayStart.y -= 0.4f;
+
+        if (MovementMode == MoveModes.UPDATED)
+        {
+            rayStart.y += StepUpHeight;
+        }
+        else
+        {
+            rayStart.y -= 0.4f;
+        }
         RaycastHit hit;
 
 
         if (!Physics.Raycast(rayStart, horVec, out hit, collisionCheckDistance) || hit.collider.isTrigger)
         {
-           
             finalMoveVec += horVec;
         }
         if (!Physics.Raycast(rayStart, vertVec, out hit, collisionCheckDistance) || hit.collider.isTrigger)
@@ -96,22 +155,40 @@ public class CharacterMovement : MonoBehaviour
             strafing = Mathf.Lerp(strafing, 0, Time.deltaTime);
             backwards = Mathf.Lerp(backwards, 0, Time.deltaTime);
         }
-        else 
+        else
         {
             strafing = (angle - 90) / 90;
             backwards = (Vector3.Angle(finalMoveVec, transform.forward) - 90.0f) / -90.0f;
         }
         // Magnitude - Determine if Moving or not
         currentMovMag = Vector3.Magnitude(finalMoveVec);
-        transform.position = transform.position + (finalMoveVec * Time.deltaTime * PlayerSpeed);
+        
+        Vector3 newPos = transform.position + (finalMoveVec * Time.deltaTime * PlayerSpeed);
+        
+        if (MovementMode == MoveModes.UPDATED)
+        {
+            RaycastHit rayhit = new RaycastHit();
+            Vector3 rayPos = newPos;
+            rayPos.y += StepUpHeight;
+
+            if (Physics.Raycast(rayPos, Vector3.down, out rayhit, 69, LayerMaskOnGround)) //Checks down for the ground
+            {
+                newPos.y = rayhit.point.y + OffsetHeight;
+            }
+        }
+
+        transform.position = newPos;
+
     }
-    void MoveCamera()
+
+
+    void SmartCam()
     {
-        Vector3 oldPos = mainCam.transform.position;
+        Vector3 oldPos = PlayerCamera.transform.position;
         Vector3 calcPos = transform.position + camOffset;
         
 
-        mainCam.transform.position = calcPos;
+        PlayerCamera.transform.position = calcPos;
 
         float enterDist = 0.0f;
         Plane levelPlane = new Plane(Vector3.up, Vector3.zero);
@@ -119,7 +196,7 @@ public class CharacterMovement : MonoBehaviour
         //LeftCheck
         /*********************************************/
 
-        Ray leftRay = mainCam.ScreenPointToRay(new Vector3(BorderThiccNess, Screen.height / 2, 0.0f));
+        Ray leftRay = PlayerCamera.ScreenPointToRay(new Vector3(ScreenBorderSize, Screen.height / 2, 0.0f));
 
         levelPlane.Raycast(leftRay, out enterDist);
         Vector3 intersectPoint = leftRay.origin + (leftRay.direction * enterDist);
@@ -128,7 +205,7 @@ public class CharacterMovement : MonoBehaviour
 
         //RightCheck
         /*********************************************/
-        Ray rightRay = mainCam.ScreenPointToRay(new Vector3(Screen.width - BorderThiccNess, Screen.height / 2, 0.0f));
+        Ray rightRay = PlayerCamera.ScreenPointToRay(new Vector3(Screen.width - ScreenBorderSize, Screen.height / 2, 0.0f));
 
         float right = 0.0f;
         levelPlane.Raycast(rightRay, out right);
@@ -138,7 +215,7 @@ public class CharacterMovement : MonoBehaviour
 
         //TopCheck
         /*********************************************/
-        Ray topRay = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height - BorderThiccNess, 0.0f));
+        Ray topRay = PlayerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height - ScreenBorderSize, 0.0f));
 
 
         float top = 0.0f;
@@ -149,7 +226,7 @@ public class CharacterMovement : MonoBehaviour
 
         //BottomCheck
         /*********************************************/
-        Ray botRay = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, BorderThiccNess, 0.0f));
+        Ray botRay = PlayerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, ScreenBorderSize, 0.0f));
 
         float bot = 0.0f;
         levelPlane.Raycast(botRay, out bot);
@@ -158,7 +235,7 @@ public class CharacterMovement : MonoBehaviour
         bool botCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
 
 
-        mainCam.transform.rotation = Quaternion.identity;
+        PlayerCamera.transform.rotation = Quaternion.identity;
 
 
 
@@ -178,36 +255,17 @@ public class CharacterMovement : MonoBehaviour
         }
 
 
-        mainCam.transform.position = Vector3.SmoothDamp(oldPos, newPos, ref velocity, smoothTime);
-        mainCam.transform.rotation = camRot;
+        PlayerCamera.transform.position = Vector3.SmoothDamp(oldPos, newPos, ref velocity, smoothTime);
+        PlayerCamera.transform.rotation = camRot;
     }
 
+    void EasyCam()
+    {
+        PlayerCamera.transform.position = transform.position + camOffset;
+    }
 
     private void OnDrawGizmos()
     {
-        float enterDist = 0.0f;
-        Plane levelPlane = new Plane(Vector3.up, Vector3.zero);
 
-
-        Ray leftRay = mainCam.ScreenPointToRay(new Vector3(BorderThiccNess, Screen.height / 2, 0.0f));
-
-        levelPlane.Raycast(leftRay, out enterDist);
-        Vector3 intersectPoint = leftRay.origin + (leftRay.direction * enterDist);
-
-        bool leftCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
-
-        Gizmos.color = (leftCheck) ? (Color.white) : (Color.red);
-        Gizmos.DrawSphere(intersectPoint, 0.5f);
-
-        Ray rightRay = mainCam.ScreenPointToRay(new Vector3(Screen.width - BorderThiccNess, Screen.height / 2, 0.0f));
-
-        float right = 0.0f;
-        levelPlane.Raycast(rightRay, out right);
-        intersectPoint = rightRay.origin + (rightRay.direction * right);
-
-        bool rightCheck = LTU.CheckPointWithinLevelBounds(intersectPoint);
-
-        Gizmos.color = (rightCheck) ? (Color.white) : (Color.red);
-        Gizmos.DrawSphere(intersectPoint, 0.5f);
     }
 }
