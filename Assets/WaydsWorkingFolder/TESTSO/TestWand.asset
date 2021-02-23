@@ -15,4 +15,6 @@ MonoBehaviour:
   name: TestWand
   icon: {fileID: 21300000, guid: 7e87ed5273676da4dbb4d5726e07bf10, type: 3}
   rarity: 1
+  type: 0
+  value: 150
   abilities: []

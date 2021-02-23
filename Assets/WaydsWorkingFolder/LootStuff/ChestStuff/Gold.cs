@@ -19,7 +19,7 @@ public class Gold : MonoBehaviour
             if (Vector3.Distance(transform.position, pc.transform.position) < 0.01f)
             {
                 // Give Player Gold - Spawn FX?
-                pc.GiveGold(amount);
+                pc.GiveCoins(amount);
                 // Swap the position of the cylinder.
                 Destroy(this.gameObject);
             }

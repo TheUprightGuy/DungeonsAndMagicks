@@ -43,18 +43,26 @@ public class LootDrop : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
-            if ((Weapon)item)
+            switch (item.type)
             {
-                pc.EquipItem((Weapon)item);
-                MagicUI.instance.SetupItem();
-                ItemUI.instance.HideItem(item);
-                EventManager.TriggerEvent("Pick Up Wand");
-                Destroy(this.gameObject);
-            }
-            else if ((Rune)item)
-            {
-                EventManager.TriggerEvent("Pick Up Rune");
-                Destroy(this.gameObject);
+                case ItemType.Wand:
+                {
+                    pc.EquipItem((Weapon)item);
+                    MagicUI.instance.SetupItem();
+                    ItemUI.instance.HideItem(item);
+                    EventManager.TriggerEvent("Pick Up Wand");
+                    Destroy(this.gameObject);
+                    break;
+                }
+                case ItemType.Rune:
+                {
+                    pc.AddRune(((Rune)item).mod);
+                    MagicUI.instance.SetupItem();
+                    EventManager.TriggerEvent("Pick Up Rune");
+                    ItemUI.instance.HideItem(item);
+                    Destroy(this.gameObject);
+                    break;
+                }
             }
         }
     }

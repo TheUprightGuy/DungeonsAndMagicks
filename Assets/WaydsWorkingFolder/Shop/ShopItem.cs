@@ -24,13 +24,16 @@ public class ShopItem : MonoBehaviour
         item = _item;
         image.sprite = item.icon;
         itemName.SetText(item.name);
-        itemPrice.SetText("$5");
+        itemPrice.SetText(item.value.ToString());
     }
 
     public void BuyItem()
     {
-        GameObject temp = Instantiate(lootDrop, Player.instance.transform.position, Quaternion.identity);
-        temp.AddComponent<LootEffect>();
-        Debug.Log("You buy " + item.name);
+        if (CallbackHandler.instance.GetPlayerCoins() > item.value)
+        {
+            CallbackHandler.instance.SpendCoins(item.value);
+            GameObject temp = Instantiate(lootDrop, Player.instance.transform.position, Quaternion.identity);
+            temp.AddComponent<LootEffect>();
+        }
     }
 }

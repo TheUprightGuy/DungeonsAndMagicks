@@ -16,4 +16,5 @@ MonoBehaviour:
   icon: {fileID: 0}
   rarity: 1
   type: 1
+  value: 50
   mod: {fileID: 0}

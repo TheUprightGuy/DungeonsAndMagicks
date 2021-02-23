@@ -50,6 +50,7 @@ public class Shopkeeper : MonoBehaviour
         if (other.GetComponent<Player>())
         {
             pc = null;
+            shop.SetActive(false);
         }
     }
 }

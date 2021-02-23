@@ -164,6 +164,44 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
+    public Func<int> getPlayerCoins;
+    public int GetPlayerCoins()
+    {
+        if (getPlayerCoins != null)
+        {
+            return (getPlayerCoins());
+        }
+        return 0;
+    }
+
+    public Action<int> spendCoins;
+    public void SpendCoins(int _coins)
+    {
+        if (spendCoins != null)
+        {
+            spendCoins(_coins);
+            UpdateShopText();
+        }
+    }
+    public Action<int> giveCoins;
+    public void GiveCoins(int _coins)
+    {
+        if (giveCoins != null)
+        {
+            giveCoins(_coins);
+            UpdateShopText();
+        }
+    }
+
+    public Action updateShopText;
+    public void UpdateShopText()
+    {
+        if (updateShopText != null)
+        {
+            updateShopText();
+        }
+    }
+
     public void QuitToMenu()
     {
         // SceneLoad here

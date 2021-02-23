@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greeting: Hail Traveller! Care to take a look at my wares?
   shopInventory:
-  - {fileID: 11400000, guid: a28742ccc87841c4e923762d67ec47ba, type: 2}
+  - {fileID: 11400000, guid: c2ca0f363c1a76348b21b5fdbb932770, type: 2}
 --- !u!1 &4960065935773660577
 GameObject:
   m_ObjectHideFlags: 0

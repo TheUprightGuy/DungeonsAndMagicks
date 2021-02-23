@@ -22,6 +22,7 @@ public abstract class Item : ScriptableObject
     public Sprite icon;
     public Rarity rarity;
     public ItemType type;
+    public int value;
 
     public abstract void SetupLoot();
 }

@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1903a8b3295394f870d2992dc7cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: a28742ccc87841c4e923762d67ec47ba, type: 2}
+  item: {fileID: 0}
   itemName: {fileID: 5906837936794490628}
   itemPrice: {fileID: 5906837936401518134}
   lootDrop: {fileID: 2594395749808740658, guid: f1e064f0bc51f134cac04569e39ba736,

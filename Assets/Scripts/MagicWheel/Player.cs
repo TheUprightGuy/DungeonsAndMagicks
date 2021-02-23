@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     {
         CallbackHandler.instance.addRune += AddRune;
         CallbackHandler.instance.removeRune += RemoveRune;
+        CallbackHandler.instance.getPlayerCoins += GetPlayerCoins;
+        CallbackHandler.instance.giveCoins += GiveCoins;
+        CallbackHandler.instance.spendCoins += SpendCoins;
 
         Invoke("SetupStuff", 0.1f);
     }
@@ -32,6 +35,9 @@ public class Player : MonoBehaviour
     {
         CallbackHandler.instance.addRune -= AddRune;
         CallbackHandler.instance.removeRune -= RemoveRune;
+        CallbackHandler.instance.getPlayerCoins -= GetPlayerCoins;
+        CallbackHandler.instance.giveCoins -= GiveCoins;
+        CallbackHandler.instance.spendCoins -= SpendCoins;
     }
     public void SetupStuff()
     {
@@ -54,14 +60,30 @@ public class Player : MonoBehaviour
     #endregion EditorFunctions
 
     //[HideInInspector]
-    public int gold;
+    public int coins;
     [HideInInspector] public Weapon equipment;
-    [HideInInspector] public List<Mod> runes;
+    //[HideInInspector]
+    public List<Mod> runes;
     [HideInInspector] public int activeIndex = 0;
     Animator animator;
        
     [Header("Setup Fields")]
     public float castspeed = 1.0f;
+
+    public void SpendCoins(int _coins)
+    {
+        coins -= _coins;
+    }
+
+    public void GiveCoins(int _gold)
+    {
+        coins += _gold;
+    }
+
+    public int GetPlayerCoins()
+    {
+        return coins;
+    }
 
     private void Update()
     {
@@ -169,10 +191,5 @@ public class Player : MonoBehaviour
     public void Cast()
     {
         equipment.abilities[activeIndex].Use(transform);
-    }
-
-    public void GiveGold(int _gold)
-    {
-        gold += _gold;
     }
 }
