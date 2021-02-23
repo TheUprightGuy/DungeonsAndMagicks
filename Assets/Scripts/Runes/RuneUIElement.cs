@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Rune : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class RuneUIElement : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Mod mod;
 

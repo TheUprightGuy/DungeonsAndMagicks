@@ -15,7 +15,7 @@ public class RunesUI : MonoBehaviour
 
         foreach(Mod n in _runes)
         {
-            Rune temp = Instantiate(runePrefab, this.transform).GetComponentInChildren<Rune>();
+            RuneUIElement temp = Instantiate(runePrefab, this.transform).GetComponentInChildren<RuneUIElement>();
             temp.mod = n;
 
             runes.Add(temp.gameObject);

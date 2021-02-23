@@ -7,8 +7,7 @@ public class LootDrop : MonoBehaviour
     [Header("Item Field")]
     public Item item;
 
-    [Header("Required Fields")]
-    public Transform rot;
+    //Local Variables
     Player pc;
 
     private void Start()
@@ -16,6 +15,8 @@ public class LootDrop : MonoBehaviour
         // Clone self and Setup
         item = Instantiate(item);
         item.SetupLoot();
+
+        Instantiate(ResourceManager.instance.GetItemMesh(item.type), transform);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,15 +39,23 @@ public class LootDrop : MonoBehaviour
 
     private void Update()
     {
-        rot.Rotate(Vector3.up, Time.deltaTime * 10.0f);
+        transform.Rotate(Vector3.up, Time.deltaTime * 10.0f);
 
         if (Input.GetKeyDown(KeyCode.E) && pc)
         {
-            pc.EquipItem(item);
-            MagicUI.instance.SetupItem();
-            ItemUI.instance.HideItem(item);
-            EventManager.TriggerEvent("Pick Up Wand");
-            Destroy(this.gameObject);
+            if ((Weapon)item)
+            {
+                pc.EquipItem((Weapon)item);
+                MagicUI.instance.SetupItem();
+                ItemUI.instance.HideItem(item);
+                EventManager.TriggerEvent("Pick Up Wand");
+                Destroy(this.gameObject);
+            }
+            else if ((Rune)item)
+            {
+                EventManager.TriggerEvent("Pick Up Rune");
+                Destroy(this.gameObject);
+            }
         }
     }
 }

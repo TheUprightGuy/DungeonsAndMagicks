@@ -118,14 +118,14 @@ public class MagicUI : MonoBehaviour
     {
         foreach(Mod n in player.runes)
         {
-            Rune temp = Instantiate(runePrefab, runeContainer.transform).GetComponentInChildren<Rune>();
+            RuneUIElement temp = Instantiate(runePrefab, runeContainer.transform).GetComponentInChildren<RuneUIElement>();
             temp.mod = n;
         }
     }
     // Add Rune - may change to actual inventory system in future
     public void AddRune(Mod _rune)
     {
-        Rune temp = Instantiate(runePrefab, runeContainer.transform).GetComponentInChildren<Rune>();
+        RuneUIElement temp = Instantiate(runePrefab, runeContainer.transform).GetComponentInChildren<RuneUIElement>();
         temp.mod = _rune;
     }
 

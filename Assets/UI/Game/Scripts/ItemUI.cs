@@ -48,11 +48,22 @@ public class ItemUI : MonoBehaviour
             itemName.SetText(items[0].name);
             image.sprite = items[0].icon;
 
-            for (int i = 0; i < items[0].abilities.Count; i++)
+            if (items[0] as Weapon)
             {
-                abilities[i].SetActive(true);
-                abilities[i].GetComponent<Image>().sprite = items[0].abilities[i].icon;
-                abilities[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(items[0].abilities[i].sockets.ToString());
+                for (int i = 0; i < ((Weapon)items[0]).abilities.Count; i++)
+                {
+                    abilities[i].SetActive(true);
+                    abilities[i].GetComponent<Image>().sprite = ((Weapon)items[0]).abilities[i].icon;
+                    abilities[i].GetComponentInChildren<TMPro.TextMeshProUGUI>().SetText(((Weapon)items[0]).abilities[i].sockets.ToString());
+                }
+            }
+            else if (items[0] as Rune)
+            {
+                // Do Stuff
+                for (int i = 0; i < abilities.Length; i++)
+                {
+                    abilities[i].SetActive(false);
+                }
             }
         }
         else

@@ -10,22 +10,18 @@ public enum Rarity
     Epic
 }
 
-[CreateAssetMenu(fileName = "Weapon", menuName = "Item/Weapon", order = 1)]
-public class Item : ScriptableObject
+public enum ItemType
 {
-    public List<Ability> abilities;
+    Wand = 0,
+    Rune
+}
 
+public abstract class Item : ScriptableObject
+{
     new public string name;
     public Sprite icon;
     public Rarity rarity;
+    public ItemType type;
 
-    public void SetupLoot()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            abilities.Add(Instantiate(DistributionManager.instance.RequestAbility()));
-            abilities[i].sockets = Random.Range((int)rarity, (int)rarity + 2);
-            abilities[i].ResetStartingModifiers();
-        }
-    }
+    public abstract void SetupLoot();
 }

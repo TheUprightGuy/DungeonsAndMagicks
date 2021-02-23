@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     //[HideInInspector]
     public int gold;
-    [HideInInspector] public Item equipment;
+    [HideInInspector] public Weapon equipment;
     [HideInInspector] public List<Mod> runes;
     [HideInInspector] public int activeIndex = 0;
     Animator animator;
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
     }
 
     // Sets up Abilities on Item pickup
-    public void EquipItem(Item _item)
+    public void EquipItem(Weapon _item)
     {
         equipment = _item;
 

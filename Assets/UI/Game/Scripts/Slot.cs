@@ -28,8 +28,8 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     {
         if (!item)
         {
-            Destroy(Rune.dragObject);
-            parent.SetMod(Rune.dragObject.GetComponent<Rune>().mod);
+            Destroy(RuneUIElement.dragObject);
+            parent.SetMod(RuneUIElement.dragObject.GetComponent<RuneUIElement>().mod);
             EventManager.TriggerEvent("Socket Rune");
         }
     }
