@@ -13,15 +13,18 @@ MonoBehaviour:
   m_Name: Movement
   m_EditorClassIdentifier: 
   modsApplied: []
-  startRing: {fileID: 0}
+  name: Blink
   type: 3
   icon: {fileID: 21300000, guid: 8ed47d1b344d1264683cbbcc686c9ac7, type: 3}
-  modRing: {fileID: 11400000, guid: e54015235e1b6f7449c897c2e219c9e5, type: 2}
+  modRing: {fileID: 0}
   buffs: []
+  startingBuffs: []
   sockets: 5
   mods:
+    buff: {fileID: 0}
     onMove: 0
     onEnd: 
   startMods:
+    buff: {fileID: 0}
     onMove: 0
     onEnd: 

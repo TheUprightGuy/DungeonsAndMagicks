@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PCAnimatorFunctions : MonoBehaviour
 {
-    [HideInInspector] public Controller controller;
+    [HideInInspector] public Player controller;
 
     // Callback is probably better
     public void Cast()

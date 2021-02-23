@@ -16,15 +16,15 @@ public class ResolutionOption : MonoBehaviour
 
     private void Start()
     {
-        settings = CanvasController.instance.gameSettings;
+        settings = PauseMenuCanvasController.instance.gameSettings;
         SetSettings();
 
-        CanvasController.instance.setSettings += SetSettings;
+        PauseMenuCanvasController.instance.setSettings += SetSettings;
     }
 
     private void OnDestroy()
     {
-        CanvasController.instance.setSettings -= SetSettings;
+        PauseMenuCanvasController.instance.setSettings -= SetSettings;
     }
 
     public void SetSettings()

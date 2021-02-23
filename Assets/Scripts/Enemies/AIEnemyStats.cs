@@ -27,5 +27,7 @@ public class AIEnemyStats : MonoBehaviour
     {
         AIController.Instance.RemoveAgent(this.transform);
         Destroy(this.gameObject);
+
+        EventManager.TriggerEvent("Defeat Enemy");
     }
 }

@@ -34,12 +34,12 @@ public class MenuButtonController : MonoBehaviour
 
     private void Start()
     {
-        CanvasController.instance.toggleMenuOption += ToggleMenuOption;
+        PauseMenuCanvasController.instance.toggleMenuOption += ToggleMenuOption;
     }
 
     private void OnDestroy()
     {
-        CanvasController.instance.toggleMenuOption -= ToggleMenuOption;
+        PauseMenuCanvasController.instance.toggleMenuOption -= ToggleMenuOption;
     }
 
     private void Update()

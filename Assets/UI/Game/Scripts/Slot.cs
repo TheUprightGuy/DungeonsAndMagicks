@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour, IDropHandler
+public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public OptionPrefab parent;
+    public SocketPrefab parent;
 
     private void Awake()
     {
-        parent = GetComponentInParent<OptionPrefab>();
+        parent = GetComponentInParent<SocketPrefab>();
     }
 
     public GameObject item
@@ -29,12 +29,19 @@ public class Slot : MonoBehaviour, IDropHandler
         if (!item)
         {
             Destroy(Rune.dragObject);
-            //Rune.dragObject.transform.SetParent(transform);
             parent.SetMod(Rune.dragObject.GetComponent<Rune>().mod);
-            //parent.element = Rune.dragObject.GetComponent<Rune>().mod;
-
-            // temp
-            TutorialTracking.instance.CheckQuest(parent.mod);
+            EventManager.TriggerEvent("Socket Rune");
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        MagicUI.instance.ShowDetails(parent);
+        parent.SetSprite(true);
+    }
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        MagicUI.instance.ShowAbility(parent);
+        parent.SetSprite(false);
     }
 }

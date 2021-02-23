@@ -30,7 +30,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 animator.SetTrigger("Pressed");
-                CanvasController.instance.ToggleMenuOption(menuOptions);
+                PauseMenuCanvasController.instance.ToggleMenuOption(menuOptions);
             }
         }
         else
@@ -60,7 +60,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void ChangeMenu()
     {
-        CanvasController.instance.ToggleMenuOption(menuOptions);
+        PauseMenuCanvasController.instance.ToggleMenuOption(menuOptions);
 
     }
 }

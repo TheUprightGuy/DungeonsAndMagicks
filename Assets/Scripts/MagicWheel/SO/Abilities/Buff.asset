@@ -13,16 +13,20 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   modsApplied: []
-  startRing: {fileID: 0}
+  name: Shield
   type: 2
   icon: {fileID: 21300000, guid: c08c21c3a347bc048a0a3c39b9e0e46a, type: 3}
-  modRing: {fileID: 11400000, guid: 1ebb336ef2a60ee42817a05e279201f0, type: 2}
-  buffs: []
+  modRing: {fileID: 0}
+  buffs:
+  - {fileID: 11400000, guid: fb85af599ca4dd9499d980d80830e4cc, type: 2}
+  startingBuffs: []
   sockets: 2
   mods:
+    buff: {fileID: 0}
     onBuff: 0
     onBuffEnd: 
   startMods:
+    buff: {fileID: 0}
     onBuff: 0
     onBuffEnd: 
   buffPrefab: {fileID: 7796062578682012636, guid: 0c739a7c53cdfb44983cbba752119836,

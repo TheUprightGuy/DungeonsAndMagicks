@@ -5,6 +5,7 @@ using System;
 
 public class CallbackHandler : MonoBehaviour
 {
+    #region Singleton
     public static CallbackHandler instance;
     private void Awake()
     {
@@ -15,12 +16,13 @@ public class CallbackHandler : MonoBehaviour
         }
         instance = this;
     }
+    #endregion Singleton
 
     public Action togglePause;
     public void TogglePause()
     {
         // Temp
-        CanvasController.instance.gameObject.SetActive(!CanvasController.instance.gameObject.activeSelf);
+        PauseMenuCanvasController.instance.gameObject.SetActive(!PauseMenuCanvasController.instance.gameObject.activeSelf);
 
         if (togglePause != null)
         {
@@ -37,43 +39,23 @@ public class CallbackHandler : MonoBehaviour
         }
     }
 
-    public Action toggleRingInterface;
-    public void ToggleRingInterface(Ability _ability)
+    public Action<Mod> addRune;
+    public void AddRune(Mod _rune)
     {
-        if (toggleRingInterface != null)
+        if (addRune != null)
         {
-            toggleRingInterface();
-            SetRingAbility(_ability);
-        }
-    }
-    public Action<Ability> setRingAbility;
-    public void SetRingAbility(Ability _ability)
-    {
-        if (setRingAbility != null)
-        {
-            setRingAbility(_ability);
+            addRune(_rune);
         }
     }
 
-    public Action toggleCraftInterface;
-    public void ToggleCraftInterface()
+    public Action<Mod> removeRune;
+    public void RemoveRune(Mod _rune)
     {
-        if (toggleCraftInterface != null)
+        if (removeRune != null)
         {
-            toggleCraftInterface();
+            removeRune(_rune);
         }
     }
-
-    public Action<bool> closeCraftInterface;
-    public void CloseCraftInterface(bool _toggle)
-    {
-        if (closeCraftInterface != null)
-        {
-            closeCraftInterface(_toggle);
-        }
-    }
-
-
 
     public Action<int, Ability> setAbilityReference;
     public void SetAbilityReference(int _id, Ability _ability)
@@ -161,6 +143,24 @@ public class CallbackHandler : MonoBehaviour
         if (setText != null)
         {
             setText(_text, _time);
+        }
+    }
+
+    public Action<Quest,string> setQuestText;
+    public void SetQuestText(Quest _quest, string _text)
+    {
+        if (setQuestText != null)
+        {
+            setQuestText(_quest, _text);
+        }
+    }
+
+    public Action<Quest> createQuestTracker;
+    public void CreateQuestTracker(Quest _quest)
+    {
+        if (createQuestTracker != null)
+        {
+            createQuestTracker(_quest);
         }
     }
 

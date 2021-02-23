@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RuneDrop : MonoBehaviour
 {
-    public Mod rune;
+    Mod rune;
 
     private void Start()
     {
@@ -13,11 +13,13 @@ public class RuneDrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Controller>())
+        Player pc = other.GetComponent<Player>();
+        if (pc)
         {
-            other.GetComponent<Controller>().runes.Add(rune);
-            TutorialTracking.instance.CheckQuest(this.gameObject);
+            pc.runes.Add(rune);
+            MagicUI.instance.AddRune(rune);
             Destroy(this.gameObject);
+            EventManager.TriggerEvent("Pick Up Rune");
         }
     }
 }

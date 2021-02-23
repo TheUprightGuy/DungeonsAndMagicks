@@ -9,19 +9,16 @@ public class RunesUI : MonoBehaviour
     public List<GameObject> runes;
 
 
-    public void DisplayRunes(List<Mod> _runes, Ability _ability)
-    {
+    public void DisplayRunes(List<Mod> _runes)
+    { 
         CleanUp();
 
         foreach(Mod n in _runes)
         {
-            //if ((int)n.DisplayModifiers == (int)_ability.type)
-            {
-                Rune temp = Instantiate(runePrefab, this.transform).GetComponentInChildren<Rune>();
-                temp.mod = n;
+            Rune temp = Instantiate(runePrefab, this.transform).GetComponentInChildren<Rune>();
+            temp.mod = n;
 
-                runes.Add(temp.gameObject);
-            }
+            runes.Add(temp.gameObject);
         }
     }
 

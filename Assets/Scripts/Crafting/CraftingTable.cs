@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class CraftingTable : MonoBehaviour
 {
-    public CraftingCanvas cc;
-    private void Start()
-    {
-        cc = CraftingCanvas.instance;
-    }
-
-
     private void OnTriggerEnter(Collider other)
     {
-        cc.pc = other.GetComponent<Controller>();
+        // temp
+        if (other.GetComponent<Player>())
+        {
+            MagicUI.instance.SetCrafting(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<Controller>())
+        // temp
+        if (other.GetComponent<Player>())
         {
-            cc.pc = null;
-            CallbackHandler.instance.CloseCraftInterface(false);
+            MagicUI.instance.SetCrafting(false);          
         }
     }
 }

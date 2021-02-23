@@ -16,15 +16,15 @@ public class FullScreenToggle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        settings = CanvasController.instance.gameSettings;
+        settings = PauseMenuCanvasController.instance.gameSettings;
         SetSettings();
 
-        CanvasController.instance.setSettings += SetSettings;
+        PauseMenuCanvasController.instance.setSettings += SetSettings;
     }
 
     private void OnDestroy()
     {
-        CanvasController.instance.setSettings -= SetSettings;
+        PauseMenuCanvasController.instance.setSettings -= SetSettings;
     }
 
     public void SetSettings()

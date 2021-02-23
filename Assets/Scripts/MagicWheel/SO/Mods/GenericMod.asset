@@ -12,21 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4eddba6637ba74f9d2e9803a606d37, type: 3}
   m_Name: GenericMod
   m_EditorClassIdentifier: 
-  name: Generic Mod
-  description: A Generic Mod
-  icon: {fileID: 21300000, guid: e4e38ad02f12d0b4bad4bf4e55fc9999, type: 3}
-  DisplayModifiers: 1
+  name: Uruz
+  icon: {fileID: 21300000, guid: a5a70a51c24e2c840856c6d5a668344e, type: 3}
+  DisplayModifiers: 2
+  projectileDescription: Fire an additional projectiles.
   ProjectileModifiers:
     buff: {fileID: 0}
-    numProj: 0
-    onShoot: 0
+    numProj: 1
+    onShoot: 1
     onHit: 
     projPrefab: {fileID: 0}
+  BuffDescription: Reduces damage taken while shield persists.
   BuffModifiers:
-    buff: {fileID: 0}
-    onBuff: 0
+    buff: {fileID: 11400000, guid: fb85af599ca4dd9499d980d80830e4cc, type: 2}
+    onBuff: 1
     onBuffEnd: 
+  MovementDescription: Grants a damage reduction buff for a short duration upon use.
   MovementModifiers:
-    buff: {fileID: 0}
+    buff: {fileID: 11400000, guid: 05eb53bfc8e431047a2126aa2acbc50a, type: 2}
     onMove: 0
     onEnd: 

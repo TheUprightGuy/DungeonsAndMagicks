@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: DistributionData
   m_EditorClassIdentifier: 
   mods:
-  - {fileID: 11400000, guid: f466a620ecb96234ea1b72ec341d057f, type: 2}
-  - {fileID: 11400000, guid: 4eada1c3958ff9b428f019850206cadd, type: 2}
-  - {fileID: 11400000, guid: f4b77a77771d41b458269e3e1328a081, type: 2}
-  - {fileID: 11400000, guid: dd9eea5fdafa080469ad2454d038fe02, type: 2}
-  - {fileID: 11400000, guid: 7fe7296901a9ebf409dad2f6f9af1341, type: 2}
+  - {fileID: 11400000, guid: 7a8d20de8e1890a40bc3141a458376fc, type: 2}
   abilities:
   - {fileID: 11400000, guid: 6ca6f573f7d50754d85a097896e1712f, type: 2}
   - {fileID: 11400000, guid: 2d1fba555e6507443b1fe516ac415172, type: 2}
