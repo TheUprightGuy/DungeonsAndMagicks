@@ -34,6 +34,8 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+
+
     public void AddQuest()
     {
         
